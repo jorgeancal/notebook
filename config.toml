@@ -10,7 +10,7 @@ publishDir="docs"
 
 paginate = 4
 pluralizeListTitles     = false
-disableLanguages        = [ "FR" , "PL", "PT", "DE", "ZH-CN", "ZH-TW", "JA", "NL", "ES"]
+disableLanguages        = [ "FR" , "PL", "PT", "DE", "ZH-CN", "ZH-TW", "JA", "NL"]
 
 
 [markup.goldmark.renderer]
