@@ -38,26 +38,26 @@ La configuración es bastante sencilla. Lo primero de todo es tener un repo para
 ```txt
 .
 |- bases
-   |- environments.yaml
-   |- helmDefaults.yaml
+|  |- environments.yaml
+|  |- helmDefaults.yaml
 |- releases
-   |- external-dns
-       |- helmfile.gotmpl
-       |- values.gotmpl
-       |- production.gotmpl
-       |- secrets.yaml
-       |- minicuke.gotmpl
-   |- grafana
-       |- helmfile.gotmpl
-       |- values.gotmpl
-       |- production.gotmpl
-       |- secrets.yaml
-       |- minikube.gotmpl
-   |- prometheus
-       |- ...
-   |- thanos
-       |- ...
-   |- ...
+|  |- external-dns
+|  |   |- helmfile.gotmpl
+|  |   |- values.gotmpl
+|  |   |- production.gotmpl
+|  |   |- secrets.yaml
+|  |   |- minicuke.gotmpl
+|  |- grafana
+|  |   |- helmfile.gotmpl
+|  |   |- values.gotmpl
+|  |   |- production.gotmpl
+|  |   |- secrets.yaml
+|  |   |- minikube.gotmpl
+|  |- prometheus
+|  |   |- ...
+|  |- thanos
+|  |   |- ...
+|  |- ...
 |- README.md
 |- helmfile.yaml
 ```
