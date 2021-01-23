@@ -8,10 +8,10 @@ author = "Jorge Andreu Calatayud"
 tags= ["helm", "helmcharts", "kubernetes", "helmfile", "sops", "helm secrets" ]
 +++
 
-Helmfile es un programa que te permite sacar más partido a Helm. Ya que si usas helmfile puedes implementar cualquier cantidad de helmcharts. Basicamente con helmfile declaras las helmcharts y les das los valores que tu quieres a cada una de las helm chart, helmfile creara el correspondiente deploy mediante helm para mandar a tu cluster todo lo que has definido en helmfile, claro esta puedes decirle a helmfile impleméntame solo este grupo de helmchart y de este grupo quiero implementarlas en esta secuencia. 
+Helmfile es un programa que te permite sacar más partido a Helm. Ya que si usas helmfile puedes implementar cualquier cantidad de helmcharts. Básicamente con helmfile declaras las helmcharts y les das los valores que tú quieres a cada una de las helm chart, helmfile creara el correspondiente deploy mediante helm para mandar a tu cluster todo lo que has definido en helmfile, claro esta puedes decirle a helmfile impleméntame solo este grupo de helmchart y de este grupo quiero implementarlas en esta secuencia. 
 
 ## ¿Cómo se ha portado helmfile? 
-Despues de estos 6 meses usando helmfile la verdad es que nos ha dado mucha más vida. Si queremos implementar cosas nuevas cosas.... todo vas rapido y seguro. 
+Despues de estos 6 meses usando helmfile la verdad es que me ha dado mucha más vida. Si queremos implementar cosas nuevas cosas.... todo vas rapido y seguro. 
 
 ## ¿Qué me ha gustado de helmfile?
 Después estar usando un tiempo esto es lo que más me ha gustado de helmfile:
@@ -113,7 +113,7 @@ environments:
       - ...
 ```
 
-A continuación vais a ver el `helmfile.yaml` que tengo para grafana. Como veis es bastante parecido al otro `helmfile.yaml` ¿Por qué es esto? os preguntaréis pues es muy sencillo si yo estoy trabajando en una sola chart o tengo que implementarla manualmente por alguna razon extraña del destino solo tengo que ir a la carpeta del release y aplicar el fichero `.yaml` con helmfile. Tengo que anadir 
+A continuación vais a ver el `helmfile.yaml` que tengo para grafana. Como veis es bastante parecido al otro `helmfile.yaml` ¿Por qué es esto? os preguntaréis pues es muy sencillo si yo estoy trabajando en una sola chart o tengo que implementarla manualmente por alguna razon extraña del destino solo tengo que ir a la carpeta del release y aplicar el fichero `.yaml` con helmfile.  
 
 ```yaml
 ---
@@ -180,5 +180,14 @@ Se me olvidaba si queréis modificarlo sin tener que estar en donde tenéis el f
 ```shell
 export SOPS_KMS_ARN="arn:aws:kms:eu-west-2:999999999999:key/123a4b56-7c89-0ef1-gh23-i4j5k6lm7npk8"
 ```
+
+## Como Usar Helmfile
+
+Helmfile es muy sencillo a la hora de user vamos alli a donde tengáis un helmfile.yaml y yo os recomiendo ejecutar el siguiente comando:
+```shell
+helmfile -e minikube apply 
+```
+
+Tenéis que poner siempre en entorno al que queréis implementar las charts por eso siempre que ejecutéis el comando tenéis que poner `-e` seguido del entorno al que vais a mandarlo, eso si, lo tenéis que tener puesto en la lista que tengáis en el `environments.yaml`.
 
 Y esto ha sido todo senores, espero que os haya gustado y nos leemos en el próximo.
