@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://devbasis.me/blog/</loc>
+    <lastmod>2020-09-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devbasis.me/categories/</loc>
+    <lastmod>2020-09-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devbasis.me/</loc>
+    <lastmod>2020-09-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devbasis.me/tags/docker/</loc>
+    <lastmod>2020-09-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devbasis.me/categories/docker/</loc>
+    <lastmod>2020-09-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devbasis.me/tags/dockerimages/</loc>
+    <lastmod>2020-09-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devbasis.me/blog/how-to-create-a-small-jvm-docker-image/</loc>
+    <lastmod>2020-09-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devbasis.me/categories/java/</loc>
+    <lastmod>2020-09-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devbasis.me/tags/java/</loc>
+    <lastmod>2020-09-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devbasis.me/tags/jdk/</loc>
+    <lastmod>2020-09-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devbasis.me/tags/jre/</loc>
+    <lastmod>2020-09-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devbasis.me/tags/jvm/</loc>
+    <lastmod>2020-09-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devbasis.me/tags/openjdk/</loc>
+    <lastmod>2020-09-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devbasis.me/tags/</loc>
+    <lastmod>2020-09-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devbasis.me/tags/init-spring-boot/</loc>
+    <lastmod>2020-01-23T23:10:39+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devbasis.me/tags/spring/</loc>
+    <lastmod>2020-01-23T23:10:39+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devbasis.me/tags/spring-boot/</loc>
+    <lastmod>2020-01-23T23:10:39+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devbasis.me/categories/spring-boot/</loc>
+    <lastmod>2020-01-23T23:10:39+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devbasis.me/tags/spring-boot-2.0/</loc>
+    <lastmod>2020-01-23T23:10:39+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devbasis.me/tags/starting-with-spring/</loc>
+    <lastmod>2020-01-23T23:10:39+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devbasis.me/blog/starting-with-spring-boot/</loc>
+    <lastmod>2020-01-23T23:10:39+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devbasis.me/tags/starting-with-spring-boot/</loc>
+    <lastmod>2020-01-23T23:10:39+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devbasis.me/tags/adoptopenjdk/</loc>
+    <lastmod>2020-01-23T23:08:17+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devbasis.me/tags/jdk-11/</loc>
+    <lastmod>2020-01-23T23:08:17+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devbasis.me/tags/jdk-11-lts/</loc>
+    <lastmod>2020-01-23T23:08:17+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devbasis.me/tags/jdk-6/</loc>
+    <lastmod>2020-01-23T23:08:17+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devbasis.me/tags/jdk-7/</loc>
+    <lastmod>2020-01-23T23:08:17+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devbasis.me/tags/jdk-8/</loc>
+    <lastmod>2020-01-23T23:08:17+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devbasis.me/categories/opinion/</loc>
+    <lastmod>2020-01-23T23:08:17+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devbasis.me/tags/opinion/</loc>
+    <lastmod>2020-01-23T23:08:17+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devbasis.me/blog/what-is-going-on-with-java/</loc>
+    <lastmod>2020-01-23T23:08:17+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devbasis.me/tags/jenkins-debian-9/</loc>
+    <lastmod>2020-01-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devbasis.me/categories/debian/</loc>
+    <lastmod>2020-01-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devbasis.me/tags/gitlab/</loc>
+    <lastmod>2020-01-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devbasis.me/categories/gitlab/</loc>
+    <lastmod>2020-01-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devbasis.me/tags/gitlab-in-debian/</loc>
+    <lastmod>2020-01-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devbasis.me/tags/gitlab-in-debian-9/</loc>
+    <lastmod>2020-01-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devbasis.me/tags/gitlad-installation/</loc>
+    <lastmod>2020-01-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devbasis.me/categories/how-to/</loc>
+    <lastmod>2020-01-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devbasis.me/tags/how-to-install-gitlab/</loc>
+    <lastmod>2020-01-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devbasis.me/blog/how-to-install-gitlab-on-debian-9/</loc>
+    <lastmod>2020-01-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devbasis.me/blog/how-to-install-jenkins/</loc>
+    <lastmod>2020-01-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devbasis.me/tags/how-to-install-jenkins/</loc>
+    <lastmod>2020-01-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devbasis.me/tags/installations/</loc>
+    <lastmod>2020-01-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devbasis.me/tags/jenkis-debian/</loc>
+    <lastmod>2020-01-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devbasis.me/categories/linux/</loc>
+    <lastmod>2020-01-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devbasis.me/tags/whats-jenkins/</loc>
+    <lastmod>2020-01-23T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devbasis.me/about/</loc>
+  </url>
+  
+</urlset>

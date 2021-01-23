@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>GitLab in Debian 9 on DevBasis</title>
+    <link>https://devbasis.me/tags/gitlab-in-debian-9/</link>
+    <description>Recent content in GitLab in Debian 9 on DevBasis</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 23 Jan 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://devbasis.me/tags/gitlab-in-debian-9/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Install Gitlab on Debian 9</title>
+      <link>https://devbasis.me/blog/how-to-install-gitlab-on-debian-9/</link>
+      <pubDate>Thu, 23 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://devbasis.me/blog/how-to-install-gitlab-on-debian-9/</guid>
+      <description>Let’s go with another installation. I’m not really sure about installing GitLab on my server, but I have been thinking a lot about it. I had installed Git which I like, but I tried one years ago and I like it but I haven’t installed it on my server.
+GitLab is a really good tool. You can have it installed on your server and you can create different teams and just developers.</description>
+    </item>
+    
+  </channel>
+</rss>

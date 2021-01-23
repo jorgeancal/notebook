@@ -1,0 +1,223 @@
+baseurl = "https://devbasis.me"
+DefaultContentLanguage  = "en"
+languageCode = "en-GB"
+title = "DevBasis"
+theme = "hugo-future-imperfect-slim"
+preserveTaxonomyNames = true
+disqusShortname = "devbasis"
+googleAnalytics = "UA-187215959-1"
+publishDir="docs"
+
+paginate = 4
+pluralizeListTitles     = false
+disableLanguages        = [ "FR" , "PL", "PT", "DE", "ZH-CN", "ZH-TW", "JA", "NL", "ES"]
+
+
+[markup.goldmark.renderer]
+unsafe                = true
+
+[outputs]
+home                  = ["html", "json", "rss"]
+
+[params]
+enableCDN             = false
+cssFiles              = ["default"]
+jsFiles               = ["default"]
+highlightjs           = true
+highlightjsTheme      = ""
+highlightjsLang       = []
+viewMorePostsLink     = "/blog/"
+readingTime           = true
+imageStretch          = ""
+removeBlur            = false
+socialShare           = ["twitter", "facebook", "linkedin", "email"]
+hideEmptyStats        = false
+
+[params.meta]
+description         = "Hi this is DevBasis "
+author              = "Jorge Andreu Calatayud"
+favicon             = true
+svg                 = true
+faviconVersion      = "1"
+msColor             = "#ffffff"
+iOSColor            = "#ffffff"
+
+[params.header]
+navbarTitle         = "DevBasis"
+dynamicTitles       = true
+searchMenu          = true
+shareMenu           = true
+languageMenu        = true
+
+[params.intro]
+header                = "DevBasis"
+paragraph             = "Wellcome! This is a multi-lengual notebook. You'll read some geeky things here. I hope you enjoy it."
+rssIntro              = true
+socialIntro           = true
+hideWhenSingleColumn  = false
+alwaysOnHomepage      = false
+
+[params.intro.pic]
+src                 = "img/devbasis.jpg"
+shape               = "circle"
+width               = ""
+alt                 = "DevBasis blog"
+
+[params.sidebar]
+about               = "In this blog I’ll post about my knowledges, and somethings that I’ll discover while I’m working. I won’t post all days because it’s a impossible. I’ll try to post one per week or at least one per month. If you like my posts stay tune becuase I’ll start a youtube channel guess how is gonig to be the name?…DevBasis!."
+postAmount          = 3
+categories          = true
+categoriesByCount   = true
+
+[params.footer]
+rssFooter           = true
+socialFooter        = true
+
+[params.staticman]
+enabled             = true
+api                 = ""  # No Trailing Slash
+gitProvider         = ""
+username            = ""
+repo                = ""
+branch              = ""
+
+[params.staticman.recaptcha]
+siteKey           = ""
+encryptedKey      = ""
+
+[menu]
+
+[[menu.main]]
+name              = "Home"
+identifier        = "home"
+url               = "/"
+pre               = "<i class='fa fa-home'></i>"
+weight            = 1
+
+[[menu.main]]
+name              = "About"
+identifier        = "about"
+url               = "/about/"
+pre               = "<i class='far fa-id-card'></i>"
+weight            = 2
+
+[[menu.main]]
+name              = "Blog"
+identifier        = "blog"
+url               = "/blog/"
+pre               = "<i class='far fa-newspaper'></i>"
+weight            = 3
+
+[[menu.main]]
+name              = "Categories"
+identifier        = "categories"
+url               = "/categories/"
+pre               = "<i class='fas fa-sitemap'></i>"
+weight            = 5
+
+#[[menu.main]]
+#name              = "Contact"
+#identifier        = "contact"
+#url               = "/contact/"
+#pre               = "<i class='far fa-envelope'></i>"
+#weight            = 6
+
+[Languages]
+
+[Languages.en]
+LanguageCode        = "en"
+LanguageName        = "English"
+weight              = 1
+
+[Languages.es]
+LanguageCode        = "es"
+LanguageName        = "Castellano"
+title               = "DevBasis"
+description         = "Un thème par HTML5 UP, porté par Julio Pescador. Simplifié et amélioré par Patrick Collins. Multilingue par StatnMap. Propulsé par Hugo."
+weight              = 2
+
+[[Languages.es.menu.main]]
+name              = "Inicio"
+identifier        = "home"
+url               = "/"
+pre               = "<i class='fas fa-home'></i>"
+weight            = 1
+
+[[Languages.es.menu.main]]
+name              = "¿Qué es esto?"
+identifier        = "about"
+url               = "/about/"
+pre               = "<i class='far fa-id-card'></i>"
+weight            = 2
+
+[[Languages.es.menu.main]]
+name              = "Blog"
+identifier        = "blog"
+url               = "/blog/"
+pre               = "<i class='far fa-newspaper'></i>"
+weight            = 3
+
+[[Languages.es.menu.main]]
+name              = "Categorias"
+identifier        = "categories"
+url               = "/categories/"
+pre               = "<i class='fas fa-sitemap'></i>"
+weight            = 5
+
+#[[Languages.es.menu.main]]
+#name              = "Contact"
+#identifier        = "contact"
+#url               = "/contact/"
+#pre               = "<i class='far fa-envelope'></i>"
+#weight            = 6
+
+
+[social]
+# Coding Communities
+github                = "devbasis"
+gitlab                = ""
+stackoverflow         = "" # User Number
+bitbucket             = ""
+jsfiddle              = ""
+codepen               = ""
+# Visual Art Communities
+deviantart            = ""
+flickr                = ""
+behance               = ""
+dribbble              = ""
+# Publishing Communities
+wordpress             = ""
+medium                = ""
+# Professional/Business Oriented Communities
+linkedin              = ""
+linkedin_company      = ""
+foursquare            = ""
+xing                  = ""
+slideshare            = ""
+# Social Networks
+facebook              = ""
+googleplus            = ""
+reddit                = ""
+quora                 = ""
+youtube               = "channel/UCx88hrzBX7kX0POwFZxpYMA"
+vimeo                 = ""
+whatsapp              = "" # WhatsApp Number
+# WeChat and QQ need testing.
+wechat              = ""
+qq                  = "" # User ID Number
+instagram             = ""
+tumblr                = ""
+twitter               = "@devbasis"
+strava                = ""
+skype                 = ""
+snapchat              = ""
+pinterest             = ""
+telegram              = ""
+vine                  = ""
+googlescholar         = ""
+orcid                 = ""
+researchgate          = ""
+keybase               = ""
+mastodon              = ""
+# Email
+email                 = "tvdevbasis@gmail.com"
