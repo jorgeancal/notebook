@@ -1,2 +1,2 @@
-# website
-This is the website of this community
+# DevBasis.me
+Hugo repository for my new project DevBasis 
