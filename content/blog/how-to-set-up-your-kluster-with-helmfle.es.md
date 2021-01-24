@@ -1,6 +1,6 @@
 +++
 title= "Configurar tu kluster con Helmfile"
-date= "2020-01-30"
+date= "2021-01-24"
 comments = true
 categories = ["Helm", "kubernetes", "How to", "helmfile"]
 description = "Echamos un vistazo atrás de cómo se ha portado helmfile después de 6 meses usando helmfile en el trabajo y mostramos a cómo configurarlo."
@@ -25,10 +25,7 @@ Después estar usando lo un tiempo, esto es lo que más me ha gustado de helmfil
 - `diff`. Posiblemente esto es lo mejor de todo... es estúpidamente sencillo y te salva más de una vez cuando estás haciendo actualizaciones de charts o estás cambiando valores en la chart y estás seguro si te has cargado algo.
 
 
-- `sops`. Un salvavidas en cuanto a tener un extra de seguridad. Algunos ya sabréis es pero para los que no... esto te ayudara a tener las contraseñas encriptadas en un archivo, normalmente tendrás que tener una key en tu local con la cual helmfile desencriptara el fichero y lo leerá, de esta manera los valores podrán ser usados en donde los hayas llamado en el valor para la chart.
-
-
-- Variables de entorno. Básicamente si no quieres implementar `kops` o tener la variable escrita en un fichero puedes tenerla en las variables de torno de tu sistema. Un simple ejemplo necesitamos ponerle un valor a la cuenta del admin en grafana `Export ADMIN_GRAFANA_PASSWORD=salsademalacatoneswthP0llo!` y en el fichero tenderemos algo parecido a esto `password: {{ env ADMIN_GRAFANA_PASSWORD | quote }}` pero si quieres tener este valor que sea obligatorio usaríamos `{{ requiredEnv ADMIN_GRAFANA_PASSWORD | quote }}`.
+- Variables de entorno. Puedes implementar `sops` en helmfile pero el plugin que estaban usando lo han jubilado asi que... me pase al uso de variables de entorno es lo mejor actualmente, ya que puedes tener los valores que tú quieres cuando desarrollas localmente y tener unos valores globales en tu CD/CI software.  Si queréis que hable sobre la implementacion de `SOPS` en helmfile solo decirlo y hare otro post sobre ello.
 
 ## ¿Cómo lo configuro?
 
@@ -37,155 +34,144 @@ La configuración es bastante sencilla. Lo primero de todo es tener un repo para
 
 ```shell
 .
-|- bases
-|  |- environments.yaml
-|  |- helmDefaults.yaml
-|- releases
-|  |- external-dns
-|  |   |- helmfile.gotmpl
-|  |   |- values.gotmpl
-|  |   |- production.gotmpl
-|  |   |- secrets.yaml
-|  |   |- minicuke.gotmpl
-|  |- grafana
-|  |   |- helmfile.gotmpl
-|  |   |- values.gotmpl
-|  |   |- production.gotmpl
-|  |   |- secrets.yaml
-|  |   |- minikube.gotmpl
-|  |- prometheus
-|  |   |- ...
-|  |- thanos
-|  |   |- ...
-|  |- ...
-|- README.md
-|- helmfile.yaml
+├── addReleases.sh
+├── base
+│   ├── defaults
+│   │   └── helmfile.yaml
+|   ├── environments
+│   │   └── helmfile.yaml
+│   ├── repositories
+│   │   └── helmfile.yaml
+│   ├── templates
+│   │   └── template.yaml
+│   └── values
+│       ├── minikube
+│       │   └── values.yaml.gotmpl
+│       └── production
+│           └── values.yaml.gotmpl
+├── helmfile.yaml
+├── README.md
+└── releases
+    ├── prometheus
+    │   ├── helmfile.yaml
+    │   ├── README.md
+    │   └── values.yaml.gotmpl
+    └── grafana
+        ├── helmfile.yaml
+        ├── README.md
+        └── values.yaml.gotmpl
+
 ```
 
 Ahora os voy a mostrar lo que tenemos en el principal helmfile.yaml:
 
 ```yaml
-bases:
-  - "bases/helmDefaults.yaml"
-  - "bases/environments.yaml"
+{{ readFile "base/templates/helmfile.yaml" }}
 
-helmfiles:
-  - "releases/external-dns/helmfile.yaml"
-  - "releases/grafana/helmfile.yaml"
-  - "releases/prometheus/helmfile.yaml"
-  - "releases/thanos/helmfile.yaml"
-  - ...
+{{ readFile "base/repositories/helmfile.yaml" }}
 
-missingFileHandler: Warn
+releases:
+
 ```
 
-Como podéis ver anteriormente tenemos tres bloques. En el primer bloque tenemos lo que viene siendo los pilares de todo. Tenemos los valores globales para helmfile. A continuación os mostraré mis valores pero si queréis saber más sobre los valores que podéis cambiar dejo [aquí](https://github.com/roboll/helmfile#configuration) el link.
+Como veréis no tengo nada en releases y eso es porque tengo un script que va por todas las carpetas de dentro de releases y me encuentra todo fichero que se llame `helmfile.yaml` y me lo agrega al final del documento. De esa manera nos libramos de tener un fichero de más 200 lineas en el repo y que da más bonito a la hora de leer el fichero y te da más flexibilidad, ya que solo has de crear tu carpeta con la chart que quieres y los valores que tú quieres y listo. Os preguntareis porque ha puesto dos readFile ahi arriba. Bueno pues... esta es la manera que encontre de mantener las cosas simples. Ya que en templates puedo crear diferentes templates para los releases y luego decirle a un release tú usa esta y tú usa la otra. Una gozada. Luego también tenemos los repositorios que como todos sabemos para declarar un repositorio en helmfile tenemos que tener dos lineas, esto quiere decir que tendríamos dos lineas mas de fichero tontamente, pues mejor es tenerlo en otro fichero no? asi todo queda mas limpio. A continuacion os mostrare un ejemplo de los ficheros, estar atengo que uno lleva sorpresa.
 
+Empezamos por el más sencillo de todo que es el de los repositorios. 
+
+```yaml
+repositories:
+  - name: prometheus-community
+    url: https://prometheus-community.github.io/helm-charts
+  - name: grafana
+    url: grafana https://grafana.github.io/helm-charts
+```
+
+A continuacion tenermos en de la template
+```yaml
+bases:
+  - base/defaults/helmfile.yaml
+  - base/environments/helmfile.yaml
+  
+templates:
+  defaultTmpl: &defaultTmpl
+    missingFileHandler: Warn
+    valuesTemplate:
+      - base/values/{{ .Environment.Name }}/values.yaml.gotmpl
+      - releases/{{ .Release.Name }}/values.yaml.gotmpl
+```
+
+Como podéis ver lleva sorpresa no solo tenemos templates tenemos la section base ahi. La verdad es que esto si queremos podríamos agregar otro fichero y poner otro `readFile` esto ya fue a mi gusto, ya que cuando estaba haciendo la template quería agregar la base, por lo que pense que deberían ir juntos.
+
+Ahora pasamos a la parte de los defaults
 ```yaml
 helmDefaults:
   wait: true
-  timeout: 700
-  cleanupOnFail: false
+  timeout: 300
 ```
 
-Lo único que tengo que comentar aquí es que `cleanupOnFail` por defecto es false pero estamos investigando un poco sobre el caso asi que la tenemos ahi solo para recuerdo.
-
-Ahora vamos a irnos a mirar nuestro `environments.yaml`. Como podéis ver, declaramos los dos entornos que tenemos y luego añadimos los valores, en este caso estamos indicando cuales charts queremos implementar en el entorno.
+Ahora vamos a irnos a mirar nuestro `environments.yaml`. Como podéis ver, declaramos los dos entornos que tenemos y luego añadimos los valores atraves de un fichero. En este fichero le estamos indicando cuales charts queremos implementar en el entorno.
 
 ```yaml
----
 environments:
-  Production:
+  production:
     values:
-      - alias: production
-      - external_dns:
-          installed: "true"
-      - prometheus:
-          installed: "true"
-      - ...
+      - base/values/production/values.yaml.gotmpl
   minikube:
     values:
-      - alias: minikube
-      - external_dns:
-          installed: "false"
-      - prometheus:
-          installed: "true"
-      - ...
+      - base/values/minikube/values.yaml.gotmp
 ```
 
-A continuación vais a ver el `helmfile.yaml` que tengo para grafana. Como veis es bastante parecido al otro `helmfile.yaml` ¿Por qué es esto? os preguntaréis pues es muy sencillo si yo estoy trabajando en una sola chart o tengo que implementarla manualmente por alguna razón extraña del destino solo tengo que ir a la carpeta del release y aplicar el fichero `.yaml` con helmfile.  
+Os dejo también un ejemplo de esto. He de comentar que este es un buen lugar para agregar variables globales para el entorno no solo para decirle que es lo que quieres instalar y lo que no.
 
 ```yaml
----
-bases:
-  - "../../bases/helmDefaults.yaml"
-  - "../../bases/environments.yaml"
-
----
-
-repositories:
-  - name: grafana
-    url: https://grafana.github.io/helm-charts
-
-releases:
-  - name:  "grafana"
-    chart: "grafana/grafana"
-    namespace: "monitoring"
-    version: "6.2.0"
-    installed: {{ .Values | getOrNil "grafana.installed" | default false }}
-    values:
-      - values.yaml.gotmpl
-      - {{ .Environment.Name }}.gotmpl
-    secrets:
-      - secrets.yaml
+prometheus:
+  installed: true
+grafana:
+  installed: true
 ```
 
-## SOPS in helmfile
-Hay muchas maneras de usar sops, yo en este caso como estoy usando AWS voy a usar `SOPS_KMS_ARN`. Si queréis que cuente más sobre esto dejarme algún comentario y lo explicaré más en detalle. Pero vamos a centrarnos en lo que helmfile nos da por defecto con `.sops.yaml` como podéis ver en su [documentación](https://github.com/futuresimple/helm-secrets) necesitáis instalar el plugin `secrets` en helm. Pero antes de eso necesitáis saber si tenéis instalado el paquete `sops` en vuestro sistema operativo para lo saber ejecutar `sops --version`. Si os sale algo parecido a esto `sops 3.6.1 (latest)` es que lo tenéis sino... instálalo y luego ejecuta el siguiente comando para instalar el plugin:
+A continuación vais a ver el `helmfile.yaml` que tengo para grafana. Es de lo mas sencillo ya que llamo a la template en el principio del release y luego agrego los datos para el release, además como veréis tenemos la key `installed` que de esta manera le digo si lo quiero instalar o no y también tengo otra key para decirle que no lo quiero implementar hasta que la lista de charts esté implementada
 
-```shell
-helm plugin install https://github.com/futuresimple/helm-secrets
-```
-
-A continuación necesitamos crear el fichero `.sops.yaml` en el root del repo y nos quedaría algo parecido a esto:
 ```yaml
----
-creation_rules:
-  - kms: 'arn:aws:kms:eu-west-2:999999999999:key/123a4b56-7c89-0ef1-gh23-i4j5k6lm7npk8'
+- <<: *defaultTmpl
+  name:  "grafana"
+  chart: "grafana/grafana"
+  namespace: "monitoring"
+  version: "3.2.5"
+  installed: {{ .Values | getOrNil "grafana.installed" | default false }}
+  needs: 
+    - fluentd
+    - prometheus
+    - jaeger
+    - istio-operator
+  values:
+    - values.yaml.gotmpl.gotmpl
 ```
 
-### Crear y Modificar ficheros encriptados 
-Ahora falta saber como modificamos y creamos los ficheros... Pues tenéis dos opciones:
-- Usando sops. De esta manera no tenéis que molestar en encriptar y desencriptar el fichero todo el rato. 
-    ```shell
-    sops secrets.yaml
-    ```
-- Con el plugin de helm
-    - Crear el fichero con el plugin de helm
-        ```shell
-        vim secrets.yaml 
-        # no intentéis encriptar un fichero vacío porque no os deja. Necesitáis al menos agregar una key y un valor
-        helm secrets enc secrets.yaml
-        ```
-    - Modificar el fichero con el plugin de helm
-        ```shell
-        helm secrets dec secrets.yaml
-        vim secrets.yaml.dec
-        helm secrets enc secrets.yaml
-        rm secrets.yaml.dec
-        ```
-Se me olvidaba si queréis modificarlo sin tener que estar en donde tenéis el fichero `.sops`. Necesitáis tener una variable del entorno agregada en vuestro entrono 
-```shell
-export SOPS_KMS_ARN="arn:aws:kms:eu-west-2:999999999999:key/123a4b56-7c89-0ef1-gh23-i4j5k6lm7npk8"
-```
+Y con esto hemos terminado la configuración de helmfile.
 
 ## Como Usar Helmfile
 
 Helmfile es muy sencillo a la hora de user vamos alli a donde tengáis un helmfile.yaml y yo os recomiendo ejecutar el siguiente comando:
+
 ```shell
 helmfile -e minikube apply 
 ```
+Teneis más comandos para el uso de helmfile. Yo suelo usar bastante el `lint` y el `diff`.
 
-Tenéis que poner siempre en entorno al que queréis implementar las charts por eso siempre que ejecutéis el comando tenéis que poner `-e` seguido del entorno al que vais a mandarlo, eso si, lo tenéis que tener puesto en la lista que tengáis en él `environments.yaml`.
+Tenéis que poner siempre en entorno al que queréis implementar las charts por eso siempre que ejecutéis el comando tenéis que poner `-e` seguido del entorno al que vais a mandarlo, eso si, lo tenéis que tener puesto en la lista que tengáis en el fichero de entornos.
+
+Para terminar voy a mostraros el script que uso para buscar y agregar los ficheros al fichero principal
+
+```shell
+for release in `find releases/ -name "*.yaml"`; do
+    release_name=$(cat $release | grep "name: " | cut -d' ' -f2-)
+    echo "Templating $release to helmfile.yaml"
+    cat $release | sed 's/\(.*\)/  \1/' >> helmfile.yaml
+    echo >> helmfile.yaml
+done
+```
 
 Y esto ha sido todo senores, espero que os haya gustado y nos leemos en el próximo.
+
+
