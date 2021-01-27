@@ -86,7 +86,7 @@ repositories:
     url: grafana https://grafana.github.io/helm-charts
 ```
 
-A continuacion tenermos en de la template
+A continuacion tenemos en de la template
 ```yaml
 bases:
   - base/defaults/helmfile.yaml
