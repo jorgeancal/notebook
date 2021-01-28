@@ -68,7 +68,27 @@ releases:
 
 ```
 
-As you can see above we have two readFile commands, and a release key with no releases. Let's go to follow line by line the file. The first line is going to the template that I've created with some patters that it's going to be equals for all the releases, and I don't want to write the same line 10 time... After that we have the readfile for the repositories. Yep we have all the repositories from all the file in there... yeah it sounds creazy, but it gives you a bit more of speed. 
+As you can see above we have two readFile commands, and a release key with no releases. Let's go to follow line by line the file. The first line is going to the template that I've created with some patters that it's going to be equals for all the releases, and I don't want to write the same line 10 time... After that we have the readfile for the repositories. Yep we have all the repositories from all the file in there... yeah it sounds crazy, but it gives you a bit more of speed. 
+
+
+Now let's see the template file
+
+```yaml
+bases:
+  - base/defaults/helmfile.yaml
+  - base/environments/helmfile.yaml
+  
+templates:
+  defaultTmpl: &defaultTmpl
+    missingFileHandler: Warn
+    valuesTemplate:
+      - base/values/{{ .Environment.Name }}/values.yaml.gotmpl
+      - releases/{{ .Release.Name }}/values.yaml.gotmpl
+```
+As you can see, we have a bit more than a simple template here. We have the bases in here too. I would probably move them to the main hemlfile or change the name of the file in some point. I like thee bases in the file at the moment becase it kind of feel like the template is part of the base of helmfile.
+
+
+
 
 
 
