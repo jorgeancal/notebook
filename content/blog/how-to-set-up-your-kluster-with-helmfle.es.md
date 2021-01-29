@@ -140,10 +140,10 @@ A continuación vais a ver el `helmfile.yaml` que tengo para grafana. Es de lo m
   version: "3.2.5"
   installed: {{ .Values | getOrNil "grafana.installed" | default false }}
   needs: 
-    - fluentd
-    - prometheus
-    - jaeger
-    - istio-operator
+    - observability/fluentd
+    - observability/prometheus
+    - operators/jaeger-operator
+    - operators/istio-operator
   values:
     - values.yaml.gotmpl.gotmpl
 ```

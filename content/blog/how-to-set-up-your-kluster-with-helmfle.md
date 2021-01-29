@@ -85,10 +85,25 @@ templates:
       - base/values/{{ .Environment.Name }}/values.yaml.gotmpl
       - releases/{{ .Release.Name }}/values.yaml.gotmpl
 ```
-As you can see, we have a bit more than a simple template here. We have the bases in here too. I would probably move them to the main hemlfile or change the name of the file in some point. I like thee bases in the file at the moment becase it kind of feel like the template is part of the base of helmfile.
 
 
+As you can see, we have a bit more than a simple template here. We have the bases in here too. I have two bases. the first base is the helmfile default config you can see all thee options in their [readme](https://github.com/roboll/helmfile/blob/master/README.md#configuration). The second base are the environments where I declare values for the environments. These variables are going to allow me to declare which releases I want to release into the cluster. I have t say that I would probably move them to the main hemlfile or change the name of the file in some point. I like thee bases in the file at the moment becase it kind of feel like the template is part of the base of helmfile.
 
+It's time to see how I do release everything... In the next file you'll see an example of my grafana release. In the first line we'll have the template that we are implementing after that we would have the name, chart, namespace and version as we have on any kind of release in helm. After all these keys we have the one that allow me to tell if I want it to be installed or not. After that one I have the dependencies that it means that helmfile it's not going to  release that release until the other release are been released.
 
-
+```yaml
+- <<: *defaultTmpl
+  name:  "grafana"
+  chart: "grafana/grafana"
+  namespace: "monitoring"
+  version: "3.2.5"
+  installed: {{ .Values | getOrNil "grafana.installed" | default false }}
+  needs: 
+    - observability/fluentd
+    - observability/prometheus
+    - operators/jaeger-operator
+    - operators/istio-operator
+  values:
+    - values.yaml.gotmpl.gotmpl
+```
 
