@@ -1,6 +1,6 @@
 +++
 title= "How to set up your kluster with helmfile"
-date= "2021-01-31"
+date= "2021-01-30"
 comments = true
 categories = ["Helm", "kubernetes", "How to", "cluster"]
 description = "We'll config helmfile. This is not the perfect solution, but this is my way, and it works for me."

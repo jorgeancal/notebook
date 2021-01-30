@@ -1,6 +1,6 @@
 +++
 title= "Configurar tu kluster con Helmfile"
-date= "2021-01-31"
+date= "2021-01-30"
 comments = true
 categories = ["Helm", "kubernetes", "How to", "helmfile"]
 description = "Echamos un vistazo atrás de cómo se ha portado helmfile después de 6 meses usando helmfile en el trabajo y mostramos a cómo configurarlo."

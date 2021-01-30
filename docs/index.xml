@@ -6,7 +6,16 @@
     <description>Recent content on DevBasis</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 28 Sep 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://devbasis.me/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 30 Jan 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://devbasis.me/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to set up your kluster with helmfile</title>
+      <link>https://devbasis.me/blog/how-to-set-up-your-kluster-with-helmfle/</link>
+      <pubDate>Sat, 30 Jan 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://devbasis.me/blog/how-to-set-up-your-kluster-with-helmfle/</guid>
+      <description>Helmfile is a tool that allows you to get more out of Helm. When you use helmfile, you can implement as many charts as you want. Helmfile allows you to template the charts with the values that you want, and it will ship it to your cluster. Helmfile brings modular deployments too, by this I mean that you can have a huge list of deployments, and you can say deploy only this group of helmchart, you can also deploy them in sequence.</description>
+    </item>
+    
     <item>
       <title>How to Create a Small JRE for your Microservices</title>
       <link>https://devbasis.me/blog/how-to-create-a-small-jvm-docker-image/</link>
