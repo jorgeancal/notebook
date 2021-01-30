@@ -3,28 +3,28 @@ title= "How to set up your kluster with helmfile"
 date= "2021-01-31"
 comments = true
 categories = ["Helm", "kubernetes", "How to", "cluster"]
-description = "We'll config helmfile. This is not the perfect solution this my way and it work for me."
+description = "We'll config helmfile. This is not the perfect solution, but this is my way, and it works for me."
 tags= ["cluster","Kluster", "helm", "helmcharts", "kubernetes", "helmfile" ]
 author = "Jorge Andreu Calatayud"
 +++
 
 
-Helmfile is a tool that allows you to get more out from Helm. When you use helmfile you can implement much helmcharts as you want. Helmfile allows you to template the helmcharts with the values that you want to and itwill ship it to your cluster. Helmfile bring modular deployments too, saying this I meaen that you can have a huge list of deployments and you can tell deploy only this group of helmchart, furthermore you can deploy them in sequence.
+Helmfile is a tool that allows you to get more out of Helm. When you use helmfile, you can implement as many charts as you want. Helmfile allows you to template the charts with the values that you want, and it will ship it to your cluster. Helmfile brings modular deployments too, by this I mean that you can have a huge list of deployments, and you can say deploy only this group of helmchart, you can also deploy them in sequence.
 
 ## What do I like about helmfile?
-After 6 months using helmfile, this is what I liked the most about helmfile:
--  it's stupidly faster because you have all the releases in the same file and you ship them to the cluster in the order that you want.
+After six months using helmfile, this is what I liked the most about helmfile:
+-  It's stupidly faster because you have all the releases in the same file, and you ship them to the cluster in the order that you want.
 
 
-- Centralized Values. I love the possibility to have a main config per environment and then be able to apply those different values to the charts.
+- Centralized Values. I love the possibility of having a main config per environment and then be able to apply those different values to the charts.
 
-- `diff`. This command in helmfile let me compare with the actual chart that I have in the cluster. I know that when you exec the diff you have thousands of lines but sometimes is useful because it shows if you did it okay or just blow up it.
+- `diff`. This command in helmfile lets me compare with the current chart that I have in the cluster. I know that when you exec the diff you have thousands of lines, but sometimes it's useful because it shows what you changed, or if you just blew it up.
 
-- Env Variables. it is a lovely alternative to get everything working without having password in text plain in a file. An alternative to this is `helm-secrets` but I didn't use that much, so I cannot tell how good is it. I have to say that it is an awesome idea that you can use `sops` to encode the variables value. I'm stating to look into it but I didn't implement yet.
+- Env Variables. This is a lovely alternative to get everything working without having passwords in plain text in a file. An alternative to this is `helm-secrets`, but I didn't use it, so I cannot tell you how good it is. I have to say that it is an awesome idea that you can use `sops` to encode the variables value. I'm starting to look into it, but I haven't implemented it yet.
   
 ## How to set up Helmfile?
 
-Firstly, we need to set up a folder schema. You can have it in a folder with another stuff, but I prefer to have it in the root of the repo. it's going to be better if I show you the schema (I'll create a repo with all this soon in github)
+Firstly, we need to set up a folder schema. You can have it in a folder with other stuff, but I prefer to have it in the root of the repo. It's going to be better if I show you the schema.
 
 ```shell
 .
@@ -68,7 +68,7 @@ releases:
 
 ```
 
-As you can see above we have two readFile commands, and a release key with no releases. Let's go to follow line by line the file. The first line is going to the template that I've created with some patters that it's going to be equals for all the releases, and I don't want to write the same line 10 time... After that we have the readfile for the repositories. Yep we have all the repositories from all the file in there... yeah it sounds crazy, but it gives you a bit more of speed. 
+As you can see above, we have two readFile commands and a release key with no releases. Let's go to follow the file line by line. The first line is going to be the template that I've created with some patterns that will be the same for all the releases, and I don't want to write the same line ten times... After that, we have the readfile for the repositories. Yep, we have all the repositories from all the files in there... yeah, it sounds crazy, but it gives you a bit more speed. 
 
 
 Now let's see the template file
@@ -87,9 +87,9 @@ templates:
 ```
 
 
-As you can see, we have a bit more than a simple template here. We have the bases in here too. I have two bases. the first base is the helmfile default config you can see all thee options in their [readme](https://github.com/roboll/helmfile/blob/master/README.md#configuration). The second base are the environments where I declare values for the environments. These variables are going to allow me to declare which releases I want to release into the cluster. I have t say that I would probably move them to the main hemlfile or change the name of the file in some point. I like thee bases in the file at the moment becase it kind of feel like the template is part of the base of helmfile.
+As you can see, we have a bit more than a simple template here. We have the bases in here too. I have two bases. The first base is the default config, you can see all the options in their [readme](https://github.com/roboll/helmfile/blob/master/README.md#configuration). The second base is the environments where I declare values for them. These variables are going to allow me to declare which releases I want to release into the cluster. I have to say that I would probably move them to the main hemlfile or change the name of the file at some point. I like the bases in the file at the moment because it kind of feels like the template is part of the base of helmfile.
 
-It's time to see how I do release everything... In the next file you'll see an example of my grafana release. In the first line we'll have the template that we are implementing after that we would have the name, chart, namespace and version as we have on any kind of release in helm. After all these keys we have the one that allow me to tell if I want it to be installed or not. After that one I have the dependencies that it means that helmfile it's not going to  release that release until the other release are been released.
+It's time to see how I release everything... In the next file, you'll see an example of my grafana release. In the first line, we'll have the template that we are implementing. After that, we would have the name, chart, namespace and version as we have on any kind of release in Helm. After all these keys, we have the one that allows me to tell it if I want it to be installed or not. After that one, I have the dependencies of that chart. That means that helmfile is not going to release it until the others have been released.
 
 ```yaml
 - <<: *defaultTmpl
@@ -113,7 +113,7 @@ This is the simplest thing that you're going to see in this post... you need to 
 helmfile -e minikube apply 
 ```
 
-Before you run that command you are going to need to run a bash script. This bash script is going to templating the small helmfile releases to the main helmfile. 
+Before you run that command, you are going to need to run a bash script. This bash script is going to template the small helmfile releases to the main helmfile. 
 
 ```shell
 #!/bin/bash
@@ -126,7 +126,7 @@ for release in `find releases/ -name "*.yaml"`; do
 done
 ```
 
-After run this script your helmfile.yaml should look something like this:
+After running this script, your helmfile.yaml should look something like this:
 
 
 ```yaml
@@ -149,4 +149,4 @@ releases:
     - operators/istio-operator
 ```
 
-I have to say that this is not the perfect way to use helmfile but this is how I use it and it works for me. You can see all the files in this [repo](https://github.com/devbasis/helmfile-schema). Thanks for reading me,everyone! I hope you like this post, and I see you in the next one.
+I have to say that this is not the perfect way to use helmfile, but this is how I use it, and it works for me. You can see all the files in this [repo](https://github.com/devbasis/helmfile-schema). Thanks for reading me, everyone! I hope you like this post, and I'll see you in the next one.
