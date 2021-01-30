@@ -10,7 +10,7 @@ publishDir="docs"
 
 paginate = 4
 pluralizeListTitles     = false
-disableLanguages        = [ "FR" , "PL", "PT", "DE", "ZH-CN", "ZH-TW", "JA", "NL", "ES"]
+disableLanguages        = [ "FR" , "PL", "PT", "DE", "ZH-CN", "ZH-TW", "JA", "NL"]
 
 
 [markup.goldmark.renderer]
@@ -24,7 +24,7 @@ enableCDN             = false
 cssFiles              = ["default"]
 jsFiles               = ["default"]
 highlightjs           = true
-highlightjsTheme      = ""
+highlightjsTheme      = "paraiso-dark"
 highlightjsLang       = []
 viewMorePostsLink     = "/blog/"
 readingTime           = true
@@ -54,7 +54,7 @@ header                = "DevBasis"
 paragraph             = "Wellcome! This is a multi-lengual notebook. You'll read some geeky things here. I hope you enjoy it."
 rssIntro              = true
 socialIntro           = true
-hideWhenSingleColumn  = false
+hideWhenSingleColumn  = true
 alwaysOnHomepage      = false
 
 [params.intro.pic]
@@ -133,7 +133,7 @@ weight              = 1
 LanguageCode        = "es"
 LanguageName        = "Castellano"
 title               = "DevBasis"
-description         = "Un thème par HTML5 UP, porté par Julio Pescador. Simplifié et amélioré par Patrick Collins. Multilingue par StatnMap. Propulsé par Hugo."
+description         = "La traduccion del blog en castellano. Pero solo estoy traduciendo los nuevos posts."
 weight              = 2
 
 [[Languages.es.menu.main]]
