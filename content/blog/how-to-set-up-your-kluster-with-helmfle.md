@@ -1,10 +1,10 @@
 +++
 title= "How to set up your kluster with helmfile"
-date= "2021-01-24"
+date= "2021-01-31"
 comments = true
-categories = ["Helm", "kubernetes", "How to"]
-description = ""
-tags= []
+categories = ["Helm", "kubernetes", "How to", "cluster"]
+description = "We'll config helmfile. This is not the perfect solution this my way and it work for me."
+tags= ["cluster","Kluster", "helm", "helmcharts", "kubernetes", "helmfile" ]
 author = "Jorge Andreu Calatayud"
 +++
 
@@ -103,7 +103,50 @@ It's time to see how I do release everything... In the next file you'll see an e
     - observability/prometheus
     - operators/jaeger-operator
     - operators/istio-operator
-  values:
-    - values.yaml.gotmpl.gotmpl
 ```
 
+## How to use it
+
+This is the simplest thing that you're going to see in this post... you need to go to your main helmfile and run the following command:
+
+```shell
+helmfile -e minikube apply 
+```
+
+Before you run that command you are going to need to run a bash script. This bash script is going to templating the small helmfile releases to the main helmfile. 
+
+```shell
+#!/bin/bash
+
+for release in `find releases/ -name "*.yaml"`; do
+    release_name=$(cat $release | grep "name: " | cut -d' ' -f2-)
+    echo "Templating  $release"
+    cat $release | sed 's/\(.*\)/  \1/' >> helmfile.yaml
+    echo >> helmfile.yaml
+done
+```
+
+After run this script your helmfile.yaml should look something like this:
+
+
+```yaml
+
+{{ readFile "base/templates/helmfile.yaml" }}
+
+{{ readFile "base/repositories/helmfile.yaml" }}
+
+releases:
+  - <<: *defaultTmpl
+  name:  "grafana"
+  chart: "grafana/grafana"
+  namespace: "monitoring"
+  version: "3.2.5"
+  installed: {{ .Values | getOrNil "grafana.installed" | default false }}
+  needs: 
+    - observability/fluentd
+    - observability/prometheus
+    - operators/jaeger-operator
+    - operators/istio-operator
+```
+
+I have to say that this is not the perfect way to use helmfile but this is how I use it and it works for me. You can see all the files in this [repo](https://github.com/devbasis/helmfile-schema). Thanks for reading me,everyone! I hope you like this post, and I see you in the next one.

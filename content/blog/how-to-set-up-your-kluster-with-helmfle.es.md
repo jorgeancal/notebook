@@ -1,11 +1,11 @@
 +++
 title= "Configurar tu kluster con Helmfile"
-date= "2021-01-24"
+date= "2021-01-31"
 comments = true
 categories = ["Helm", "kubernetes", "How to", "helmfile"]
 description = "Echamos un vistazo atrás de cómo se ha portado helmfile después de 6 meses usando helmfile en el trabajo y mostramos a cómo configurarlo."
 author = "Jorge Andreu Calatayud"
-tags= ["helm", "helmcharts", "kubernetes", "helmfile" ]
+tags= ["helm", "helmcharts", "kubernetes", "helmfile", "cluster", "Kluster"]
 +++
 
 Helmfile es una herramienta que te permite sacar más partido a Helm. Ya que si usas helmfile puedes implementar cualquier cantidad de helmcharts. Básicamente con helmfile declaras las helmcharts y les das los valores que tú quieres a cada una de las helm chart, helmfile creara el correspondiente deploy mediante helm para mandar a tu cluster todo lo que has definido en helmfile, claro esta puedes decirle a helmfile impleméntame solo este grupo de helmchart y de este grupo quiero implementarlas en esta secuencia. 
@@ -130,7 +130,7 @@ grafana:
   installed: true
 ```
 
-A continuación vais a ver el `helmfile.yaml` que tengo para grafana. Es de lo mas sencillo ya que llamo a la template en el principio del release y luego agrego los datos para el release, además como veréis tenemos la key `installed` que de esta manera le digo si lo quiero instalar o no y también tengo otra key para decirle que no lo quiero implementar hasta que la lista de charts esté implementada
+A continuación vais a ver el `helmfile.yaml` que tengo para grafana. Es de lo más sencillo, ya que llamo a la template en el principio del release y luego agrego los datos para el release, además como veréis tenemos la key `installed` que de esta manera le digo si lo quiero instalar o no y también tengo otra key para decirle que no lo quiero implementar hasta que la lista de charts esté implementada
 
 ```yaml
 - <<: *defaultTmpl
@@ -157,13 +157,15 @@ Helmfile es muy sencillo a la hora de user vamos alli a donde tengáis un helmfi
 ```shell
 helmfile -e minikube apply 
 ```
-Teneis más comandos para el uso de helmfile. Yo suelo usar bastante el `lint` y el `diff`.
+Tenéis más comandos para el uso de helmfile. Yo suelo usar bastante `tempalte` y `diff`.
 
 Tenéis que poner siempre en entorno al que queréis implementar las charts por eso siempre que ejecutéis el comando tenéis que poner `-e` seguido del entorno al que vais a mandarlo, eso si, lo tenéis que tener puesto en la lista que tengáis en el fichero de entornos.
 
 Para terminar voy a mostraros el script que uso para buscar y agregar los ficheros al fichero principal
 
 ```shell
+#!/bin/bash
+
 for release in `find releases/ -name "*.yaml"`; do
     release_name=$(cat $release | grep "name: " | cut -d' ' -f2-)
     echo "Templating $release to helmfile.yaml"
@@ -172,6 +174,6 @@ for release in `find releases/ -name "*.yaml"`; do
 done
 ```
 
-Y esto ha sido todo senores, espero que os haya gustado y nos leemos en el próximo.
+Si quereis ver todas los ficheros juntos y como esto funciona todo junto os dejo todo en este [repo](https://github.com/devbasis/helmfile-schema). Y esto ha sido todo senores, espero que os haya gustado y nos leemos en el próximo.
 
 
