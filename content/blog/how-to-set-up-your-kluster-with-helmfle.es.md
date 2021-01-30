@@ -100,7 +100,7 @@ templates:
       - releases/{{ .Release.Name }}/values.yaml.gotmpl
 ```
 
-Como podéis ver lleva sorpresa no solo tenemos templates tenemos la section base ahi. La verdad es que esto si queremos podríamos agregar otro fichero y poner otro `readFile` esto ya fue a mi gusto, ya que cuando estaba haciendo la template quería agregar la base, por lo que pense que deberían ir juntos.
+Como podéis ver lleva sorpresa no solo tenemos templates tenemos la section base ahi. La verdad es que esto si queremos podríamos agregar otro fichero y poner otro `readFile` esto ya fue a mi gusto, ya que cuando estaba haciendo la template quería agregar la base, por lo que pensé que deberían ir juntos.
 
 Ahora pasamos a la parte de los defaults
 ```yaml
@@ -174,6 +174,6 @@ for release in `find releases/ -name "*.yaml"`; do
 done
 ```
 
-Si quereis ver todas los ficheros juntos y como esto funciona todo junto os dejo todo en este [repo](https://github.com/devbasis/helmfile-schema). Y esto ha sido todo senores, espero que os haya gustado y nos leemos en el próximo.
+Si queréis ver todas los ficheros juntos y como esto funciona todo junto os dejo todo en este [repo](https://github.com/devbasis/helmfile-schema). Y esto ha sido todo senores, espero que os haya gustado y nos leemos en el próximo.
 
 
