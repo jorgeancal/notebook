@@ -168,7 +168,7 @@ Para terminar voy a mostraros el script que uso para buscar y agregar los ficher
 
 for release in `find releases/ -name "*.yaml"`; do
     release_name=$(cat $release | grep "name: " | cut -d' ' -f2-)
-    echo "Templating $release to helmfile.yaml"
+    echo "Templating  $release"
     cat $release | sed 's/\(.*\)/  \1/' >> helmfile.yaml
     echo >> helmfile.yaml
 done

@@ -18,7 +18,7 @@
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="theme-color" content="#ffffff">
 
-<meta name="generator" content="Hugo 0.80.0" /><meta property="og:site_name" content="DevBasis">
+<meta name="generator" content="Hugo 0.75.1" /><meta property="og:site_name" content="DevBasis">
   <meta property="og:title" content="Configurar tu kluster con Helmfile">
   <meta property="og:description" content="Echamos un vistazo atrás de cómo se ha portado helmfile después de 6 meses usando helmfile en el trabajo y mostramos a cómo configurarlo.">
   <meta property="description" content="Echamos un vistazo atrás de cómo se ha portado helmfile después de 6 meses usando helmfile en el trabajo y mostramos a cómo configurarlo.">
@@ -353,7 +353,7 @@
 </span><span style="color:#75715e"></span>
 <span style="color:#66d9ef">for</span> release in <span style="color:#e6db74">`</span>find releases/ -name <span style="color:#e6db74">&#34;*.yaml&#34;</span><span style="color:#e6db74">`</span>; <span style="color:#66d9ef">do</span>
     release_name<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>cat $release | grep <span style="color:#e6db74">&#34;name: &#34;</span> | cut -d<span style="color:#e6db74">&#39; &#39;</span> -f2-<span style="color:#66d9ef">)</span>
-    echo <span style="color:#e6db74">&#34;Templating </span>$release<span style="color:#e6db74"> to helmfile.yaml&#34;</span>
+    echo <span style="color:#e6db74">&#34;Templating  </span>$release<span style="color:#e6db74">&#34;</span>
     cat $release | sed <span style="color:#e6db74">&#39;s/\(.*\)/  \1/&#39;</span> &gt;&gt; helmfile.yaml
     echo &gt;&gt; helmfile.yaml
 <span style="color:#66d9ef">done</span>
@@ -547,7 +547,7 @@
   <p class="copyright">
     © 2021 DevBasis
       <br>
-    Tema: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>Adaptado de <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP</a> | Impulsado por <a href='https://gohugo.io/' title='0.80.0' target='_blank' rel='noopener'>Hugo</a>
+    Tema: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>Adaptado de <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP</a> | Impulsado por <a href='https://gohugo.io/' title='0.75.1' target='_blank' rel='noopener'>Hugo</a>
   </p>
 </footer>
 <a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>
