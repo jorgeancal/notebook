@@ -130,7 +130,7 @@ grafana:
   installed: true
 ```
 
-A continuación vais a ver el `helmfile.yaml` que tengo para grafana. Es de lo más sencillo, ya que llamo a la template en el principio del release y luego agrego los datos para el release, además como veréis tenemos la key `installed` que de esta manera le digo si lo quiero instalar o no y también tengo otra key para decirle que no lo quiero implementar hasta que la lista de charts esté implementada
+A continuación vais a ver el `helmfile.yaml` que tengo para grafana. Es de lo más sencillo, ya que llamo a la template en el principio del release y luego agrego los datos para el release, además como veréis tenemos el campo `installed` que de esta manera le digo si lo quiero instalar o no y también tengo otro campo para decirle que no lo quiero implementar hasta que la lista de charts esté implementada
 
 ```yaml
 - <<: *defaultTmpl
@@ -143,9 +143,6 @@ A continuación vais a ver el `helmfile.yaml` que tengo para grafana. Es de lo m
     - observability/fluentd
     - observability/prometheus
     - operators/jaeger-operator
-    - operators/istio-operator
-  values:
-    - values.yaml.gotmpl.gotmpl
 ```
 
 Y con esto hemos terminado la configuración de helmfile.
