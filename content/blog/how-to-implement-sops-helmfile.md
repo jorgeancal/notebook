@@ -1,0 +1,73 @@
++++
+title= "How to config SOPS in Helm"
+date= "2021-02-30"
+comments = true
+categories = ["Helm", "kubernetes", "How to", "helmfile"]
+description = "I will explain how to use SOPS in helm deploying it with helmfile"
+author = "Jorge Andreu Calatayud"
+tags= ["helm", "helmcharts", "sops"","kubernetes", "helmfile", "cluster", "Kluster", "helm-secrets", "secrets"]
++++
+
+In our previous post about helmfile, we speak briefly about sops but we didn't use it or speak more about it... Now it's the time for it. With SOPS we can have a file in our repo that is encrypted by sops and have there the variables to use in our chart through Helmfile. 
+
+
+## What is Sops?
+If we take a look to the [Project](https://github.com/mozilla/sops), we'll see that Mozilla defines SOPS as "an editor of encrypted files that supports YAML, JSON, ENV, INI and BINARY formats and encrypts with AWS KMS, GCP KMS, Azure Key Vault and PGP". 
+
+## How to implement it?
+
+As everyone knows, this life is based in plugins so... We need to install a plugin in helm to be able to use sops. I did some reach that was... keep reading the helmfile Readme.md. In that readme you can find a link to the plugin `helm-sercts` that lives in [zendesk/helm-secrets](https://github.com/zendesk/helm-secrets) but this is obsolete but thanks to the comminity we have a fork of it that is not obsolete and this is the [repo](https://github.com/jkroepke/helm-secrets).
+Firstly, we have to install the plugin dependencies, the helm plugin and that's it. If I remember correctly if you have Ubuntu or Debian, when you install the plugin the dependecy will be install at the same time but.. As I'm using ArchLinux I need to install it manually. I have to say that they recomand the manual installation. I drop a link to the [releases](https://github.com/mozilla/sops/releases).
+
+Once you have installed the package you need to install the helm plugin, they recommend that you instilled with the version flag `--version`. You would need to run the following command being `${HELM_SECRERS_VERSION}` the version that you want to install.
+```bash
+helm plugin install https://github.com/jkroepke/helm-secrets --version ${HELM_SECRERS_VERSION}
+```
+
+After you installed the plugin you need to go to your helmfile root folder and add a hidden file called `.sops.yaml`. This file should look like the following one:
+
+```yaml
+creation_rules:
+  # Encrypt with AWS KMS
+  - kms: 'arn:aws:kms:eu-west-1:222222222222:key/111b1c11-1c11-1fd1-aa11-a1c1a1sa1dsl1'
+
+  # Encrypt using GCP KMS
+  - gcp_kms: projects/mygcproject/locations/global/keyRings/mykeyring/cryptoKeys/thekey
+
+  # As failover encrypt with PGP
+  - pgp: '000111122223333444AAAADDDDFFFFGGGG000999'
+
+  # For more help look at https://github.com/mozilla/sops
+```
+
+BTW Multiple KMS and PGP are allowed.
+
+
+Once you have this file created you need too go to releases and add the field `secrets` that allows to helmfile to get the file. Your release should look like something like this: 
+
+```yaml
+- <<: *defaultTmpl
+  name:  "grafana"
+  chart: "grafana/grafana"
+  namespace: "monitoring"
+  version: "3.2.5"
+  installed: {{ .Values | getOrNil "grafana.installed" | default false }}
+  needs: 
+    - observability/fluentd
+    - observability/prometheus
+    - operators/jaeger-operator
+  secrets:
+    - releases/grafana/secrets.yaml
+```
+
+## How to edit the secrets.yaml with SOPS?
+There are a few ways to edit the files, but I would recommend you that you create an ENV var and go the directory where is the file and run `sops secrets.yaml` .
+
+For example, I'm using SOPS with AWS KMS, and it looks like the following:
+
+```
+export SOPS_KMS_ARN=arn:aws:kms:eu-west-1:222222222222:key/111b1c11-1c11-1fd1-aa11-a1c1a1sa1dsl1
+``` 
+
+
+ That was everything! I hope you like this post, and I'll see you in the next one.
