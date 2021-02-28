@@ -140,6 +140,16 @@
   <url>
     <loc>https://devbasis.me/es/categories/helmfile/</loc>
     <lastmod>2021-01-30T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devbasis.me/categories/helmfile/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://devbasis.me/es/categories/helmfile/"
+                />
   </url>
   
   <url>
@@ -228,6 +238,62 @@
                 rel="alternate"
                 hreflang="es"
                 href="https://devbasis.me/es/about/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://devbasis.me/es/blog/how-to-implement-sops-helmfile/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devbasis.me/blog/how-to-implement-sops-helmfile/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://devbasis.me/es/blog/how-to-implement-sops-helmfile/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://devbasis.me/es/tags/helm-secrets/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devbasis.me/tags/helm-secrets/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://devbasis.me/es/tags/helm-secrets/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://devbasis.me/es/tags/secrets/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devbasis.me/tags/secrets/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://devbasis.me/es/tags/secrets/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://devbasis.me/es/tags/sops/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devbasis.me/tags/sops/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://devbasis.me/es/tags/sops/"
                 />
   </url>
   

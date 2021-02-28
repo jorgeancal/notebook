@@ -68,7 +68,7 @@ releases:
 
 ```
 
-As you can see above, we have two readFile commands and a release key with no releases. Let's go to follow the file line by line. The first line is going to be the template that I've created with some patterns that will be the same for all the releases, and I don't want to write the same line ten times... After that, we have the readfile for the repositories. Yep, we have all the repositories from all the files in there... yeah, it sounds crazy, but it gives you a bit more speed. 
+As you can see above, we have two readFile commands and a release field with no releases. Let's go to follow the file line by line. The first line is going to be the template that I've created with some patterns that will be the same for all the releases, and I don't want to write the same line ten times... After that, we have the readfile for the repositories. Yep, we have all the repositories from all the files in there... yeah, it sounds crazy, but it gives you a bit more speed. 
 
 
 Now let's see the template file
@@ -89,7 +89,7 @@ templates:
 
 As you can see, we have a bit more than a simple template here. We have the bases in here too. I have two bases. The first base is the default config, you can see all the options in their [readme](https://github.com/roboll/helmfile/blob/master/README.md#configuration). The second base is the environments where I declare values for them. These variables are going to allow me to declare which releases I want to release into the cluster. I have to say that I would probably move them to the main hemlfile or change the name of the file at some point. I like the bases in the file at the moment because it kind of feels like the template is part of the base of helmfile.
 
-It's time to see how I release everything... In the next file, you'll see an example of my grafana release. In the first line, we'll have the template that we are implementing. After that, we would have the name, chart, namespace and version as we have on any kind of release in Helm. After all these keys, we have the one that allows me to tell it if I want it to be installed or not. After that one, I have the dependencies of that chart. That means that helmfile is not going to release it until the others have been released.
+It's time to see how I release everything... In the next file, you'll see an example of my grafana release. In the first line, we'll have the template that we are implementing. After that, we would have the name, chart, namespace and version as we have on any kind of release in Helm. After all these fields, we have the one that allows me to tell it if I want it to be installed or not. After that one, I have the dependencies of that chart. That means that helmfile is not going to release it until the others have been released.
 
 ```yaml
 - <<: *defaultTmpl
@@ -102,7 +102,6 @@ It's time to see how I release everything... In the next file, you'll see an exa
     - observability/fluentd
     - observability/prometheus
     - operators/jaeger-operator
-    - operators/istio-operator
 ```
 
 ## How to use it

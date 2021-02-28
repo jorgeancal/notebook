@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>helm-secrets on DevBasis</title>
+    <link>https://devbasis.me/es/tags/helm-secrets/</link>
+    <description>Recent content in helm-secrets on DevBasis</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es</language><atom:link href="https://devbasis.me/es/tags/helm-secrets/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Como configurar SOPS en Helmfile</title>
+      <link>https://devbasis.me/es/blog/how-to-implement-sops-helmfile/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://devbasis.me/es/blog/how-to-implement-sops-helmfile/</guid>
+      <description>Como veíamos por encima en nuestro anterior post sobre helmfile podemos tener un fichero en nuestro repo que este encriptado mediante sops y tener ahi las variables para usar en nuestra chart mediante Helmfile.
+¿Qué es Sops? Si nos vamos a si proyecto veremos que Mozilla define SOPS como un editor de archivos cifrados que admite los formatos YAML, JSON, ENV, INI y BINARY. Además de soportar el cifrado de estos mediante los cifrados AWS KMS, GCP KMS, Azure Key Vault y PGP.</description>
+    </item>
+    
+  </channel>
+</rss>
