@@ -441,4 +441,74 @@
                 />
   </url>
   
+  <url>
+    <loc>https://devbasis.me/tags/helm-secrets/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://devbasis.me/es/tags/helm-secrets/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devbasis.me/tags/helm-secrets/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://devbasis.me/categories/helmfile/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://devbasis.me/es/categories/helmfile/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devbasis.me/categories/helmfile/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://devbasis.me/blog/how-to-implement-sops-helmfile/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://devbasis.me/es/blog/how-to-implement-sops-helmfile/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devbasis.me/blog/how-to-implement-sops-helmfile/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://devbasis.me/tags/secrets/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://devbasis.me/es/tags/secrets/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devbasis.me/tags/secrets/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://devbasis.me/tags/sops/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://devbasis.me/es/tags/sops/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devbasis.me/tags/sops/"
+                />
+  </url>
+  
 </urlset>
