@@ -4,7 +4,7 @@
   
   <url>
     <loc>https://devbasis.me/blog/</loc>
-    <lastmod>2021-01-30T00:00:00+00:00</lastmod>
+    <lastmod>2021-02-28T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
@@ -19,7 +19,7 @@
   
   <url>
     <loc>https://devbasis.me/categories/</loc>
-    <lastmod>2021-01-30T00:00:00+00:00</lastmod>
+    <lastmod>2021-02-28T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
@@ -34,7 +34,7 @@
   
   <url>
     <loc>https://devbasis.me/tags/cluster/</loc>
-    <lastmod>2021-01-30T00:00:00+00:00</lastmod>
+    <lastmod>2021-02-28T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
@@ -48,13 +48,8 @@
   </url>
   
   <url>
-    <loc>https://devbasis.me/categories/cluster/</loc>
-    <lastmod>2021-01-30T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://devbasis.me/</loc>
-    <lastmod>2021-01-30T00:00:00+00:00</lastmod>
+    <lastmod>2021-02-28T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
@@ -69,7 +64,7 @@
   
   <url>
     <loc>https://devbasis.me/categories/helm/</loc>
-    <lastmod>2021-01-30T00:00:00+00:00</lastmod>
+    <lastmod>2021-02-28T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
@@ -84,7 +79,7 @@
   
   <url>
     <loc>https://devbasis.me/tags/helm/</loc>
-    <lastmod>2021-01-30T00:00:00+00:00</lastmod>
+    <lastmod>2021-02-28T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
@@ -98,8 +93,23 @@
   </url>
   
   <url>
+    <loc>https://devbasis.me/tags/helm-secrets/</loc>
+    <lastmod>2021-02-28T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://devbasis.me/es/tags/helm-secrets/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devbasis.me/tags/helm-secrets/"
+                />
+  </url>
+  
+  <url>
     <loc>https://devbasis.me/tags/helmcharts/</loc>
-    <lastmod>2021-01-30T00:00:00+00:00</lastmod>
+    <lastmod>2021-02-28T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
@@ -114,7 +124,7 @@
   
   <url>
     <loc>https://devbasis.me/tags/helmfile/</loc>
-    <lastmod>2021-01-30T00:00:00+00:00</lastmod>
+    <lastmod>2021-02-28T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
@@ -128,8 +138,23 @@
   </url>
   
   <url>
+    <loc>https://devbasis.me/categories/helmfile/</loc>
+    <lastmod>2021-02-28T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://devbasis.me/es/categories/helmfile/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devbasis.me/categories/helmfile/"
+                />
+  </url>
+  
+  <url>
     <loc>https://devbasis.me/categories/how-to/</loc>
-    <lastmod>2021-01-30T00:00:00+00:00</lastmod>
+    <lastmod>2021-02-28T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
@@ -143,23 +168,23 @@
   </url>
   
   <url>
-    <loc>https://devbasis.me/blog/how-to-set-up-your-kluster-with-helmfle/</loc>
-    <lastmod>2021-01-30T00:00:00+00:00</lastmod>
+    <loc>https://devbasis.me/blog/how-to-implement-sops-helmfile/</loc>
+    <lastmod>2021-02-28T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="https://devbasis.me/es/blog/how-to-set-up-your-kluster-with-helmfle/"
+                href="https://devbasis.me/es/blog/how-to-implement-sops-helmfile/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://devbasis.me/blog/how-to-set-up-your-kluster-with-helmfle/"
+                href="https://devbasis.me/blog/how-to-implement-sops-helmfile/"
                 />
   </url>
   
   <url>
     <loc>https://devbasis.me/tags/kluster/</loc>
-    <lastmod>2021-01-30T00:00:00+00:00</lastmod>
+    <lastmod>2021-02-28T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
@@ -174,7 +199,7 @@
   
   <url>
     <loc>https://devbasis.me/tags/kubernetes/</loc>
-    <lastmod>2021-01-30T00:00:00+00:00</lastmod>
+    <lastmod>2021-02-28T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
@@ -189,7 +214,7 @@
   
   <url>
     <loc>https://devbasis.me/categories/kubernetes/</loc>
-    <lastmod>2021-01-30T00:00:00+00:00</lastmod>
+    <lastmod>2021-02-28T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
@@ -203,8 +228,38 @@
   </url>
   
   <url>
+    <loc>https://devbasis.me/tags/secrets/</loc>
+    <lastmod>2021-02-28T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://devbasis.me/es/tags/secrets/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devbasis.me/tags/secrets/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://devbasis.me/tags/sops/</loc>
+    <lastmod>2021-02-28T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://devbasis.me/es/tags/sops/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devbasis.me/tags/sops/"
+                />
+  </url>
+  
+  <url>
     <loc>https://devbasis.me/tags/</loc>
-    <lastmod>2021-01-30T00:00:00+00:00</lastmod>
+    <lastmod>2021-02-28T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
@@ -214,6 +269,26 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://devbasis.me/tags/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://devbasis.me/categories/cluster/</loc>
+    <lastmod>2021-01-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://devbasis.me/blog/how-to-set-up-your-kluster-with-helmfle/</loc>
+    <lastmod>2021-01-30T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://devbasis.me/es/blog/how-to-set-up-your-kluster-with-helmfle/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://devbasis.me/blog/how-to-set-up-your-kluster-with-helmfle/"
                 />
   </url>
   
@@ -438,76 +513,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://devbasis.me/about/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://devbasis.me/tags/helm-secrets/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://devbasis.me/es/tags/helm-secrets/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://devbasis.me/tags/helm-secrets/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://devbasis.me/categories/helmfile/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://devbasis.me/es/categories/helmfile/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://devbasis.me/categories/helmfile/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://devbasis.me/blog/how-to-implement-sops-helmfile/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://devbasis.me/es/blog/how-to-implement-sops-helmfile/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://devbasis.me/blog/how-to-implement-sops-helmfile/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://devbasis.me/tags/secrets/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://devbasis.me/es/tags/secrets/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://devbasis.me/tags/secrets/"
-                />
-  </url>
-  
-  <url>
-    <loc>https://devbasis.me/tags/sops/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://devbasis.me/es/tags/sops/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://devbasis.me/tags/sops/"
                 />
   </url>
   

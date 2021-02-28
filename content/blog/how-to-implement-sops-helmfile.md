@@ -1,6 +1,6 @@
 +++
 title= "How to config SOPS in Helm"
-date= "2021-02-30"
+date= "2021-02-28"
 comments = true
 categories = ["Helm", "kubernetes", "How to", "helmfile"]
 description = "I will explain how to use SOPS in helm deploying it with helmfile"

@@ -1,6 +1,6 @@
 +++
 title= "Como configurar SOPS en Helmfile"
-date= "2021-02-30"
+date= "2021-02-28"
 comments = true
 categories = ["Helm", "kubernetes", "How to", "helmfile"]
 description = "Te explicare como implementar sops en Helmfile de una manera rapida y sencilla."
