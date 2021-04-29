@@ -5,7 +5,7 @@ title = "Jorge's notebook"
 theme = "hugo-future-imperfect-slim"
 preserveTaxonomyNames = true
 disqusShortname = "jorgesnotebook"
-googleAnalytics = "G-5X0MZZJXFN"
+googleAnalytics = "UA-108421112-2"
 publishDir="docs"
 
 paginate = 4
