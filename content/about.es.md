@@ -4,7 +4,7 @@ description: "Just something about the Website."
 ---
 Buenas,
 
-Soy Jorge Andreu Calatayud y esto es DevBasis.
+Soy Jorge Andreu Calatayud y esto es mi cuaderno.
 
 Este es mi nuevo proyecto.
 

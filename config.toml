@@ -1,11 +1,11 @@
-baseurl = "https://devbasis.me"
+baseurl = "https://jorgesnotebook.com"
 DefaultContentLanguage  = "en"
 languageCode = "en-GB"
-title = "DevBasis"
+title = "Jorge's notebook"
 theme = "hugo-future-imperfect-slim"
 preserveTaxonomyNames = true
-disqusShortname = "devbasis"
-googleAnalytics = "UA-187215959-1"
+disqusShortname = "jorgesnotebook"
+googleAnalytics = "G-5X0MZZJXFN"
 publishDir="docs"
 
 paginate = 4
@@ -34,7 +34,7 @@ socialShare           = ["twitter", "facebook", "linkedin", "email"]
 hideEmptyStats        = false
 
 [params.meta]
-description         = "Hi this is DevBasis "
+description         = "Welcome to my notebook"
 author              = "Jorge Andreu Calatayud"
 favicon             = true
 svg                 = true
@@ -43,14 +43,14 @@ msColor             = "#ffffff"
 iOSColor            = "#ffffff"
 
 [params.header]
-navbarTitle         = "DevBasis"
+navbarTitle         = "Jorge's Notebook"
 dynamicTitles       = true
 searchMenu          = true
 shareMenu           = true
 languageMenu        = true
 
 [params.intro]
-header                = "DevBasis"
+header                = "Jorge's Notebook"
 paragraph             = "Wellcome! This is a multi-lengual notebook. You'll read some geeky things here. I hope you enjoy it."
 rssIntro              = true
 socialIntro           = true
@@ -64,7 +64,7 @@ width               = ""
 alt                 = "DevBasis blog"
 
 [params.sidebar]
-about               = "In this blog I’ll post about my knowledges, and somethings that I’ll discover while I’m working. I won’t post all days because it’s a impossible. I’ll try to post one per week or at least one per month. If you like my posts stay tune becuase I’ll start a youtube channel guess how is gonig to be the name?…DevBasis!."
+about               = "In this Notebook I’ll post about my knowledges, and somethings that I’ll discover while I’m working. I won’t post all days because it’s a impossible. I’ll try to post one per week or at least one per month. If you like my posts stay tune becuase I’ll start a youtube channel guess how is gonig to be the name?…jorge's Notebook!."
 postAmount          = 3
 categories          = true
 categoriesByCount   = true
@@ -74,7 +74,7 @@ rssFooter           = true
 socialFooter        = true
 
 [params.staticman]
-enabled             = true
+enabled             = false
 api                 = ""  # No Trailing Slash
 gitProvider         = ""
 username            = ""
@@ -132,7 +132,7 @@ weight              = 1
 [Languages.es]
 LanguageCode        = "es"
 LanguageName        = "Castellano"
-title               = "DevBasis"
+title               = "Jorge's Notebook"
 description         = "La traduccion del blog en castellano. Pero solo estoy traduciendo los nuevos posts."
 weight              = 2
 
@@ -174,8 +174,8 @@ weight            = 5
 
 [social]
 # Coding Communities
-github                = "devbasis"
-gitlab                = ""
+github                = "jorgeancal"
+gitlab                = "jorgeancal"
 stackoverflow         = "" # User Number
 bitbucket             = ""
 jsfiddle              = ""
@@ -207,7 +207,7 @@ wechat              = ""
 qq                  = "" # User ID Number
 instagram             = ""
 tumblr                = ""
-twitter               = "@devbasis"
+twitter               = "@jorgeancal"
 strava                = ""
 skype                 = ""
 snapchat              = ""
@@ -220,4 +220,4 @@ researchgate          = ""
 keybase               = ""
 mastodon              = ""
 # Email
-email                 = "tvdevbasis@gmail.com"
+email                 = "info@jorgeancal.com"

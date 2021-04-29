@@ -1,2 +1,2 @@
-# DevBasis.me
-Hugo repository for my new project DevBasis 
+# Jorge's Notebook
+Hugo repository for my new project jorge's notebook 
