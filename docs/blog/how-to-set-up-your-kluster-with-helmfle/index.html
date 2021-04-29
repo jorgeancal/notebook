@@ -1,0 +1,606 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+<title>How to set up your kluster with helmfile - Jorge&#39;s notebook</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png?v=1">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png?v=1">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png?v=1">
+  <link rel="manifest" href="/favicon/site.webmanifest?v=1">
+  
+    <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg?v=1" color="#ffffff">
+    <link rel="shortcut icon" href="/favicon/favicon.ico?v=1">
+    <meta name="msapplication-config" content="/favicon/browserconfig.xml?v=1">
+  
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="theme-color" content="#ffffff">
+
+<meta name="generator" content="Hugo 0.82.0" /><meta property="og:site_name" content="Jorge&#39;s notebook">
+  <meta property="og:title" content="How to set up your kluster with helmfile">
+  <meta property="og:description" content="We&#39;ll config helmfile. This is not the perfect solution, but this is my way, and it works for me.">
+  <meta property="description" content="We&#39;ll config helmfile. This is not the perfect solution, but this is my way, and it works for me.">
+  <meta property="og:url" content="https://jorgesnotebook.com/blog/how-to-set-up-your-kluster-with-helmfle/">
+  <meta property="og:type" content="article">
+  
+    <meta property="og:image" content="https://jorgesnotebook.com/img/notebook.png">
+  
+  
+            <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/paraiso-dark.min.css">
+          <link rel="stylesheet" href="/css/bundle.min.0fe7d3e300d1134847c0dcd26069f3c7a41912fa53e69bf61e84b0ebbce3db91.css" integrity="sha256-D&#43;fT4wDRE0hHwNzSYGnzx6QZEvpT5pv2HoSw67zj25E="><link rel="stylesheet" href="/css/add-on.css">
+</head>
+
+  <body>
+    
+
+<header id="site-header">
+  <nav id="site-nav">
+    <h1 class="nav-title">
+      <a href="/" class="nav">
+        
+          Blog
+        
+      </a>
+    </h1>
+    <menu id="site-nav-menu" class="flyout-menu menu">
+      
+        
+          
+          <a href="/" class="nav link"><i class='fa fa-home'></i> Home</a>
+        
+      
+        
+          
+          <a href="/about/" class="nav link"><i class='far fa-id-card'></i> About</a>
+        
+      
+        
+          
+          <a href="/blog/" class="nav link"><i class='far fa-newspaper'></i> Blog</a>
+        
+      
+        
+          
+          <a href="/categories/" class="nav link"><i class='fas fa-sitemap'></i> Categories</a>
+        
+      
+      <a href="#share-menu" class="nav link share-toggle"><i class="fas fa-share-alt">&nbsp;</i>Share</a>
+      <a href="#search-input" class="nav link search-toggle"><i class="fas fa-search">&nbsp;</i>Search</a>
+    </menu>
+    <a href="#search-input" class="nav search-toggle"><i class="fas fa-search fa-2x">&nbsp;</i></a>
+    <a href="#share-menu" class="nav share-toggle"><i class="fas fa-share-alt fa-2x">&nbsp;</i></a>
+    <a href="#lang-menu" class="nav lang-toggle" lang="en">en</a>
+    <a href="#site-nav" class="nav nav-toggle"><i class="fas fa-bars fa-2x"></i></a>
+  </nav>
+  <menu id="search" class="menu"><input id="search-input" class="search-input menu"></input><div id="search-results" class="search-results menu"></div></menu>
+  <menu id="lang-menu" class="flyout-menu menu">
+  <a href="#" lang="en" class="nav link active">English (en)</a>
+  
+      <a href="https://jorgesnotebook.com/es/blog/how-to-set-up-your-kluster-with-helmfle/" lang="es" class="nav link">Castellano (es)</a>
+    
+  
+</menu>
+
+  
+    <menu id="share-menu" class="flyout-menu menu">
+      <h1>Share Post</h1>
+      
+
+
+
+
+  
+    
+    <a href="//twitter.com/share?text=How%20to%20set%20up%20your%20kluster%20with%20helmfile&amp;url=https%3a%2f%2fjorgesnotebook.com%2fblog%2fhow-to-set-up-your-kluster-with-helmfle%2f" target="_blank" rel="noopener" class="nav share-btn twitter">
+        <p>Twitter</p>
+      </a>
+  
+
+  
+      <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fjorgesnotebook.com%2fblog%2fhow-to-set-up-your-kluster-with-helmfle%2f" target="_blank" rel="noopener" class="nav share-btn facebook">
+        <p>Facebook</p>
+        </a>
+  
+
+  
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fjorgesnotebook.com%2fblog%2fhow-to-set-up-your-kluster-with-helmfle%2f&amp;title=How%20to%20set%20up%20your%20kluster%20with%20helmfile" target="_blank" rel="noopener" class="nav share-btn linkedin">
+            <p>LinkedIn</p>
+          </a>
+  
+
+  
+        <a href="mailto:?subject=Check%20out%20this%20post%20by Jorge%20Andreu%20Calatayud&amp;body=https%3a%2f%2fjorgesnotebook.com%2fblog%2fhow-to-set-up-your-kluster-with-helmfle%2f" target="_blank" class="nav share-btn email" data-proofer-ignore>
+          <p>Email</p>
+        </a>
+  
+
+
+    </menu>
+  
+</header>
+
+    <div id="wrapper">
+      <section id="site-intro" class="hidden-single-column">
+  <a href="/"><img src="https://jorgesnotebook.com/img/notebook.png" class="circle" width="100" alt="Jorge&#39;s Notebook" /></a>
+  <header>
+    <h1>Jorge's Notebook</h1>
+  </header>
+  <main>
+    <p>Wellcome! This is a multi-lengual notebook. You'll read some geeky things here. I hope you enjoy it.</p>
+  </main>
+  
+    <footer>
+      <ul class="socnet-icons">
+        
+
+        <li><a href="//github.com/jorgeancal" target="_blank" rel="noopener" title="GitHub" class="fab fa-github"></a></li>
+<li><a href="//gitlab.com/jorgeancal" target="_blank" rel="noopener" title="GitLab" class="fab fa-gitlab"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//twitter.com/@jorgeancal" target="_blank" rel="noopener" title="Twitter" class="fab fa-twitter"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="mailto:info@jorgeancal.com" target="_blank" title="Email" class="far fa-envelope"></a></li>
+
+      </ul>
+    </footer>
+  
+</section>
+
+      <main id="site-main">
+        
+  <article class="post">
+    <header>
+  <div class="title">
+    
+      <h2><a href="/blog/how-to-set-up-your-kluster-with-helmfle/">How to set up your kluster with helmfile</a></h2>
+    
+    
+      <p>We&#39;ll config helmfile. This is not the perfect solution, but this is my way, and it works for me.</p>
+    
+  </div>
+  <div class="meta">
+    <time datetime="2021-01-30 00:00:00 &#43;0000 UTC">January 30, 2021</time>
+    <p>Jorge Andreu Calatayud</p>
+    <p>5-Minute Read</p>
+  </div>
+</header>
+
+    <div id="socnet-share">
+      
+
+
+
+
+  
+    
+    <a href="//twitter.com/share?text=How%20to%20set%20up%20your%20kluster%20with%20helmfile&amp;url=https%3a%2f%2fjorgesnotebook.com%2fblog%2fhow-to-set-up-your-kluster-with-helmfle%2f" target="_blank" rel="noopener" class="nav share-btn twitter">
+        <p>Twitter</p>
+      </a>
+  
+
+  
+      <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fjorgesnotebook.com%2fblog%2fhow-to-set-up-your-kluster-with-helmfle%2f" target="_blank" rel="noopener" class="nav share-btn facebook">
+        <p>Facebook</p>
+        </a>
+  
+
+  
+        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fjorgesnotebook.com%2fblog%2fhow-to-set-up-your-kluster-with-helmfle%2f&amp;title=How%20to%20set%20up%20your%20kluster%20with%20helmfile" target="_blank" rel="noopener" class="nav share-btn linkedin">
+            <p>LinkedIn</p>
+          </a>
+  
+
+  
+        <a href="mailto:?subject=Check%20out%20this%20post%20by Jorge%20Andreu%20Calatayud&amp;body=https%3a%2f%2fjorgesnotebook.com%2fblog%2fhow-to-set-up-your-kluster-with-helmfle%2f" target="_blank" class="nav share-btn email" data-proofer-ignore>
+          <p>Email</p>
+        </a>
+  
+
+
+    </div>
+    <div class="content">
+      
+      <p>Helmfile is a tool that allows you to get more out of Helm. When you use helmfile, you can implement as many charts as you want. Helmfile allows you to template the charts with the values that you want, and it will ship it to your cluster. Helmfile brings modular deployments too, by this I mean that you can have a huge list of deployments, and you can say deploy only this group of helmchart, you can also deploy them in sequence.</p>
+<h2 id="what-do-i-like-about-helmfile">What do I like about helmfile?</h2>
+<p>After six months using helmfile, this is what I liked the most about helmfile:</p>
+<ul>
+<li>
+<p>It&rsquo;s stupidly faster because you have all the releases in the same file, and you ship them to the cluster in the order that you want.</p>
+</li>
+<li>
+<p>Centralized Values. I love the possibility of having a main config per environment and then be able to apply those different values to the charts.</p>
+</li>
+<li>
+<p><code>diff</code>. This command in helmfile lets me compare with the current chart that I have in the cluster. I know that when you exec the diff you have thousands of lines, but sometimes it&rsquo;s useful because it shows what you changed, or if you just blew it up.</p>
+</li>
+<li>
+<p>Env Variables. This is a lovely alternative to get everything working without having passwords in plain text in a file. An alternative to this is <code>helm-secrets</code>, but I didn&rsquo;t use it, so I cannot tell you how good it is. I have to say that it is an awesome idea that you can use <code>sops</code> to encode the variables value. I&rsquo;m starting to look into it, but I haven&rsquo;t implemented it yet.</p>
+</li>
+</ul>
+<h2 id="how-to-set-up-helmfile">How to set up Helmfile?</h2>
+<p>Firstly, we need to set up a folder schema. You can have it in a folder with other stuff, but I prefer to have it in the root of the repo. It&rsquo;s going to be better if I show you the schema.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">.
+├── addReleases.sh
+├── base
+│   ├── defaults
+│   │   └── helmfile.yaml
+|   ├── environments
+│   │   └── helmfile.yaml
+│   ├── repositories
+│   │   └── helmfile.yaml
+│   ├── templates
+│   │   └── template.yaml
+│   └── values
+│       ├── minikube
+│       │   └── values.yaml.gotmpl
+│       └── production
+│           └── values.yaml.gotmpl
+├── helmfile.yaml
+├── README.md
+└── releases
+    ├── prometheus
+    │   ├── helmfile.yaml
+    │   ├── README.md
+    │   └── values.yaml.gotmpl
+    └── grafana
+        ├── helmfile.yaml
+        ├── README.md
+        └── values.yaml.gotmpl
+
+</code></pre></div><p>Now I&rsquo;m going to show you what I have in the main helmfile file.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">{{ <span style="color:#ae81ff">readFile &#34;base/templates/helmfile.yaml&#34; }}</span>
+
+{{ <span style="color:#ae81ff">readFile &#34;base/repositories/helmfile.yaml&#34; }}</span>
+
+<span style="color:#f92672">releases</span>:
+
+</code></pre></div><p>As you can see above, we have two readFile commands and a release field with no releases. Let&rsquo;s go to follow the file line by line. The first line is going to be the template that I&rsquo;ve created with some patterns that will be the same for all the releases, and I don&rsquo;t want to write the same line ten times&hellip; After that, we have the readfile for the repositories. Yep, we have all the repositories from all the files in there&hellip; yeah, it sounds crazy, but it gives you a bit more speed.</p>
+<p>Now let&rsquo;s see the template file</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">bases</span>:
+  - <span style="color:#ae81ff">base/defaults/helmfile.yaml</span>
+  - <span style="color:#ae81ff">base/environments/helmfile.yaml</span>
+  
+<span style="color:#f92672">templates</span>:
+  <span style="color:#f92672">defaultTmpl</span>: <span style="color:#75715e">&amp;defaultTmpl</span>
+    <span style="color:#f92672">missingFileHandler</span>: <span style="color:#ae81ff">Warn</span>
+    <span style="color:#f92672">valuesTemplate</span>:
+      - <span style="color:#ae81ff">base/values/{{ .Environment.Name }}/values.yaml.gotmpl</span>
+      - <span style="color:#ae81ff">releases/{{ .Release.Name }}/values.yaml.gotmpl</span>
+</code></pre></div><p>As you can see, we have a bit more than a simple template here. We have the bases in here too. I have two bases. The first base is the default config, you can see all the options in their <a href="https://github.com/roboll/helmfile/blob/master/README.md#configuration">readme</a>. The second base is the environments where I declare values for them. These variables are going to allow me to declare which releases I want to release into the cluster. I have to say that I would probably move them to the main hemlfile or change the name of the file at some point. I like the bases in the file at the moment because it kind of feels like the template is part of the base of helmfile.</p>
+<p>It&rsquo;s time to see how I release everything&hellip; In the next file, you&rsquo;ll see an example of my grafana release. In the first line, we&rsquo;ll have the template that we are implementing. After that, we would have the name, chart, namespace and version as we have on any kind of release in Helm. After all these fields, we have the one that allows me to tell it if I want it to be installed or not. After that one, I have the dependencies of that chart. That means that helmfile is not going to release it until the others have been released.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">- <span style="color:#f92672">&lt;&lt;</span>: <span style="color:#75715e">*defaultTmpl</span>
+  <span style="color:#f92672">name</span>:  <span style="color:#e6db74">&#34;grafana&#34;</span>
+  <span style="color:#f92672">chart</span>: <span style="color:#e6db74">&#34;grafana/grafana&#34;</span>
+  <span style="color:#f92672">namespace</span>: <span style="color:#e6db74">&#34;monitoring&#34;</span>
+  <span style="color:#f92672">version</span>: <span style="color:#e6db74">&#34;3.2.5&#34;</span>
+  <span style="color:#f92672">installed</span>: {{ <span style="color:#ae81ff">.Values | getOrNil &#34;grafana.installed&#34; | default false }}</span>
+  <span style="color:#f92672">needs</span>: 
+    - <span style="color:#ae81ff">observability/fluentd</span>
+    - <span style="color:#ae81ff">observability/prometheus</span>
+    - <span style="color:#ae81ff">operators/jaeger-operator</span>
+</code></pre></div><h2 id="how-to-use-it">How to use it</h2>
+<p>This is the simplest thing that you&rsquo;re going to see in this post&hellip; you need to go to your main helmfile and run the following command:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">helmfile -e minikube apply 
+</code></pre></div><p>Before you run that command, you are going to need to run a bash script. This bash script is going to template the small helmfile releases to the main helmfile.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e">#!/bin/bash
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">for</span> release in <span style="color:#e6db74">`</span>find releases/ -name <span style="color:#e6db74">&#34;*.yaml&#34;</span><span style="color:#e6db74">`</span>; <span style="color:#66d9ef">do</span>
+    release_name<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>cat $release | grep <span style="color:#e6db74">&#34;name: &#34;</span> | cut -d<span style="color:#e6db74">&#39; &#39;</span> -f2-<span style="color:#66d9ef">)</span>
+    echo <span style="color:#e6db74">&#34;Templating  </span>$release<span style="color:#e6db74">&#34;</span>
+    cat $release | sed <span style="color:#e6db74">&#39;s/\(.*\)/  \1/&#39;</span> &gt;&gt; helmfile.yaml
+    echo &gt;&gt; helmfile.yaml
+<span style="color:#66d9ef">done</span>
+</code></pre></div><p>After running this script, your helmfile.yaml should look something like this:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">
+{{ <span style="color:#ae81ff">readFile &#34;base/templates/helmfile.yaml&#34; }}</span>
+
+{{ <span style="color:#ae81ff">readFile &#34;base/repositories/helmfile.yaml&#34; }}</span>
+
+<span style="color:#f92672">releases</span>:
+  - <span style="color:#f92672">&lt;&lt;</span>: <span style="color:#75715e">*defaultTmpl</span>
+  <span style="color:#f92672">name</span>:  <span style="color:#e6db74">&#34;grafana&#34;</span>
+  <span style="color:#f92672">chart</span>: <span style="color:#e6db74">&#34;grafana/grafana&#34;</span>
+  <span style="color:#f92672">namespace</span>: <span style="color:#e6db74">&#34;monitoring&#34;</span>
+  <span style="color:#f92672">version</span>: <span style="color:#e6db74">&#34;3.2.5&#34;</span>
+  <span style="color:#f92672">installed</span>: {{ <span style="color:#ae81ff">.Values | getOrNil &#34;grafana.installed&#34; | default false }}</span>
+  <span style="color:#f92672">needs</span>: 
+    - <span style="color:#ae81ff">observability/fluentd</span>
+    - <span style="color:#ae81ff">observability/prometheus</span>
+    - <span style="color:#ae81ff">operators/jaeger-operator</span>
+    - <span style="color:#ae81ff">operators/istio-operator</span>
+</code></pre></div><p>I have to say that this is not the perfect way to use helmfile, but this is how I use it, and it works for me. You can see all the files in this <a href="https://github.com/devbasis/helmfile-schema">repo</a>. Thanks for reading me, everyone! I hope you like this post, and I&rsquo;ll see you in the next one.</p>
+
+    </div>
+    <footer>
+      <div class="stats">
+  
+    <ul class="categories">
+      
+        
+          <li><a class="article-terms-link" href="/categories/helm/">Helm</a></li>
+        
+          <li><a class="article-terms-link" href="/categories/kubernetes/">kubernetes</a></li>
+        
+          <li><a class="article-terms-link" href="/categories/how-to/">How to</a></li>
+        
+          <li><a class="article-terms-link" href="/categories/cluster/">cluster</a></li>
+        
+      
+    </ul>
+  
+  
+    <ul class="tags">
+      
+        
+          <li><a class="article-terms-link" href="/tags/cluster/">cluster</a></li>
+        
+          <li><a class="article-terms-link" href="/tags/kluster/">Kluster</a></li>
+        
+          <li><a class="article-terms-link" href="/tags/helm/">helm</a></li>
+        
+          <li><a class="article-terms-link" href="/tags/helmcharts/">helmcharts</a></li>
+        
+          <li><a class="article-terms-link" href="/tags/kubernetes/">kubernetes</a></li>
+        
+          <li><a class="article-terms-link" href="/tags/helmfile/">helmfile</a></li>
+        
+      
+    </ul>
+  
+</div>
+
+    </footer>
+  </article>
+  
+    
+  <article class="post">
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "jorgesnotebook" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+  </article>
+
+
+
+  
+  <div class="pagination">
+    
+      <a href="/blog/how-to-implement-sops-helmfile/" class="button left"><span>How to config SOPS in Helm</span></a>
+    
+    
+      <a href="/blog/how-to-create-a-small-jvm-docker-image/" class="button right"><span>How to Create a Small JRE for your Microservices</span></a>
+    
+  </div>
+
+      </main>
+      <section id="site-sidebar">
+  
+    <section id="recent-posts">
+      <header>
+        <h1>Recent Posts</h1>
+      </header>
+      
+      <article class="mini-post">
+          
+        <header>
+          <h2><a href="/blog/how-to-implement-sops-helmfile/">How to config SOPS in Helm</a></h2>
+          <time class="published" datetime="2021-02-28 00:00:00 &#43;0000 UTC">February 28, 2021</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+          
+        <header>
+          <h2><a href="/blog/how-to-set-up-your-kluster-with-helmfle/">How to set up your kluster with helmfile</a></h2>
+          <time class="published" datetime="2021-01-30 00:00:00 &#43;0000 UTC">January 30, 2021</time>
+        </header>
+      </article>
+      
+      <article class="mini-post">
+          
+        <header>
+          <h2><a href="/blog/how-to-create-a-small-jvm-docker-image/">How to Create a Small JRE for your Microservices</a></h2>
+          <time class="published" datetime="2020-09-28 00:00:00 &#43;0000 UTC">September 28, 2020</time>
+        </header>
+      </article>
+      
+      
+        <footer>
+          <a href="/blog/" class="button">See More</a>
+        </footer>
+      
+    </section>
+  
+
+  
+    
+
+      <section id="categories">
+        <header>
+          <h1><a href="/categories">Categories</a></h1>
+        </header>
+        <ul>
+          
+          
+          <li>
+              <a href="/categories/how-to/">how-to<span class="count">4</span></a>
+          
+          <li>
+              <a href="/categories/java/">java<span class="count">3</span></a>
+          
+          <li>
+              <a href="/categories/debian/">debian<span class="count">2</span></a>
+          
+          <li>
+              <a href="/categories/helm/">helm<span class="count">2</span></a>
+          
+          <li>
+              <a href="/categories/kubernetes/">kubernetes<span class="count">2</span></a>
+          
+          <li>
+              <a href="/categories/linux/">linux<span class="count">2</span></a>
+          
+          <li>
+              <a href="/categories/cluster/">cluster<span class="count">1</span></a>
+          
+          <li>
+              <a href="/categories/docker/">docker<span class="count">1</span></a>
+          
+          <li>
+              <a href="/categories/gitlab/">gitlab<span class="count">1</span></a>
+          
+          <li>
+              <a href="/categories/helmfile/">helmfile<span class="count">1</span></a>
+          
+          <li>
+              <a href="/categories/opinion/">opinion<span class="count">1</span></a>
+          
+          <li>
+              <a href="/categories/spring-boot/">spring-boot<span class="count">1</span></a>
+          
+          </li>
+        </ul>
+      </section>
+    
+  
+
+  
+    <section id="mini-bio">
+      <header>
+        <h1>About</h1>
+      </header>
+      <p>In this Notebook I’ll post about my knowledges, and somethings that I’ll discover while I’m working. I won’t post all days because it’s a impossible. I’ll try to post one per week or at least one per month. If you like my posts stay tune becuase I’ll start a youtube channel guess how is gonig to be the name?…jorge's Notebook!.</p>
+      <footer>
+        <a href="/about" class="button">Learn More</a>
+      </footer>
+    </section>
+  
+</section>
+
+      <footer id="site-footer">
+  
+      <ul class="socnet-icons">
+        
+
+        <li><a href="//github.com/jorgeancal" target="_blank" rel="noopener" title="GitHub" class="fab fa-github"></a></li>
+<li><a href="//gitlab.com/jorgeancal" target="_blank" rel="noopener" title="GitLab" class="fab fa-gitlab"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="//twitter.com/@jorgeancal" target="_blank" rel="noopener" title="Twitter" class="fab fa-twitter"></a></li>
+
+
+
+
+
+
+
+
+
+
+
+<li><a href="mailto:info@jorgeancal.com" target="_blank" title="Email" class="far fa-envelope"></a></li>
+
+      </ul>
+  
+  <p class="copyright">
+    © 2021 Jorge&#39;s notebook
+      <br>
+    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.82.0' target='_blank' rel='noopener'>Hugo</a>
+  </p>
+</footer>
+<a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>
+
+      <script src="/js/highlight.js"></script>
+    
+    <script>hljs.initHighlightingOnLoad();</script><script src="/js/bundle.min.3636570d13f0810e9f3329e953a3f542a2628b6fb86b986c1962fda162cb74d7.js" integrity="sha256-NjZXDRPwgQ6fMynpU6P1QqJii2&#43;4a5hsGWL9oWLLdNc="></script>
+    <script src="/js/add-on.js"></script>
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'G-5X0MZZJXFN', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+    </div>
+  </body>
+</html>
