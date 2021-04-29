@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>jvm on DevBasis</title>
-    <link>https://devbasis.me/tags/jvm/</link>
-    <description>Recent content in jvm on DevBasis</description>
+    <title>jvm on Jorge&#39;s notebook</title>
+    <link>https://jorgesnotebook.com/tags/jvm/</link>
+    <description>Recent content in jvm on Jorge&#39;s notebook</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Mon, 28 Sep 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://devbasis.me/tags/jvm/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 28 Sep 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://jorgesnotebook.com/tags/jvm/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to Create a Small JRE for your Microservices</title>
-      <link>https://devbasis.me/blog/how-to-create-a-small-jvm-docker-image/</link>
+      <link>https://jorgesnotebook.com/blog/how-to-create-a-small-jvm-docker-image/</link>
       <pubDate>Mon, 28 Sep 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://devbasis.me/blog/how-to-create-a-small-jvm-docker-image/</guid>
+      <guid>https://jorgesnotebook.com/blog/how-to-create-a-small-jvm-docker-image/</guid>
       <description>In this post you&amp;rsquo;ll learn about how to create a small JRE for your microservices.
 Firstly you are going to need a java project. So you have to go to your root folder project. When you are there you have to run the next command:
 jdeps --list-deps {{jar-name}}.jar This command is going to give us a list of modules that we are using in our java microservice. I&amp;rsquo;m running this again to hello-world java service, so I&amp;rsquo;m not going to have that many dependencies.</description>

@@ -1,37 +1,37 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>DevBasis</title>
-    <link>https://devbasis.me/</link>
-    <description>Recent content on DevBasis</description>
+    <title>Jorge&#39;s notebook</title>
+    <link>https://jorgesnotebook.com/</link>
+    <description>Recent content on Jorge&#39;s notebook</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 28 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://devbasis.me/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 28 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://jorgesnotebook.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to config SOPS in Helm</title>
-      <link>https://devbasis.me/blog/how-to-implement-sops-helmfile/</link>
+      <link>https://jorgesnotebook.com/blog/how-to-implement-sops-helmfile/</link>
       <pubDate>Sun, 28 Feb 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://devbasis.me/blog/how-to-implement-sops-helmfile/</guid>
+      <guid>https://jorgesnotebook.com/blog/how-to-implement-sops-helmfile/</guid>
       <description>In our previous post about helmfile, we spoke briefly about sops, but we didn&amp;rsquo;t use it or speak more about it&amp;hellip; Now it&amp;rsquo;s the time to do that. With SOPS, we can have a file in our repo that is encrypted by sops and have the variables to use in our chart through Helmfile there.
 What is Sops? If we take a look at the Project, we&amp;rsquo;ll see that Mozilla defines SOPS as &amp;ldquo;an editor of encrypted files that supports YAML, JSON, ENV, INI and BINARY formats and encrypts with AWS KMS, GCP KMS, Azure Key Vault and PGP&amp;rdquo;.</description>
     </item>
     
     <item>
       <title>How to set up your kluster with helmfile</title>
-      <link>https://devbasis.me/blog/how-to-set-up-your-kluster-with-helmfle/</link>
+      <link>https://jorgesnotebook.com/blog/how-to-set-up-your-kluster-with-helmfle/</link>
       <pubDate>Sat, 30 Jan 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://devbasis.me/blog/how-to-set-up-your-kluster-with-helmfle/</guid>
+      <guid>https://jorgesnotebook.com/blog/how-to-set-up-your-kluster-with-helmfle/</guid>
       <description>Helmfile is a tool that allows you to get more out of Helm. When you use helmfile, you can implement as many charts as you want. Helmfile allows you to template the charts with the values that you want, and it will ship it to your cluster. Helmfile brings modular deployments too, by this I mean that you can have a huge list of deployments, and you can say deploy only this group of helmchart, you can also deploy them in sequence.</description>
     </item>
     
     <item>
       <title>How to Create a Small JRE for your Microservices</title>
-      <link>https://devbasis.me/blog/how-to-create-a-small-jvm-docker-image/</link>
+      <link>https://jorgesnotebook.com/blog/how-to-create-a-small-jvm-docker-image/</link>
       <pubDate>Mon, 28 Sep 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://devbasis.me/blog/how-to-create-a-small-jvm-docker-image/</guid>
+      <guid>https://jorgesnotebook.com/blog/how-to-create-a-small-jvm-docker-image/</guid>
       <description>In this post you&amp;rsquo;ll learn about how to create a small JRE for your microservices.
 Firstly you are going to need a java project. So you have to go to your root folder project. When you are there you have to run the next command:
 jdeps --list-deps {{jar-name}}.jar This command is going to give us a list of modules that we are using in our java microservice. I&amp;rsquo;m running this again to hello-world java service, so I&amp;rsquo;m not going to have that many dependencies.</description>
@@ -39,51 +39,51 @@ jdeps --list-deps {{jar-name}}.jar This command is going to give us a list of mo
     
     <item>
       <title>Starting with Spring Boot</title>
-      <link>https://devbasis.me/blog/starting-with-spring-boot/</link>
+      <link>https://jorgesnotebook.com/blog/starting-with-spring-boot/</link>
       <pubDate>Thu, 23 Jan 2020 23:10:39 +0000</pubDate>
       
-      <guid>https://devbasis.me/blog/starting-with-spring-boot/</guid>
+      <guid>https://jorgesnotebook.com/blog/starting-with-spring-boot/</guid>
       <description>In this post we’re going to have different sections, in the first one, as in all beginner courses, we’re going to define Spring, learn how to create a project with Spring Boot and learn what the meaning of the basic class which Spring gives you when you start a project is.
 What’s Spring? If you stop someone on the street and ask them about it, they are going to tell you that Spring is a season of the year, but that’s not the meaning that we want.</description>
     </item>
     
     <item>
       <title>What’s going on with Java?</title>
-      <link>https://devbasis.me/blog/what-is-going-on-with-java/</link>
+      <link>https://jorgesnotebook.com/blog/what-is-going-on-with-java/</link>
       <pubDate>Thu, 23 Jan 2020 23:08:17 +0000</pubDate>
       
-      <guid>https://devbasis.me/blog/what-is-going-on-with-java/</guid>
+      <guid>https://jorgesnotebook.com/blog/what-is-going-on-with-java/</guid>
       <description>The other day there were a few news articles about the new version of Java. I was thinking another one? Really? Like a lot of people in the beginning of their careers, no-one checks the differences between Java versions because they are focused on the projects which they are working on, or maybe it’s just me. But, I had a break between jobs so I decided to update all my knowledge and one thing from my list was this one, so I hope you find this information interesting.</description>
     </item>
     
     <item>
       <title>How to Install Gitlab on Debian 9</title>
-      <link>https://devbasis.me/blog/how-to-install-gitlab-on-debian-9/</link>
+      <link>https://jorgesnotebook.com/blog/how-to-install-gitlab-on-debian-9/</link>
       <pubDate>Thu, 23 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://devbasis.me/blog/how-to-install-gitlab-on-debian-9/</guid>
+      <guid>https://jorgesnotebook.com/blog/how-to-install-gitlab-on-debian-9/</guid>
       <description>Let’s go with another installation. I’m not really sure about installing GitLab on my server, but I have been thinking a lot about it. I had installed Git which I like, but I tried one years ago and I like it but I haven’t installed it on my server.
 GitLab is a really good tool. You can have it installed on your server and you can create different teams and just developers.</description>
     </item>
     
     <item>
       <title>How to Install Jenkins</title>
-      <link>https://devbasis.me/blog/how-to-install-jenkins/</link>
+      <link>https://jorgesnotebook.com/blog/how-to-install-jenkins/</link>
       <pubDate>Thu, 23 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://devbasis.me/blog/how-to-install-jenkins/</guid>
+      <guid>https://jorgesnotebook.com/blog/how-to-install-jenkins/</guid>
       <description>In this post I’m going to try to explain what Jenkins is, why we use it, how to install it in Debain and how to use it. Everyone is going to say… oh no! Another boring post about it. I’ll tell them just maybe or maybe not. Find out for yourself.
 Firstly, I have to say this post is all my notes about my research about Jenkins, therefore, it could be a bit different than other websites, or just wrong!</description>
     </item>
     
     <item>
       <title>About</title>
-      <link>https://devbasis.me/about/</link>
+      <link>https://jorgesnotebook.com/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://devbasis.me/about/</guid>
+      <guid>https://jorgesnotebook.com/about/</guid>
       <description>Hi,
-I am Jorge Andreu Calatayud and this is DevBasis.
+I am Jorge Andreu Calatayud and this is my notebook.
 This is my new project.
 In this blog, I’ll post about my knowledge and some things that I discover while I&amp;rsquo;m working. I won’t post everyday because that’s impossible. I&amp;rsquo;ll try to post once per week or at least once per month. If you like my posts, stay tuned because I&amp;rsquo;m starting a Youtube channel. Guess what it&amp;rsquo;s going to be called?</description>
     </item>

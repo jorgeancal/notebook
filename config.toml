@@ -61,7 +61,7 @@ alwaysOnHomepage      = false
 src                 = "img/notebook.png"
 shape               = "circle"
 width               = ""
-alt                 = "DevBasis blog"
+alt                 = "Jorge's Notebook"
 
 [params.sidebar]
 about               = "In this Notebook I’ll post about my knowledges, and somethings that I’ll discover while I’m working. I won’t post all days because it’s a impossible. I’ll try to post one per week or at least one per month. If you like my posts stay tune becuase I’ll start a youtube channel guess how is gonig to be the name?…jorge's Notebook!."

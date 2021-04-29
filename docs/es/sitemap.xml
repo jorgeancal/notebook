@@ -1,304 +1,264 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
-    <loc>https://devbasis.me/es/blog/</loc>
+    <loc>https://jorgesnotebook.com/es/blog/</loc>
     <lastmod>2021-02-28T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://devbasis.me/blog/"
+                href="https://jorgesnotebook.com/blog/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="https://devbasis.me/es/blog/"
+                href="https://jorgesnotebook.com/es/blog/"
                 />
-  </url>
-  
-  <url>
-    <loc>https://devbasis.me/es/categories/</loc>
+  </url><url>
+    <loc>https://jorgesnotebook.com/es/categories/</loc>
     <lastmod>2021-02-28T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://devbasis.me/categories/"
+                href="https://jorgesnotebook.com/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="https://devbasis.me/es/categories/"
+                href="https://jorgesnotebook.com/es/categories/"
                 />
-  </url>
-  
-  <url>
-    <loc>https://devbasis.me/es/tags/cluster/</loc>
+  </url><url>
+    <loc>https://jorgesnotebook.com/es/tags/cluster/</loc>
     <lastmod>2021-02-28T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://devbasis.me/tags/cluster/"
+                href="https://jorgesnotebook.com/tags/cluster/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="https://devbasis.me/es/tags/cluster/"
+                href="https://jorgesnotebook.com/es/tags/cluster/"
                 />
-  </url>
-  
-  <url>
-    <loc>https://devbasis.me/es/blog/how-to-implement-sops-helmfile/</loc>
+  </url><url>
+    <loc>https://jorgesnotebook.com/es/blog/how-to-implement-sops-helmfile/</loc>
     <lastmod>2021-02-28T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://devbasis.me/blog/how-to-implement-sops-helmfile/"
+                href="https://jorgesnotebook.com/blog/how-to-implement-sops-helmfile/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="https://devbasis.me/es/blog/how-to-implement-sops-helmfile/"
+                href="https://jorgesnotebook.com/es/blog/how-to-implement-sops-helmfile/"
                 />
-  </url>
-  
-  <url>
-    <loc>https://devbasis.me/es/</loc>
+  </url><url>
+    <loc>https://jorgesnotebook.com/es/categories/helm/</loc>
     <lastmod>2021-02-28T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://devbasis.me/"
+                href="https://jorgesnotebook.com/categories/helm/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="https://devbasis.me/es/"
+                href="https://jorgesnotebook.com/es/categories/helm/"
                 />
-  </url>
-  
-  <url>
-    <loc>https://devbasis.me/es/categories/helm/</loc>
+  </url><url>
+    <loc>https://jorgesnotebook.com/es/tags/helm/</loc>
     <lastmod>2021-02-28T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://devbasis.me/categories/helm/"
+                href="https://jorgesnotebook.com/tags/helm/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="https://devbasis.me/es/categories/helm/"
+                href="https://jorgesnotebook.com/es/tags/helm/"
                 />
-  </url>
-  
-  <url>
-    <loc>https://devbasis.me/es/tags/helm/</loc>
+  </url><url>
+    <loc>https://jorgesnotebook.com/es/tags/helm-secrets/</loc>
     <lastmod>2021-02-28T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://devbasis.me/tags/helm/"
+                href="https://jorgesnotebook.com/tags/helm-secrets/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="https://devbasis.me/es/tags/helm/"
+                href="https://jorgesnotebook.com/es/tags/helm-secrets/"
                 />
-  </url>
-  
-  <url>
-    <loc>https://devbasis.me/es/tags/helm-secrets/</loc>
+  </url><url>
+    <loc>https://jorgesnotebook.com/es/tags/helmcharts/</loc>
     <lastmod>2021-02-28T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://devbasis.me/tags/helm-secrets/"
+                href="https://jorgesnotebook.com/tags/helmcharts/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="https://devbasis.me/es/tags/helm-secrets/"
+                href="https://jorgesnotebook.com/es/tags/helmcharts/"
                 />
-  </url>
-  
-  <url>
-    <loc>https://devbasis.me/es/tags/helmcharts/</loc>
+  </url><url>
+    <loc>https://jorgesnotebook.com/es/tags/helmfile/</loc>
     <lastmod>2021-02-28T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://devbasis.me/tags/helmcharts/"
+                href="https://jorgesnotebook.com/tags/helmfile/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="https://devbasis.me/es/tags/helmcharts/"
+                href="https://jorgesnotebook.com/es/tags/helmfile/"
                 />
-  </url>
-  
-  <url>
-    <loc>https://devbasis.me/es/tags/helmfile/</loc>
+  </url><url>
+    <loc>https://jorgesnotebook.com/es/categories/helmfile/</loc>
     <lastmod>2021-02-28T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://devbasis.me/tags/helmfile/"
+                href="https://jorgesnotebook.com/categories/helmfile/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="https://devbasis.me/es/tags/helmfile/"
+                href="https://jorgesnotebook.com/es/categories/helmfile/"
                 />
-  </url>
-  
-  <url>
-    <loc>https://devbasis.me/es/categories/helmfile/</loc>
+  </url><url>
+    <loc>https://jorgesnotebook.com/es/categories/how-to/</loc>
     <lastmod>2021-02-28T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://devbasis.me/categories/helmfile/"
+                href="https://jorgesnotebook.com/categories/how-to/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="https://devbasis.me/es/categories/helmfile/"
+                href="https://jorgesnotebook.com/es/categories/how-to/"
                 />
-  </url>
-  
-  <url>
-    <loc>https://devbasis.me/es/categories/how-to/</loc>
+  </url><url>
+    <loc>https://jorgesnotebook.com/es/</loc>
     <lastmod>2021-02-28T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://devbasis.me/categories/how-to/"
+                href="https://jorgesnotebook.com/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="https://devbasis.me/es/categories/how-to/"
+                href="https://jorgesnotebook.com/es/"
                 />
-  </url>
-  
-  <url>
-    <loc>https://devbasis.me/es/tags/kluster/</loc>
+  </url><url>
+    <loc>https://jorgesnotebook.com/es/tags/kluster/</loc>
     <lastmod>2021-02-28T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://devbasis.me/tags/kluster/"
+                href="https://jorgesnotebook.com/tags/kluster/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="https://devbasis.me/es/tags/kluster/"
+                href="https://jorgesnotebook.com/es/tags/kluster/"
                 />
-  </url>
-  
-  <url>
-    <loc>https://devbasis.me/es/tags/kubernetes/</loc>
+  </url><url>
+    <loc>https://jorgesnotebook.com/es/tags/kubernetes/</loc>
     <lastmod>2021-02-28T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://devbasis.me/tags/kubernetes/"
+                href="https://jorgesnotebook.com/tags/kubernetes/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="https://devbasis.me/es/tags/kubernetes/"
+                href="https://jorgesnotebook.com/es/tags/kubernetes/"
                 />
-  </url>
-  
-  <url>
-    <loc>https://devbasis.me/es/categories/kubernetes/</loc>
+  </url><url>
+    <loc>https://jorgesnotebook.com/es/categories/kubernetes/</loc>
     <lastmod>2021-02-28T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://devbasis.me/categories/kubernetes/"
+                href="https://jorgesnotebook.com/categories/kubernetes/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="https://devbasis.me/es/categories/kubernetes/"
+                href="https://jorgesnotebook.com/es/categories/kubernetes/"
                 />
-  </url>
-  
-  <url>
-    <loc>https://devbasis.me/es/tags/secrets/</loc>
+  </url><url>
+    <loc>https://jorgesnotebook.com/es/tags/secrets/</loc>
     <lastmod>2021-02-28T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://devbasis.me/tags/secrets/"
+                href="https://jorgesnotebook.com/tags/secrets/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="https://devbasis.me/es/tags/secrets/"
+                href="https://jorgesnotebook.com/es/tags/secrets/"
                 />
-  </url>
-  
-  <url>
-    <loc>https://devbasis.me/es/tags/sops/</loc>
+  </url><url>
+    <loc>https://jorgesnotebook.com/es/tags/sops/</loc>
     <lastmod>2021-02-28T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://devbasis.me/tags/sops/"
+                href="https://jorgesnotebook.com/tags/sops/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="https://devbasis.me/es/tags/sops/"
+                href="https://jorgesnotebook.com/es/tags/sops/"
                 />
-  </url>
-  
-  <url>
-    <loc>https://devbasis.me/es/tags/</loc>
+  </url><url>
+    <loc>https://jorgesnotebook.com/es/tags/</loc>
     <lastmod>2021-02-28T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://devbasis.me/tags/"
+                href="https://jorgesnotebook.com/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="https://devbasis.me/es/tags/"
+                href="https://jorgesnotebook.com/es/tags/"
                 />
-  </url>
-  
-  <url>
-    <loc>https://devbasis.me/es/blog/how-to-set-up-your-kluster-with-helmfle/</loc>
+  </url><url>
+    <loc>https://jorgesnotebook.com/es/blog/how-to-set-up-your-kluster-with-helmfle/</loc>
     <lastmod>2021-01-30T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://devbasis.me/blog/how-to-set-up-your-kluster-with-helmfle/"
+                href="https://jorgesnotebook.com/blog/how-to-set-up-your-kluster-with-helmfle/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="https://devbasis.me/es/blog/how-to-set-up-your-kluster-with-helmfle/"
+                href="https://jorgesnotebook.com/es/blog/how-to-set-up-your-kluster-with-helmfle/"
                 />
-  </url>
-  
-  <url>
-    <loc>https://devbasis.me/es/about/</loc>
+  </url><url>
+    <loc>https://jorgesnotebook.com/es/about/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://devbasis.me/about/"
+                href="https://jorgesnotebook.com/about/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="https://devbasis.me/es/about/"
+                href="https://jorgesnotebook.com/es/about/"
                 />
   </url>
-  
 </urlset>

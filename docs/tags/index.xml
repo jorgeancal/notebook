@@ -1,360 +1,360 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on DevBasis</title>
-    <link>https://devbasis.me/tags/</link>
-    <description>Recent content in Tags on DevBasis</description>
+    <title>Tags on Jorge&#39;s notebook</title>
+    <link>https://jorgesnotebook.com/tags/</link>
+    <description>Recent content in Tags on Jorge&#39;s notebook</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 28 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://devbasis.me/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 28 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://jorgesnotebook.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>cluster</title>
-      <link>https://devbasis.me/tags/cluster/</link>
+      <link>https://jorgesnotebook.com/tags/cluster/</link>
       <pubDate>Sun, 28 Feb 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://devbasis.me/tags/cluster/</guid>
+      <guid>https://jorgesnotebook.com/tags/cluster/</guid>
       <description></description>
     </item>
     
     <item>
       <title>helm</title>
-      <link>https://devbasis.me/tags/helm/</link>
+      <link>https://jorgesnotebook.com/tags/helm/</link>
       <pubDate>Sun, 28 Feb 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://devbasis.me/tags/helm/</guid>
+      <guid>https://jorgesnotebook.com/tags/helm/</guid>
       <description></description>
     </item>
     
     <item>
       <title>helm-secrets</title>
-      <link>https://devbasis.me/tags/helm-secrets/</link>
+      <link>https://jorgesnotebook.com/tags/helm-secrets/</link>
       <pubDate>Sun, 28 Feb 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://devbasis.me/tags/helm-secrets/</guid>
+      <guid>https://jorgesnotebook.com/tags/helm-secrets/</guid>
       <description></description>
     </item>
     
     <item>
       <title>helmcharts</title>
-      <link>https://devbasis.me/tags/helmcharts/</link>
+      <link>https://jorgesnotebook.com/tags/helmcharts/</link>
       <pubDate>Sun, 28 Feb 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://devbasis.me/tags/helmcharts/</guid>
+      <guid>https://jorgesnotebook.com/tags/helmcharts/</guid>
       <description></description>
     </item>
     
     <item>
       <title>helmfile</title>
-      <link>https://devbasis.me/tags/helmfile/</link>
+      <link>https://jorgesnotebook.com/tags/helmfile/</link>
       <pubDate>Sun, 28 Feb 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://devbasis.me/tags/helmfile/</guid>
+      <guid>https://jorgesnotebook.com/tags/helmfile/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Kluster</title>
-      <link>https://devbasis.me/tags/kluster/</link>
+      <link>https://jorgesnotebook.com/tags/kluster/</link>
       <pubDate>Sun, 28 Feb 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://devbasis.me/tags/kluster/</guid>
+      <guid>https://jorgesnotebook.com/tags/kluster/</guid>
       <description></description>
     </item>
     
     <item>
       <title>kubernetes</title>
-      <link>https://devbasis.me/tags/kubernetes/</link>
+      <link>https://jorgesnotebook.com/tags/kubernetes/</link>
       <pubDate>Sun, 28 Feb 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://devbasis.me/tags/kubernetes/</guid>
+      <guid>https://jorgesnotebook.com/tags/kubernetes/</guid>
       <description></description>
     </item>
     
     <item>
       <title>secrets</title>
-      <link>https://devbasis.me/tags/secrets/</link>
+      <link>https://jorgesnotebook.com/tags/secrets/</link>
       <pubDate>Sun, 28 Feb 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://devbasis.me/tags/secrets/</guid>
+      <guid>https://jorgesnotebook.com/tags/secrets/</guid>
       <description></description>
     </item>
     
     <item>
       <title>sops</title>
-      <link>https://devbasis.me/tags/sops/</link>
+      <link>https://jorgesnotebook.com/tags/sops/</link>
       <pubDate>Sun, 28 Feb 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://devbasis.me/tags/sops/</guid>
+      <guid>https://jorgesnotebook.com/tags/sops/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Docker</title>
-      <link>https://devbasis.me/tags/docker/</link>
+      <link>https://jorgesnotebook.com/tags/docker/</link>
       <pubDate>Mon, 28 Sep 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://devbasis.me/tags/docker/</guid>
+      <guid>https://jorgesnotebook.com/tags/docker/</guid>
       <description></description>
     </item>
     
     <item>
       <title>DockerImages</title>
-      <link>https://devbasis.me/tags/dockerimages/</link>
+      <link>https://jorgesnotebook.com/tags/dockerimages/</link>
       <pubDate>Mon, 28 Sep 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://devbasis.me/tags/dockerimages/</guid>
+      <guid>https://jorgesnotebook.com/tags/dockerimages/</guid>
       <description></description>
     </item>
     
     <item>
       <title>java</title>
-      <link>https://devbasis.me/tags/java/</link>
+      <link>https://jorgesnotebook.com/tags/java/</link>
       <pubDate>Mon, 28 Sep 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://devbasis.me/tags/java/</guid>
+      <guid>https://jorgesnotebook.com/tags/java/</guid>
       <description></description>
     </item>
     
     <item>
       <title>jdk</title>
-      <link>https://devbasis.me/tags/jdk/</link>
+      <link>https://jorgesnotebook.com/tags/jdk/</link>
       <pubDate>Mon, 28 Sep 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://devbasis.me/tags/jdk/</guid>
+      <guid>https://jorgesnotebook.com/tags/jdk/</guid>
       <description></description>
     </item>
     
     <item>
       <title>jre</title>
-      <link>https://devbasis.me/tags/jre/</link>
+      <link>https://jorgesnotebook.com/tags/jre/</link>
       <pubDate>Mon, 28 Sep 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://devbasis.me/tags/jre/</guid>
+      <guid>https://jorgesnotebook.com/tags/jre/</guid>
       <description></description>
     </item>
     
     <item>
       <title>jvm</title>
-      <link>https://devbasis.me/tags/jvm/</link>
+      <link>https://jorgesnotebook.com/tags/jvm/</link>
       <pubDate>Mon, 28 Sep 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://devbasis.me/tags/jvm/</guid>
+      <guid>https://jorgesnotebook.com/tags/jvm/</guid>
       <description></description>
     </item>
     
     <item>
       <title>openjdk</title>
-      <link>https://devbasis.me/tags/openjdk/</link>
+      <link>https://jorgesnotebook.com/tags/openjdk/</link>
       <pubDate>Mon, 28 Sep 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://devbasis.me/tags/openjdk/</guid>
+      <guid>https://jorgesnotebook.com/tags/openjdk/</guid>
       <description></description>
     </item>
     
     <item>
       <title>init spring boot</title>
-      <link>https://devbasis.me/tags/init-spring-boot/</link>
+      <link>https://jorgesnotebook.com/tags/init-spring-boot/</link>
       <pubDate>Thu, 23 Jan 2020 23:10:39 +0000</pubDate>
       
-      <guid>https://devbasis.me/tags/init-spring-boot/</guid>
+      <guid>https://jorgesnotebook.com/tags/init-spring-boot/</guid>
       <description></description>
     </item>
     
     <item>
       <title>spring</title>
-      <link>https://devbasis.me/tags/spring/</link>
+      <link>https://jorgesnotebook.com/tags/spring/</link>
       <pubDate>Thu, 23 Jan 2020 23:10:39 +0000</pubDate>
       
-      <guid>https://devbasis.me/tags/spring/</guid>
+      <guid>https://jorgesnotebook.com/tags/spring/</guid>
       <description></description>
     </item>
     
     <item>
       <title>spring boot</title>
-      <link>https://devbasis.me/tags/spring-boot/</link>
+      <link>https://jorgesnotebook.com/tags/spring-boot/</link>
       <pubDate>Thu, 23 Jan 2020 23:10:39 +0000</pubDate>
       
-      <guid>https://devbasis.me/tags/spring-boot/</guid>
+      <guid>https://jorgesnotebook.com/tags/spring-boot/</guid>
       <description></description>
     </item>
     
     <item>
       <title>spring boot 2.0</title>
-      <link>https://devbasis.me/tags/spring-boot-2.0/</link>
+      <link>https://jorgesnotebook.com/tags/spring-boot-2.0/</link>
       <pubDate>Thu, 23 Jan 2020 23:10:39 +0000</pubDate>
       
-      <guid>https://devbasis.me/tags/spring-boot-2.0/</guid>
+      <guid>https://jorgesnotebook.com/tags/spring-boot-2.0/</guid>
       <description></description>
     </item>
     
     <item>
       <title>starting with spring</title>
-      <link>https://devbasis.me/tags/starting-with-spring/</link>
+      <link>https://jorgesnotebook.com/tags/starting-with-spring/</link>
       <pubDate>Thu, 23 Jan 2020 23:10:39 +0000</pubDate>
       
-      <guid>https://devbasis.me/tags/starting-with-spring/</guid>
+      <guid>https://jorgesnotebook.com/tags/starting-with-spring/</guid>
       <description></description>
     </item>
     
     <item>
       <title>starting with spring boot</title>
-      <link>https://devbasis.me/tags/starting-with-spring-boot/</link>
+      <link>https://jorgesnotebook.com/tags/starting-with-spring-boot/</link>
       <pubDate>Thu, 23 Jan 2020 23:10:39 +0000</pubDate>
       
-      <guid>https://devbasis.me/tags/starting-with-spring-boot/</guid>
+      <guid>https://jorgesnotebook.com/tags/starting-with-spring-boot/</guid>
       <description></description>
     </item>
     
     <item>
       <title>AdoptOpenJDK</title>
-      <link>https://devbasis.me/tags/adoptopenjdk/</link>
+      <link>https://jorgesnotebook.com/tags/adoptopenjdk/</link>
       <pubDate>Thu, 23 Jan 2020 23:08:17 +0000</pubDate>
       
-      <guid>https://devbasis.me/tags/adoptopenjdk/</guid>
+      <guid>https://jorgesnotebook.com/tags/adoptopenjdk/</guid>
       <description></description>
     </item>
     
     <item>
       <title>JDK 11</title>
-      <link>https://devbasis.me/tags/jdk-11/</link>
+      <link>https://jorgesnotebook.com/tags/jdk-11/</link>
       <pubDate>Thu, 23 Jan 2020 23:08:17 +0000</pubDate>
       
-      <guid>https://devbasis.me/tags/jdk-11/</guid>
+      <guid>https://jorgesnotebook.com/tags/jdk-11/</guid>
       <description></description>
     </item>
     
     <item>
       <title>JDK 11 LTS</title>
-      <link>https://devbasis.me/tags/jdk-11-lts/</link>
+      <link>https://jorgesnotebook.com/tags/jdk-11-lts/</link>
       <pubDate>Thu, 23 Jan 2020 23:08:17 +0000</pubDate>
       
-      <guid>https://devbasis.me/tags/jdk-11-lts/</guid>
+      <guid>https://jorgesnotebook.com/tags/jdk-11-lts/</guid>
       <description></description>
     </item>
     
     <item>
       <title>JDK 6</title>
-      <link>https://devbasis.me/tags/jdk-6/</link>
+      <link>https://jorgesnotebook.com/tags/jdk-6/</link>
       <pubDate>Thu, 23 Jan 2020 23:08:17 +0000</pubDate>
       
-      <guid>https://devbasis.me/tags/jdk-6/</guid>
+      <guid>https://jorgesnotebook.com/tags/jdk-6/</guid>
       <description></description>
     </item>
     
     <item>
       <title>JDK 7</title>
-      <link>https://devbasis.me/tags/jdk-7/</link>
+      <link>https://jorgesnotebook.com/tags/jdk-7/</link>
       <pubDate>Thu, 23 Jan 2020 23:08:17 +0000</pubDate>
       
-      <guid>https://devbasis.me/tags/jdk-7/</guid>
+      <guid>https://jorgesnotebook.com/tags/jdk-7/</guid>
       <description></description>
     </item>
     
     <item>
       <title>JDK 8</title>
-      <link>https://devbasis.me/tags/jdk-8/</link>
+      <link>https://jorgesnotebook.com/tags/jdk-8/</link>
       <pubDate>Thu, 23 Jan 2020 23:08:17 +0000</pubDate>
       
-      <guid>https://devbasis.me/tags/jdk-8/</guid>
+      <guid>https://jorgesnotebook.com/tags/jdk-8/</guid>
       <description></description>
     </item>
     
     <item>
       <title>opinion</title>
-      <link>https://devbasis.me/tags/opinion/</link>
+      <link>https://jorgesnotebook.com/tags/opinion/</link>
       <pubDate>Thu, 23 Jan 2020 23:08:17 +0000</pubDate>
       
-      <guid>https://devbasis.me/tags/opinion/</guid>
+      <guid>https://jorgesnotebook.com/tags/opinion/</guid>
       <description></description>
     </item>
     
     <item>
       <title> Jenkins Debian 9</title>
-      <link>https://devbasis.me/tags/jenkins-debian-9/</link>
+      <link>https://jorgesnotebook.com/tags/jenkins-debian-9/</link>
       <pubDate>Thu, 23 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://devbasis.me/tags/jenkins-debian-9/</guid>
+      <guid>https://jorgesnotebook.com/tags/jenkins-debian-9/</guid>
       <description></description>
     </item>
     
     <item>
       <title>GitLab</title>
-      <link>https://devbasis.me/tags/gitlab/</link>
+      <link>https://jorgesnotebook.com/tags/gitlab/</link>
       <pubDate>Thu, 23 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://devbasis.me/tags/gitlab/</guid>
+      <guid>https://jorgesnotebook.com/tags/gitlab/</guid>
       <description></description>
     </item>
     
     <item>
       <title>GitLab in Debian</title>
-      <link>https://devbasis.me/tags/gitlab-in-debian/</link>
+      <link>https://jorgesnotebook.com/tags/gitlab-in-debian/</link>
       <pubDate>Thu, 23 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://devbasis.me/tags/gitlab-in-debian/</guid>
+      <guid>https://jorgesnotebook.com/tags/gitlab-in-debian/</guid>
       <description></description>
     </item>
     
     <item>
       <title>GitLab in Debian 9</title>
-      <link>https://devbasis.me/tags/gitlab-in-debian-9/</link>
+      <link>https://jorgesnotebook.com/tags/gitlab-in-debian-9/</link>
       <pubDate>Thu, 23 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://devbasis.me/tags/gitlab-in-debian-9/</guid>
+      <guid>https://jorgesnotebook.com/tags/gitlab-in-debian-9/</guid>
       <description></description>
     </item>
     
     <item>
       <title>GitLad Installation</title>
-      <link>https://devbasis.me/tags/gitlad-installation/</link>
+      <link>https://jorgesnotebook.com/tags/gitlad-installation/</link>
       <pubDate>Thu, 23 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://devbasis.me/tags/gitlad-installation/</guid>
+      <guid>https://jorgesnotebook.com/tags/gitlad-installation/</guid>
       <description></description>
     </item>
     
     <item>
       <title>How to install GitLab</title>
-      <link>https://devbasis.me/tags/how-to-install-gitlab/</link>
+      <link>https://jorgesnotebook.com/tags/how-to-install-gitlab/</link>
       <pubDate>Thu, 23 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://devbasis.me/tags/how-to-install-gitlab/</guid>
+      <guid>https://jorgesnotebook.com/tags/how-to-install-gitlab/</guid>
       <description></description>
     </item>
     
     <item>
       <title>How to install Jenkins</title>
-      <link>https://devbasis.me/tags/how-to-install-jenkins/</link>
+      <link>https://jorgesnotebook.com/tags/how-to-install-jenkins/</link>
       <pubDate>Thu, 23 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://devbasis.me/tags/how-to-install-jenkins/</guid>
+      <guid>https://jorgesnotebook.com/tags/how-to-install-jenkins/</guid>
       <description></description>
     </item>
     
     <item>
       <title>installations</title>
-      <link>https://devbasis.me/tags/installations/</link>
+      <link>https://jorgesnotebook.com/tags/installations/</link>
       <pubDate>Thu, 23 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://devbasis.me/tags/installations/</guid>
+      <guid>https://jorgesnotebook.com/tags/installations/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Jenkis Debian</title>
-      <link>https://devbasis.me/tags/jenkis-debian/</link>
+      <link>https://jorgesnotebook.com/tags/jenkis-debian/</link>
       <pubDate>Thu, 23 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://devbasis.me/tags/jenkis-debian/</guid>
+      <guid>https://jorgesnotebook.com/tags/jenkis-debian/</guid>
       <description></description>
     </item>
     
     <item>
       <title>What’s jenkins</title>
-      <link>https://devbasis.me/tags/whats-jenkins/</link>
+      <link>https://jorgesnotebook.com/tags/whats-jenkins/</link>
       <pubDate>Thu, 23 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://devbasis.me/tags/whats-jenkins/</guid>
+      <guid>https://jorgesnotebook.com/tags/whats-jenkins/</guid>
       <description></description>
     </item>
     
