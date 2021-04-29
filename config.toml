@@ -58,7 +58,7 @@ hideWhenSingleColumn  = true
 alwaysOnHomepage      = false
 
 [params.intro.pic]
-src                 = "img/notebook.jpg"
+src                 = "img/notebook.png"
 shape               = "circle"
 width               = ""
 alt                 = "DevBasis blog"
