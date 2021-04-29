@@ -148,4 +148,4 @@ releases:
     - operators/istio-operator
 ```
 
-I have to say that this is not the perfect way to use helmfile, but this is how I use it, and it works for me. You can see all the files in this [repo](https://github.com/devbasis/helmfile-schema). Thanks for reading me, everyone! I hope you like this post, and I'll see you in the next one.
+I have to say that this is not the perfect way to use helmfile, but this is how I use it, and it works for me. You can see all the files in this [repo](https://github.com/jorgeancal/helmfile-schema). Thanks for reading me, everyone! I hope you like this post, and I'll see you in the next one.

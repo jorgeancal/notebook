@@ -171,6 +171,6 @@ for release in `find releases/ -name "*.yaml"`; do
 done
 ```
 
-Si queréis ver todas los ficheros juntos y como esto funciona todo junto os dejo todo en este [repo](https://github.com/devbasis/helmfile-schema). Y esto ha sido todo senores, espero que os haya gustado y nos leemos en el próximo.
+Si queréis ver todas los ficheros juntos y como esto funciona todo junto os dejo todo en este [repo](https://github.com/jorgeancal/helmfile-schema). Y esto ha sido todo senores, espero que os haya gustado y nos leemos en el próximo.
 
 

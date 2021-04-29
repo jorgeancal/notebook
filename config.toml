@@ -9,7 +9,7 @@ googleAnalytics = "G-5X0MZZJXFN"
 publishDir="docs"
 
 paginate = 4
-pluralizeListTitles     = false
+pluralizeListTitles     = true
 disableLanguages        = [ "FR" , "PL", "PT", "DE", "ZH-CN", "ZH-TW", "JA", "NL"]
 
 
@@ -74,7 +74,7 @@ rssFooter           = true
 socialFooter        = true
 
 [params.staticman]
-enabled             = false
+enabled             = true
 api                 = ""  # No Trailing Slash
 gitProvider         = ""
 username            = ""
@@ -199,7 +199,7 @@ facebook              = ""
 googleplus            = ""
 reddit                = ""
 quora                 = ""
-youtube               = "channel/UCx88hrzBX7kX0POwFZxpYMA"
+youtube               = ""
 vimeo                 = ""
 whatsapp              = "" # WhatsApp Number
 # WeChat and QQ need testing.
