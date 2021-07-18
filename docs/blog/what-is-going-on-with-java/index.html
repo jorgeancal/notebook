@@ -31,8 +31,8 @@
     
   
   
-            <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/paraiso-dark.min.css">
-          <link rel="stylesheet" href="/css/bundle.min.307f33cd8015e5bab28d6ebda9b400f8d3059bc248b4e60adf4d23469fab5a2b.css" integrity="sha256-MH8zzYAV5bqyjW69qbQA&#43;NMFm8JItOYK300jRp&#43;rWis="><link rel="stylesheet" href="/css/add-on.css">
+            <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/styles/paraiso-dark.min.css">
+          <link rel="stylesheet" href="/css/bundle.min.f9833b9a1d1e59b77665427ff94903f4a7ef149086c08bf634f842df3362e607.css" integrity="sha256-&#43;YM7mh0eWbd2ZUJ/&#43;UkD9KfvFJCGwIv2NPhC3zNi5gc="><link rel="stylesheet" href="/css/add-on.css">
 </head>
 
   <body>
@@ -192,8 +192,9 @@
 
       <main id="site-main">
         
-  <article class="post">
-    <header>
+  <article>
+    <div class="post">
+      <header>
   <div class="title">
     
       <h2><a href="/blog/what-is-going-on-with-java/">What’s going on with Java?</a></h2>
@@ -209,8 +210,8 @@
   </div>
 </header>
 
-    <div id="socnet-share">
-      
+      <div id="socnet-share">
+        
 
 
 
@@ -241,12 +242,12 @@
   
 
 
-    </div>
-    <div class="content">
-      <a href="/blog/what-is-going-on-with-java/" class="image" style="--bg-image: url('https://jorgesnotebook.com/img/oracleversion.png');">
+      </div>
+      <div class="content">
+        <a href="/blog/what-is-going-on-with-java/" class="image" style="--bg-image: url('https://jorgesnotebook.com/img/oracleversion.png');">
     <img class="stretchV" src="https://jorgesnotebook.com/img/oracleversion.png" alt="Oraclee&#39;s Timeline">
   </a>
-      <p>The other day there were a few news articles about the new version of Java. I was thinking another one? Really? Like a lot of people in the beginning of their careers, no-one checks the differences between Java versions because they are focused on the projects which they are working on, or maybe it’s just me. But, I had a break between jobs so I decided to update all my knowledge and one thing from my list was this one, so I hope you find this information interesting. As everyone knows, Java has another JDK version which is the JDK 11.</p>
+        <p>The other day there were a few news articles about the new version of Java. I was thinking another one? Really? Like a lot of people in the beginning of their careers, no-one checks the differences between Java versions because they are focused on the projects which they are working on, or maybe it’s just me. But, I had a break between jobs so I decided to update all my knowledge and one thing from my list was this one, so I hope you find this information interesting. As everyone knows, Java has another JDK version which is the JDK 11.</p>
 <p>One year ago, Oracle released JDK 9 which a lot of people said was really bad, Oracle released JDK 11 after JDK 10, that’s pretty obvious. But I learned to develop with JDK 7 which was released in July 2011 while I was studying vocational training. Three years later, I started university and I had to use the JDK 8 which a lot of people said was something gorgeous. If I have to tell you whether I realised about the differences between them, I didn’t. Furthermore, I didn’t mind, but now I’ve started to do some research about which would be better for all the applications which I want to do, so now I mind. I’m going to tell you what’s going to happen with Java in the next few years and which one I chose for my apps.</p>
 <h2 id="the-future">The Future</h2>
 <p>It’s madness, but we’re developers so it’s something which you find out when you start to work in this crazy world. The future of Java is open source, but it depends on you or the business which you’re working for because if you want to use it… get your wallet out. I think for a business it wouldn’t be a problem, but for a person like me who cares about each penny that I spend, it’s a problem because I hadn’t planned to spend money on this. The good thing is, if you don’t want to pay, you can use OpenJDK, check the price of JDK, maybe it’s worth it for you:</p>
@@ -318,9 +319,9 @@
 <p>If you want to install it, you have to go to the official <a href="http://openjdk.java.net/">website</a>, or this <a href="https://adoptopenjdk.net/index.html?variant=openjdk11&amp;jvmVariant=hotspot">one</a>. AdoptOpenJDK provides prebuilt OpenJDK binaries from a fully open source set of build scripts and infrastructure.</p>
 <p>In conclusion, if you don’t want to pay, use OpenJDK.</p>
 
-    </div>
-    <footer>
-      <div class="stats">
+      </div>
+      <footer>
+        <div class="stats">
   
     <ul class="categories">
       
@@ -361,11 +362,11 @@
   
 </div>
 
-    </footer>
-  </article>
-  
+      </footer>
+    </div>
     
-  <article class="post">
+      
+  <div class='post'>
     <div id="disqus_thread"></div>
 <script type="application/javascript">
     var disqus_config = function () {
@@ -386,11 +387,12 @@
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
 <a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+  </div>
+
+
+
+    
   </article>
-
-
-
-  
   <div class="pagination">
     
       <a href="/blog/starting-with-spring-boot/" class="button left"><span>Starting with Spring Boot</span></a>
@@ -564,7 +566,7 @@
 
       <script src="/js/highlight.js"></script>
     
-    <script>hljs.initHighlightingOnLoad();</script><script src="/js/bundle.min.bbba6b424a8ac5b6858cd5fc80eabc9c5277945cc2dc349204646b84891b4b58.js" integrity="sha256-u7prQkqKxbaFjNX8gOq8nFJ3lFzC3DSSBGRrhIkbS1g="></script>
+    <script>hljs.highlightAll();</script><script src="/js/bundle.min.36abc42ea32014c383ab78dab6b94342ee5c2705907d071600cccc010d387ad8.js" integrity="sha256-NqvELqMgFMODq3jatrlDQu5cJwWQfQcWAMzMAQ04etg="></script>
     <script src="/js/add-on.js"></script>
 <script type="application/javascript">
 var doNotTrack = false;
