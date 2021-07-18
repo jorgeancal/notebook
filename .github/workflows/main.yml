@@ -51,3 +51,4 @@ jobs:
           personal_token: ${{ secrets.GH_PAGES_ACTIONS }}
           publish_branch: main
           publish_dir: ./docs
+          cname: jorgesnotebook.com
