@@ -18,7 +18,7 @@
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="theme-color" content="#ffffff">
 
-<meta name="generator" content="Hugo 0.80.0" /><meta property="og:site_name" content="Jorge&#39;s notebook">
+<meta name="generator" content="Hugo 0.86.0" /><meta property="og:site_name" content="Jorge&#39;s notebook">
   <meta property="og:title" content="How to Install Gitlab on Debian 9">
   <meta property="og:description" content="Let’s go with another installation. I’m not really sure about installing GitLab on my server, but I have been thinking a lot about it. I had installed Git which I like, but I tried one years ago and I like it but I haven’t installed it on my server.">
   <meta property="description" content="Let’s go with another installation. I’m not really sure about installing GitLab on my server, but I have been thinking a lot about it. I had installed Git which I like, but I tried one years ago and I like it but I haven’t installed it on my server.">
@@ -32,7 +32,7 @@
   
   
             <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/styles/paraiso-dark.min.css">
-          <link rel="stylesheet" href="/css/bundle.min.f9833b9a1d1e59b77665427ff94903f4a7ef149086c08bf634f842df3362e607.css" integrity="sha256-&#43;YM7mh0eWbd2ZUJ/&#43;UkD9KfvFJCGwIv2NPhC3zNi5gc="><link rel="stylesheet" href="/css/add-on.css">
+          <link rel="stylesheet" href="/css/bundle.min.2b4e36cd6a81be0237f8d8f3ce0d239eb39d356f5e3b6c33140b8108476a2beb.css" integrity="sha256-K042zWqBvgI3&#43;Njzzg0jnrOdNW9eO2wzFAuBCEdqK&#43;s="><link rel="stylesheet" href="/css/add-on.css">
 </head>
 
   <body>
@@ -251,19 +251,19 @@
 <p>GitLab is a really good tool. You can have it installed on your server and you can create different teams and just developers. I really like the teams thing because you can create the teams and you can create a project for the teams and you can create roles for each person of the team. I think is excellent.
 Installation</p>
 <p>Firstly, we need you to install the dependencies.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># apt install -y curl openssh-server ca-certificates</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># apt install -y curl openssh-server ca-certificates</span>
 </code></pre></div><p>There are a lot of people who install the postfix because they want email notifications. So if you want to use another solution to send emails please skip this step and configure an external SMTP server after GitLab has been installed.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># apt install -y postfix</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># apt install -y postfix</span>
 </code></pre></div><p>After installing all of it, you must add the respositories of GitLab. For that, you need to run the next command:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># curl -sS https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.deb.sh | bash</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># curl -sS https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.deb.sh | bash</span>
 </code></pre></div><p>Now you need to install it so… there are two different installations the Community Edition or Enterprise Edition. With the Enterprise Edition you have a trial of 30 days and then you have to pay for each user, but you can use mysql with it and there are more functionabilities. The free one is the community, which is the one I have. If you check the installation process on GitLab they are going to tell you to set an External URL as constant, if you want I have one similar to ‘http://myFox.jorgeancal.com’. But if you have in your local, you don’t need it but I drop the command here too.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># EXTERNAL_URL=&#34;http://gitlab.example.com&#34;</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># EXTERNAL_URL=&#34;http://gitlab.example.com&#34;</span>
 
 <span style="color:#75715e"># apt install gitlab-ce</span>
 </code></pre></div><p>Let’s go now with a simple comfiguration which is setting the admin password and login. I’ll do another post speaking more about how to configure and everything. I’m going to do like a quick introducction about commands and setting the root password. Well, the first thing you have to know is the command of how to generate the configuration again.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># gitlab-ctl reconfigure</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># gitlab-ctl reconfigure</span>
 </code></pre></div><p>Another interesting command is the one which allows you to run and stop the GitLab.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># gitlab-ctl start</span>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#75715e"># gitlab-ctl start</span>
 
 <span style="color:#75715e"># gitlab-ctl stop</span>
 </code></pre></div><p>Now we’re going to set the password. Open in your browser the URL which you have, or if you didn’t set a URL, just write your IP in the browser.</p>
@@ -379,7 +379,7 @@ Installation</p>
       <article class="mini-post">
           
         <header>
-          <h2><a href="/blog/how-to-create-a-small-jvm-docker-image/">How to Create a Small JRE for your Microservices</a></h2>
+          <h2><a href="/blog/how-to-create-a-small-jvm-docker-image/">jlink with Spring Boot services</a></h2>
           <time class="published" datetime="2020-09-28 00:00:00 &#43;0000 UTC">September 28, 2020</time>
         </header>
       </article>
@@ -509,14 +509,14 @@ Installation</p>
   <p class="copyright">
     © 2021 Jorge&#39;s notebook
       <br>
-    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.80.0' target='_blank' rel='noopener'>Hugo</a>
+    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.86.0' target='_blank' rel='noopener'>Hugo</a>
   </p>
 </footer>
 <a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>
 
       <script src="/js/highlight.js"></script>
     
-    <script>hljs.highlightAll();</script><script src="/js/bundle.min.36abc42ea32014c383ab78dab6b94342ee5c2705907d071600cccc010d387ad8.js" integrity="sha256-NqvELqMgFMODq3jatrlDQu5cJwWQfQcWAMzMAQ04etg="></script>
+    <script>hljs.highlightAll();</script><script src="/js/bundle.min.5e028ec6834a5f4a1ba4ec29d9bcd65b5cc855ac4163c06708177c2efb812880.js" integrity="sha256-XgKOxoNKX0obpOwp2bzWW1zIVaxBY8BnCBd8LvuBKIA="></script>
     <script src="/js/add-on.js"></script>
 <script type="application/javascript">
 var doNotTrack = false;

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  
   <url>
     <loc>https://jorgesnotebook.com/blog/</loc>
     <lastmod>2021-02-28T00:00:00+00:00</lastmod>
@@ -15,9 +14,7 @@
                 hreflang="en"
                 href="https://jorgesnotebook.com/blog/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jorgesnotebook.com/categories/</loc>
     <lastmod>2021-02-28T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -30,9 +27,7 @@
                 hreflang="en"
                 href="https://jorgesnotebook.com/categories/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jorgesnotebook.com/tags/cluster/</loc>
     <lastmod>2021-02-28T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -45,9 +40,7 @@
                 hreflang="en"
                 href="https://jorgesnotebook.com/tags/cluster/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jorgesnotebook.com/categories/helm/</loc>
     <lastmod>2021-02-28T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -60,9 +53,7 @@
                 hreflang="en"
                 href="https://jorgesnotebook.com/categories/helm/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jorgesnotebook.com/tags/helm/</loc>
     <lastmod>2021-02-28T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -75,9 +66,7 @@
                 hreflang="en"
                 href="https://jorgesnotebook.com/tags/helm/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jorgesnotebook.com/tags/helm-secrets/</loc>
     <lastmod>2021-02-28T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -90,9 +79,7 @@
                 hreflang="en"
                 href="https://jorgesnotebook.com/tags/helm-secrets/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jorgesnotebook.com/tags/helmcharts/</loc>
     <lastmod>2021-02-28T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -105,9 +92,7 @@
                 hreflang="en"
                 href="https://jorgesnotebook.com/tags/helmcharts/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jorgesnotebook.com/tags/helmfile/</loc>
     <lastmod>2021-02-28T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -120,9 +105,7 @@
                 hreflang="en"
                 href="https://jorgesnotebook.com/tags/helmfile/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jorgesnotebook.com/categories/helmfile/</loc>
     <lastmod>2021-02-28T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -135,9 +118,7 @@
                 hreflang="en"
                 href="https://jorgesnotebook.com/categories/helmfile/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jorgesnotebook.com/categories/how-to/</loc>
     <lastmod>2021-02-28T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -150,9 +131,7 @@
                 hreflang="en"
                 href="https://jorgesnotebook.com/categories/how-to/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jorgesnotebook.com/blog/how-to-implement-sops-helmfile/</loc>
     <lastmod>2021-02-28T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -165,9 +144,7 @@
                 hreflang="en"
                 href="https://jorgesnotebook.com/blog/how-to-implement-sops-helmfile/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jorgesnotebook.com/</loc>
     <lastmod>2021-02-28T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -180,9 +157,7 @@
                 hreflang="en"
                 href="https://jorgesnotebook.com/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jorgesnotebook.com/tags/kluster/</loc>
     <lastmod>2021-02-28T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -195,9 +170,7 @@
                 hreflang="en"
                 href="https://jorgesnotebook.com/tags/kluster/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jorgesnotebook.com/tags/kubernetes/</loc>
     <lastmod>2021-02-28T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -210,9 +183,7 @@
                 hreflang="en"
                 href="https://jorgesnotebook.com/tags/kubernetes/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jorgesnotebook.com/categories/kubernetes/</loc>
     <lastmod>2021-02-28T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -225,9 +196,7 @@
                 hreflang="en"
                 href="https://jorgesnotebook.com/categories/kubernetes/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jorgesnotebook.com/tags/secrets/</loc>
     <lastmod>2021-02-28T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -240,9 +209,7 @@
                 hreflang="en"
                 href="https://jorgesnotebook.com/tags/secrets/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jorgesnotebook.com/tags/sops/</loc>
     <lastmod>2021-02-28T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -255,9 +222,7 @@
                 hreflang="en"
                 href="https://jorgesnotebook.com/tags/sops/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jorgesnotebook.com/tags/</loc>
     <lastmod>2021-02-28T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -270,14 +235,10 @@
                 hreflang="en"
                 href="https://jorgesnotebook.com/tags/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jorgesnotebook.com/categories/cluster/</loc>
     <lastmod>2021-01-30T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jorgesnotebook.com/blog/how-to-set-up-your-kluster-with-helmfle/</loc>
     <lastmod>2021-01-30T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -290,219 +251,136 @@
                 hreflang="en"
                 href="https://jorgesnotebook.com/blog/how-to-set-up-your-kluster-with-helmfle/"
                 />
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jorgesnotebook.com/tags/docker/</loc>
     <lastmod>2020-09-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jorgesnotebook.com/categories/docker/</loc>
     <lastmod>2020-09-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jorgesnotebook.com/tags/dockerimages/</loc>
     <lastmod>2020-09-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://jorgesnotebook.com/blog/how-to-create-a-small-jvm-docker-image/</loc>
-    <lastmod>2020-09-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jorgesnotebook.com/categories/java/</loc>
     <lastmod>2020-09-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jorgesnotebook.com/tags/java/</loc>
     <lastmod>2020-09-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jorgesnotebook.com/tags/jdk/</loc>
     <lastmod>2020-09-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>https://jorgesnotebook.com/blog/how-to-create-a-small-jvm-docker-image/</loc>
+    <lastmod>2020-09-28T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://jorgesnotebook.com/tags/jre/</loc>
     <lastmod>2020-09-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jorgesnotebook.com/tags/jvm/</loc>
     <lastmod>2020-09-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>https://jorgesnotebook.com/tags/maven/</loc>
+    <lastmod>2020-09-28T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://jorgesnotebook.com/tags/openjdk/</loc>
     <lastmod>2020-09-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
+    <loc>https://jorgesnotebook.com/tags/spring-boot/</loc>
+    <lastmod>2020-09-28T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://jorgesnotebook.com/tags/init-spring-boot/</loc>
     <lastmod>2020-01-23T23:10:39+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jorgesnotebook.com/tags/spring/</loc>
     <lastmod>2020-01-23T23:10:39+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://jorgesnotebook.com/tags/spring-boot/</loc>
-    <lastmod>2020-01-23T23:10:39+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jorgesnotebook.com/categories/spring-boot/</loc>
     <lastmod>2020-01-23T23:10:39+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jorgesnotebook.com/tags/spring-boot-2.0/</loc>
     <lastmod>2020-01-23T23:10:39+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jorgesnotebook.com/tags/starting-with-spring/</loc>
     <lastmod>2020-01-23T23:10:39+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jorgesnotebook.com/blog/starting-with-spring-boot/</loc>
     <lastmod>2020-01-23T23:10:39+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jorgesnotebook.com/tags/starting-with-spring-boot/</loc>
     <lastmod>2020-01-23T23:10:39+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jorgesnotebook.com/tags/adoptopenjdk/</loc>
     <lastmod>2020-01-23T23:08:17+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jorgesnotebook.com/tags/jdk-11/</loc>
     <lastmod>2020-01-23T23:08:17+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jorgesnotebook.com/tags/jdk-11-lts/</loc>
     <lastmod>2020-01-23T23:08:17+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jorgesnotebook.com/tags/jdk-6/</loc>
     <lastmod>2020-01-23T23:08:17+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jorgesnotebook.com/tags/jdk-7/</loc>
     <lastmod>2020-01-23T23:08:17+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jorgesnotebook.com/tags/jdk-8/</loc>
     <lastmod>2020-01-23T23:08:17+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jorgesnotebook.com/categories/opinion/</loc>
     <lastmod>2020-01-23T23:08:17+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jorgesnotebook.com/tags/opinion/</loc>
     <lastmod>2020-01-23T23:08:17+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jorgesnotebook.com/blog/what-is-going-on-with-java/</loc>
     <lastmod>2020-01-23T23:08:17+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jorgesnotebook.com/tags/jenkins-debian-9/</loc>
     <lastmod>2020-01-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jorgesnotebook.com/categories/debian/</loc>
     <lastmod>2020-01-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jorgesnotebook.com/tags/gitlab/</loc>
     <lastmod>2020-01-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jorgesnotebook.com/categories/gitlab/</loc>
     <lastmod>2020-01-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jorgesnotebook.com/tags/gitlab-in-debian/</loc>
     <lastmod>2020-01-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jorgesnotebook.com/tags/gitlab-in-debian-9/</loc>
     <lastmod>2020-01-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jorgesnotebook.com/tags/gitlad-installation/</loc>
     <lastmod>2020-01-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jorgesnotebook.com/tags/how-to-install-gitlab/</loc>
     <lastmod>2020-01-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jorgesnotebook.com/blog/how-to-install-gitlab-on-debian-9/</loc>
     <lastmod>2020-01-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jorgesnotebook.com/blog/how-to-install-jenkins/</loc>
     <lastmod>2020-01-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jorgesnotebook.com/tags/how-to-install-jenkins/</loc>
     <lastmod>2020-01-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jorgesnotebook.com/tags/installations/</loc>
     <lastmod>2020-01-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jorgesnotebook.com/tags/jenkis-debian/</loc>
     <lastmod>2020-01-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jorgesnotebook.com/categories/linux/</loc>
     <lastmod>2020-01-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jorgesnotebook.com/tags/whats-jenkins/</loc>
     <lastmod>2020-01-23T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
+  </url><url>
     <loc>https://jorgesnotebook.com/about/</loc>
     <xhtml:link
                 rel="alternate"
@@ -515,5 +393,4 @@
                 href="https://jorgesnotebook.com/about/"
                 />
   </url>
-  
 </urlset>

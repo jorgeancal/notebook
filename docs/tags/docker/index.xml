@@ -8,14 +8,14 @@
     <language>en</language>
     <lastBuildDate>Mon, 28 Sep 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://jorgesnotebook.com/tags/docker/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>How to Create a Small JRE for your Microservices</title>
+      <title>jlink with Spring Boot services</title>
       <link>https://jorgesnotebook.com/blog/how-to-create-a-small-jvm-docker-image/</link>
       <pubDate>Mon, 28 Sep 2020 00:00:00 +0000</pubDate>
       
       <guid>https://jorgesnotebook.com/blog/how-to-create-a-small-jvm-docker-image/</guid>
-      <description>In this post you&amp;rsquo;ll learn about how to create a small JRE for your microservices.
-Firstly you are going to need a java project. So you have to go to your root folder project. When you are there you have to run the next command:
-jdeps --list-deps {{jar-name}}.jar This command is going to give us a list of modules that we are using in our java microservice. I&amp;rsquo;m running this again to hello-world java service, so I&amp;rsquo;m not going to have that many dependencies.</description>
+      <description>This always has been my priority because&amp;hellip; I don&amp;rsquo;t want to pay extra in ECR so&amp;hellip; I have to create small docker images.
+we need to list the classpath of all the libraries that we are going to use the follow command in maven ot save all of them in a file
+mvn dependency:build-classpath -Dmdep.includeScope=runtime -Dmdep.outputFile=classpath once we have all the libraries in a file&amp;hellip; we need are going to put everything in a environment variable that way we can use it later on.</description>
     </item>
     
   </channel>

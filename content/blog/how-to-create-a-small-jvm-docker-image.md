@@ -2,35 +2,38 @@
 comments= true
 author = "Jorge Andreu Calatayud"
 categories = ["Java", "Docker"]
-tags = ["java", "openjdk", "jdk", "DockerImages", "Docker", "jvm", "jre"]
+tags = ["java", "openjdk", "jdk", "DockerImages", "Docker", "jvm", "jre", "maven", "Spring Boot"]
 date = "2020-09-28"
 description = "Here, you will learn about how to create a small JRE for your microservices. "
 linktitle = ""
-title= "How to Create a Small JRE for your Microservices"
+title= "jlink with Spring Boot services"
 
 +++
 
-In this post you'll learn about how to create a small JRE for your microservices.
+This always has been my priority because... I don't want to pay extra in ECR so... I have to create small docker images.
 
-Firstly you are going to need a java project. So you have to go to your root folder project. When you are there you have to run the next command:
-```shell script
-jdeps --list-deps {{jar-name}}.jar
+we need to list the classpath of all the libraries that we are going to use the follow command in maven ot save all of them in a file
+
+```shell
+mvn dependency:build-classpath -Dmdep.includeScope=runtime -Dmdep.outputFile=classpath
 ```
 
-This command is going to give us a list of modules that we are using in our java microservice. I'm running this again to hello-world java service, so I'm not going to have that many dependencies. My output was the following one:
-```shell script
-$ jdeps --list-deps hello-0.0.1-SNAPSHOT.jar
-  java.base
-  java.logging
-  not found
+once we have all the libraries in a file... we need are going to put everything in a environment variable that way we can use it later on. To be able to do that... we need to run the following command
+
+```shell
+export SERVICE_CLASSPATH=$(cat classpath)
 ```
 
-The previous output is going to tell us which modules we are using in the jar. Now we need to crate our JRE. 
+Once we have the variable in place let's go to list all the java modules. For that we are going to run the following command:
+```shell
+jdeps -cp $SERVICE_CLASSPATH --multi-release $JDK --print-module-deps --ignore-missing-deps -R target/classes
+```
+Being `$JDK` the number of java version. Once we have all the modules it's time to create out slim jdk... for that we are going to need to run the following command (Being `$JDEPMODULES` the list of modules from the previous command)
 
 ```Shell script
 $ jlink --module-path /opt/java/jmods --compress=2 --strip-debug \
   --no-header-files --no-man-pages \
-  --add-modules java.base,java.logging --output /opt/jlink 
+  --add-modules $JDEPMODULES --output /opt/jlink 
 ```
 
 Now, we have our runtime in `/opt/jlink` folder that we can use to run our application and this folder is going to be around 30 Mb instead of 240 Mb which is the normal size of the JDK. 
