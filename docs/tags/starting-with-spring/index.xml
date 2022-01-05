@@ -6,7 +6,11 @@
     <description>Recent content in starting with spring on Jorge&#39;s notebook</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 23 Jan 2020 23:10:39 +0000</lastBuildDate><atom:link href="https://jorgesnotebook.com/tags/starting-with-spring/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 23 Jan 2020 23:10:39 +0000</lastBuildDate>
+    
+	<atom:link href="https://jorgesnotebook.com/tags/starting-with-spring/index.xml" rel="self" type="application/rss+xml" />
+    
+    
     <item>
       <title>Starting with Spring Boot</title>
       <link>https://jorgesnotebook.com/blog/starting-with-spring-boot/</link>

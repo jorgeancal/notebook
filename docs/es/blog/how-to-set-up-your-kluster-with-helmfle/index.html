@@ -3,33 +3,39 @@
   <head>
   <meta charset="utf-8">
 <title>Configurar tu kluster con Helmfile - Jorge&#39;s Notebook</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Echamos un vistazo atrás de cómo se ha portado helmfile después de 6 meses usando helmfile en el trabajo y mostramos a cómo configurarlo.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="twitter:card" content="summary_large_image">
+
+<meta property="og:site_name" content="Jorge&#39;s Notebook">
+<meta property="og:title" content="Configurar tu kluster con Helmfile">
+<meta property="og:description" content="Echamos un vistazo atrás de cómo se ha portado helmfile después de 6 meses usando helmfile en el trabajo y mostramos a cómo configurarlo.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://jorgesnotebook.com/es/blog/how-to-set-up-your-kluster-with-helmfle/">
+  <meta property="og:image" content="https://jorgesnotebook.com/img/notebook.png">
 
 
+
+  <link rel="manifest" href="/favicon/site.webmanifest?v=1">
   <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png?v=1">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png?v=1">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png?v=1">
-  <link rel="manifest" href="/favicon/site.webmanifest?v=1">
   
-    <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg?v=1" color="#ffffff">
+    <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg?v=1" color="#000000">
     <link rel="shortcut icon" href="/favicon/favicon.ico?v=1">
     <meta name="msapplication-config" content="/favicon/browserconfig.xml?v=1">
   
-  <meta name="msapplication-TileColor" content="#ffffff">
-  <meta name="theme-color" content="#ffffff">
+  <meta name="msapplication-TileColor" content="#000000">
+  <meta name="theme-color" content="#000000">
 
-<meta name="generator" content="Hugo 0.86.0" /><meta property="og:site_name" content="Jorge&#39;s Notebook">
-  <meta property="og:title" content="Configurar tu kluster con Helmfile">
-  <meta property="og:description" content="Echamos un vistazo atrás de cómo se ha portado helmfile después de 6 meses usando helmfile en el trabajo y mostramos a cómo configurarlo.">
-  <meta property="description" content="Echamos un vistazo atrás de cómo se ha portado helmfile después de 6 meses usando helmfile en el trabajo y mostramos a cómo configurarlo.">
-  <meta property="og:url" content="https://jorgesnotebook.com/es/blog/how-to-set-up-your-kluster-with-helmfle/">
-  <meta property="og:type" content="article">
-  
-    <meta property="og:image" content="https://jorgesnotebook.com/img/notebook.png">
-  
-  
-            <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/styles/paraiso-dark.min.css">
-          <link rel="stylesheet" href="/css/bundle.min.2b4e36cd6a81be0237f8d8f3ce0d239eb39d356f5e3b6c33140b8108476a2beb.css" integrity="sha256-K042zWqBvgI3&#43;Njzzg0jnrOdNW9eO2wzFAuBCEdqK&#43;s="><link rel="stylesheet" href="/css/add-on.css">
+
+  <meta name="generator" content="Hugo 0.68.3" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/styles/paraiso-dark.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,800,900|Source+Sans+Pro:400,700">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css">
+        <script src="https://kit.fontawesome.com/be54eb011a.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"><link rel="stylesheet" href="/css/main.min.1ef73455ed94bf3a90936ea9321231bc257897b2807dcef51ae18bd6697f0ed9.css" integrity="sha256-Hvc0Ve2UvzqQk26pMhIxvCV4l7KAfc71GuGL1ml/Dtk="><link rel="stylesheet" href="/css/add-on.css">
 </head>
 
   <body>
@@ -123,7 +129,7 @@
 
     <div id="wrapper">
       <section id="site-intro" class="hidden-single-column">
-  <a href="/es/"><img src="https://jorgesnotebook.com/img/notebook.png" class="circle" width="100" alt="Jorge&#39;s Notebook" /></a>
+  <a href="/es/"><img src="/img/notebook.png" class="circle" width="100" alt="Jorge&#39;s Notebook" /></a>
   <header>
     <h1>Jorge's Notebook</h1>
   </header>
@@ -237,6 +243,7 @@
       </div>
       <div class="content">
         
+        
         <p>Helmfile es una herramienta que te permite sacar más partido a Helm. Ya que si usas helmfile puedes implementar cualquier cantidad de helmcharts. Básicamente con helmfile declaras las helmcharts y les das los valores que tú quieres a cada una de las helm chart, helmfile creara el correspondiente deploy mediante helm para mandar a tu cluster todo lo que has definido en helmfile, claro esta puedes decirle a helmfile impleméntame solo este grupo de helmchart y de este grupo quiero implementarlas en esta secuencia.</p>
 <h2 id="cómo-se-ha-portado-helmfile">¿Cómo se ha portado helmfile?</h2>
 <p>Después de estos 6 meses usando helmfile la verdad es que me ha dado mucha más vida. Si queremos implementar cosas nuevas cosas&hellip;. todo va más rápido.</p>
@@ -258,7 +265,7 @@
 </ul>
 <h2 id="cómo-lo-configuro">¿Cómo lo configuro?</h2>
 <p>La configuración es bastante sencilla. Lo primero de todo es tener un repo para todo esto o en una carpeta si vas a tener lo en un mismo repo con más cosas en él. Yo actualmente lo tengo en un repo exclusivamente para helmfile. Mi esquema del repo es el siguiente:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">.
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">.
 ├── addReleases.sh
 ├── base
 │   ├── defaults
@@ -287,67 +294,67 @@
         └── values.yaml.gotmpl
 
 </code></pre></div><p>Ahora os voy a mostrar lo que tenemos en el principal helmfile.yaml:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">{{ <span style="color:#ae81ff">readFile &#34;base/templates/helmfile.yaml&#34; }}</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">{{ readFile <span style="color:#e6db74">&#34;base/templates/helmfile.yaml&#34;</span> }}
 
-{{ <span style="color:#ae81ff">readFile &#34;base/repositories/helmfile.yaml&#34; }}</span>
+{{ readFile <span style="color:#e6db74">&#34;base/repositories/helmfile.yaml&#34;</span> }}
 
-<span style="color:#f92672">releases</span>:
+<span style="color:#66d9ef">releases</span>:
 
 </code></pre></div><p>Como veréis no tengo nada en releases y eso es porque tengo un script que va por todas las carpetas de dentro de releases y me encuentra todo fichero que se llame <code>helmfile.yaml</code> y me lo agrega al final del documento. De esa manera nos libramos de tener un fichero de más 200 lineas en el repo y que da más bonito a la hora de leer el fichero y te da más flexibilidad, ya que solo has de crear tu carpeta con la chart que quieres y los valores que tú quieres y listo. Os preguntaréis por qué ha puesto dos readFile ahi arriba. Bueno pues&hellip; esta es la manera que encontre de mantener las cosas simples. Ya que en templates puedo crear diferentes templates para los releases y luego decirle a un release tú usa esta y tú usa la otra. Una gozada. Luego también tenemos los repositorios que como todos sabemos para declarar un repositorio en helmfile tenemos que tener dos lineas, esto quiere decir que tendríamos dos lineas más de fichero tontamente, pues mejor es tenerlo en otro fichero no? asi todo queda más limpio. A continuación os mostraré un ejemplo de los ficheros, estar atengo que uno lleva sorpresa.</p>
 <p>Empezamos por el más sencillo de todo que es el de los repositorios.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">repositories</span>:
-  - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">prometheus-community</span>
-    <span style="color:#f92672">url</span>: <span style="color:#ae81ff">https://prometheus-community.github.io/helm-charts</span>
-  - <span style="color:#f92672">name</span>: <span style="color:#ae81ff">grafana</span>
-    <span style="color:#f92672">url</span>: <span style="color:#ae81ff">grafana https://grafana.github.io/helm-charts</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#66d9ef">repositories</span>:
+  - <span style="color:#66d9ef">name</span>: prometheus-community
+    <span style="color:#66d9ef">url</span>: https://prometheus-community.github.io/helm-charts
+  - <span style="color:#66d9ef">name</span>: grafana
+    <span style="color:#66d9ef">url</span>: grafana https://grafana.github.io/helm-charts
 </code></pre></div><p>A continuacion tenemos en de la template</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">bases</span>:
-  - <span style="color:#ae81ff">base/defaults/helmfile.yaml</span>
-  - <span style="color:#ae81ff">base/environments/helmfile.yaml</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#66d9ef">bases</span>:
+  - base/defaults/helmfile.yaml
+  - base/environments/helmfile.yaml
   
-<span style="color:#f92672">templates</span>:
-  <span style="color:#f92672">defaultTmpl</span>: <span style="color:#75715e">&amp;defaultTmpl</span>
-    <span style="color:#f92672">missingFileHandler</span>: <span style="color:#ae81ff">Warn</span>
-    <span style="color:#f92672">valuesTemplate</span>:
-      - <span style="color:#ae81ff">base/values/{{ .Environment.Name }}/values.yaml.gotmpl</span>
-      - <span style="color:#ae81ff">releases/{{ .Release.Name }}/values.yaml.gotmpl</span>
+<span style="color:#66d9ef">templates</span>:
+  <span style="color:#66d9ef">defaultTmpl</span>: <span style="color:#75715e">&amp;defaultTmpl</span>
+    <span style="color:#66d9ef">missingFileHandler</span>: Warn
+    <span style="color:#66d9ef">valuesTemplate</span>:
+      - base/values/{{ .Environment.Name }}/values.yaml.gotmpl
+      - releases/{{ .Release.Name }}/values.yaml.gotmpl
 </code></pre></div><p>Como podéis ver lleva sorpresa no solo tenemos templates tenemos la section base ahi. La verdad es que esto si queremos podríamos agregar otro fichero y poner otro <code>readFile</code> esto ya fue a mi gusto, ya que cuando estaba haciendo la template quería agregar la base, por lo que pensé que deberían ir juntos.</p>
 <p>Ahora pasamos a la parte de los defaults</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">helmDefaults</span>:
-  <span style="color:#f92672">wait</span>: <span style="color:#66d9ef">true</span>
-  <span style="color:#f92672">timeout</span>: <span style="color:#ae81ff">300</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#66d9ef">helmDefaults</span>:
+  <span style="color:#66d9ef">wait</span>: <span style="color:#66d9ef">true</span>
+  <span style="color:#66d9ef">timeout</span>: <span style="color:#ae81ff">300</span>
 </code></pre></div><p>Ahora vamos a irnos a mirar nuestro <code>environments.yaml</code>. Como podéis ver, declaramos los dos entornos que tenemos y luego añadimos los valores atraves de un fichero. En este fichero le estamos indicando cuales charts queremos implementar en el entorno.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">environments</span>:
-  <span style="color:#f92672">production</span>:
-    <span style="color:#f92672">values</span>:
-      - <span style="color:#ae81ff">base/values/production/values.yaml.gotmpl</span>
-  <span style="color:#f92672">minikube</span>:
-    <span style="color:#f92672">values</span>:
-      - <span style="color:#ae81ff">base/values/minikube/values.yaml.gotmp</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#66d9ef">environments</span>:
+  <span style="color:#66d9ef">production</span>:
+    <span style="color:#66d9ef">values</span>:
+      - base/values/production/values.yaml.gotmpl
+  <span style="color:#66d9ef">minikube</span>:
+    <span style="color:#66d9ef">values</span>:
+      - base/values/minikube/values.yaml.gotmp
 </code></pre></div><p>Os dejo también un ejemplo de esto. He de comentar que este es un buen lugar para agregar variables globales para el entorno no solo para decirle que es lo que quieres instalar y lo que no.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#f92672">prometheus</span>:
-  <span style="color:#f92672">installed</span>: <span style="color:#66d9ef">true</span>
-<span style="color:#f92672">grafana</span>:
-  <span style="color:#f92672">installed</span>: <span style="color:#66d9ef">true</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml"><span style="color:#66d9ef">prometheus</span>:
+  <span style="color:#66d9ef">installed</span>: <span style="color:#66d9ef">true</span>
+<span style="color:#66d9ef">grafana</span>:
+  <span style="color:#66d9ef">installed</span>: <span style="color:#66d9ef">true</span>
 </code></pre></div><p>A continuación vais a ver el <code>helmfile.yaml</code> que tengo para grafana. Es de lo más sencillo, ya que llamo a la template en el principio del release y luego agrego los datos para el release, además como veréis tenemos el campo <code>installed</code> que de esta manera le digo si lo quiero instalar o no y también tengo otro campo para decirle que no lo quiero implementar hasta que la lista de charts esté implementada</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">- <span style="color:#f92672">&lt;&lt;</span>: <span style="color:#75715e">*defaultTmpl</span>
-  <span style="color:#f92672">name</span>:  <span style="color:#e6db74">&#34;grafana&#34;</span>
-  <span style="color:#f92672">chart</span>: <span style="color:#e6db74">&#34;grafana/grafana&#34;</span>
-  <span style="color:#f92672">namespace</span>: <span style="color:#e6db74">&#34;monitoring&#34;</span>
-  <span style="color:#f92672">version</span>: <span style="color:#e6db74">&#34;3.2.5&#34;</span>
-  <span style="color:#f92672">installed</span>: {{ <span style="color:#ae81ff">.Values | getOrNil &#34;grafana.installed&#34; | default false }}</span>
-  <span style="color:#f92672">needs</span>: 
-    - <span style="color:#ae81ff">observability/fluentd</span>
-    - <span style="color:#ae81ff">observability/prometheus</span>
-    - <span style="color:#ae81ff">operators/jaeger-operator</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-yaml" data-lang="yaml">- <span style="color:#66d9ef">&lt;&lt;</span>: <span style="color:#75715e">*defaultTmpl</span>
+  <span style="color:#66d9ef">name</span>:  <span style="color:#e6db74">&#34;grafana&#34;</span>
+  <span style="color:#66d9ef">chart</span>: <span style="color:#e6db74">&#34;grafana/grafana&#34;</span>
+  <span style="color:#66d9ef">namespace</span>: <span style="color:#e6db74">&#34;monitoring&#34;</span>
+  <span style="color:#66d9ef">version</span>: <span style="color:#e6db74">&#34;3.2.5&#34;</span>
+  <span style="color:#66d9ef">installed</span>: {{ .Values | getOrNil <span style="color:#e6db74">&#34;grafana.installed&#34;</span> | default <span style="color:#66d9ef">false</span> }}
+  <span style="color:#66d9ef">needs</span>: 
+    - observability/fluentd
+    - observability/prometheus
+    - operators/jaeger-operator
 </code></pre></div><p>Y con esto hemos terminado la configuración de helmfile.</p>
 <h2 id="como-usar-helmfile">Como Usar Helmfile</h2>
 <p>Helmfile es muy sencillo a la hora de user vamos alli a donde tengáis un helmfile.yaml y yo os recomiendo ejecutar el siguiente comando:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">helmfile -e minikube apply 
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell">helmfile -e minikube apply 
 </code></pre></div><p>Tenéis más comandos para el uso de helmfile. Yo suelo usar bastante <code>tempalte</code> y <code>diff</code>.</p>
 <p>Tenéis que poner siempre en entorno al que queréis implementar las charts por eso siempre que ejecutéis el comando tenéis que poner <code>-e</code> seguido del entorno al que vais a mandarlo, eso si, lo tenéis que tener puesto en la lista que tengáis en el fichero de entornos.</p>
 <p>Para terminar voy a mostraros el script que uso para buscar y agregar los ficheros al fichero principal</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e">#!/bin/bash
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-shell" data-lang="shell"><span style="color:#75715e">#!/bin/bash
 </span><span style="color:#75715e"></span>
 <span style="color:#66d9ef">for</span> release in <span style="color:#e6db74">`</span>find releases/ -name <span style="color:#e6db74">&#34;*.yaml&#34;</span><span style="color:#e6db74">`</span>; <span style="color:#66d9ef">do</span>
     release_name<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>cat $release | grep <span style="color:#e6db74">&#34;name: &#34;</span> | cut -d<span style="color:#e6db74">&#39; &#39;</span> -f2-<span style="color:#66d9ef">)</span>
@@ -555,14 +562,16 @@
   <p class="copyright">
     © 2021 Jorge&#39;s Notebook
       <br>
-    Tema: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>Adaptado de <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP</a> | Impulsado por <a href='https://gohugo.io/' title='0.86.0' target='_blank' rel='noopener'>Hugo</a>
+    Tema: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>Adaptado de <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP</a> | Impulsado por <a href='https://gohugo.io/' title='0.68.3' target='_blank' rel='noopener'>Hugo</a>
   </p>
 </footer>
 <a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>
 
-      <script src="/js/highlight.js"></script>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/highlight.min.js"></script>
     
-    <script>hljs.highlightAll();</script><script src="/js/bundle.min.5e028ec6834a5f4a1ba4ec29d9bcd65b5cc855ac4163c06708177c2efb812880.js" integrity="sha256-XgKOxoNKX0obpOwp2bzWW1zIVaxBY8BnCBd8LvuBKIA="></script>
+    <script>hljs.highlightAll();</script><script src="//code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.js"></script>
+    <script src="//unpkg.com/lunr/lunr.js"></script><script src="/js/bundlecdn.min.4f132c3a72cc80927fa0afc9069b2b476276c647887b5256af20e2252eef2e92.js" integrity="sha256-TxMsOnLMgJJ/oK/JBpsrR2J2xkeIe1JWryDiJS7vLpI="></script>
     <script src="/js/add-on.js"></script>
 <script type="application/javascript">
 var doNotTrack = false;

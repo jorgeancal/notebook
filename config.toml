@@ -20,7 +20,7 @@ unsafe                = true
 home                  = ["html", "json", "rss"]
 
 [params]
-enableCDN             = false
+enableCDN             = true
 cssFiles              = ["default"]
 jsFiles               = ["default"]
 highlightjs           = true
@@ -32,6 +32,8 @@ imageStretch          = ""
 removeBlur            = false
 socialShare           = ["twitter", "facebook", "linkedin", "email"]
 hideEmptyStats        = false
+toc                   = false
+tocWords              = 400
 
 [params.meta]
 description         = "Welcome to my notebook"
@@ -39,8 +41,8 @@ author              = "Jorge Andreu Calatayud"
 favicon             = true
 svg                 = true
 faviconVersion      = "1"
-msColor             = "#ffffff"
-iOSColor            = "#ffffff"
+msColor             = "#000000"
+iOSColor            = "#000000"
 
 [params.header]
 navbarTitle         = "Jorge's Notebook"
