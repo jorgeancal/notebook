@@ -6,7 +6,34 @@
     <description>Recent content in Categories on Jorge&#39;s Notebook</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
-    <lastBuildDate>Sun, 28 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://jorgesnotebook.com/es/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 20 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://jorgesnotebook.com/es/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>AWS</title>
+      <link>https://jorgesnotebook.com/es/categories/aws/</link>
+      <pubDate>Tue, 20 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://jorgesnotebook.com/es/categories/aws/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>How to</title>
+      <link>https://jorgesnotebook.com/es/categories/how-to/</link>
+      <pubDate>Tue, 20 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://jorgesnotebook.com/es/categories/how-to/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>kubernetes</title>
+      <link>https://jorgesnotebook.com/es/categories/kubernetes/</link>
+      <pubDate>Tue, 20 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://jorgesnotebook.com/es/categories/kubernetes/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Helm</title>
       <link>https://jorgesnotebook.com/es/categories/helm/</link>
@@ -22,24 +49,6 @@
       <pubDate>Sun, 28 Feb 2021 00:00:00 +0000</pubDate>
       
       <guid>https://jorgesnotebook.com/es/categories/helmfile/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>How to</title>
-      <link>https://jorgesnotebook.com/es/categories/how-to/</link>
-      <pubDate>Sun, 28 Feb 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://jorgesnotebook.com/es/categories/how-to/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>kubernetes</title>
-      <link>https://jorgesnotebook.com/es/categories/kubernetes/</link>
-      <pubDate>Sun, 28 Feb 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://jorgesnotebook.com/es/categories/kubernetes/</guid>
       <description></description>
     </item>
     

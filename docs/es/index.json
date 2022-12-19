@@ -1,4 +1,10 @@
 [{
+    "title": "Creando un EKS con terraform",
+    "date": "",
+    "description": "",
+    "body": "",
+    "ref": "/es/blog/how-to-create-your-cluster-with-terraform/"
+  },{
     "title": "Como configurar SOPS en Helmfile",
     "date": "",
     "description": "Te explicare como implementar sops en Helmfile de una manera rapida y sencilla.",

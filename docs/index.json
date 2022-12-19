@@ -1,4 +1,10 @@
 [{
+    "title": "How to create your cluster with terraform",
+    "date": "",
+    "description": "",
+    "body": "",
+    "ref": "/blog/how-to-create-your-cluster-with-terraform/"
+  },{
     "title": "How to config SOPS in Helm",
     "date": "",
     "description": "I will explain how to use SOPS in helm deploying it with helmfile",
