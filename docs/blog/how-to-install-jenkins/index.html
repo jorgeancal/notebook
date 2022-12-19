@@ -30,7 +30,7 @@
   <meta name="theme-color" content="#000000">
 
 
-  <meta name="generator" content="Hugo 0.68.3" />
+  <meta name="generator" content="Hugo 0.108.0">
   <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/styles/paraiso-dark.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,800,900|Source+Sans+Pro:400,700">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css">
@@ -259,16 +259,16 @@ What’s Jenkins?</p>
 <p>I think explaining these terms you can see why we use it. I’m really interested in working with it, because I think you can have more control in the product which we are developing. Because I’m using it now in my work, but I think we’re not using it correctly, but that is another matter.
 Installing Jenkins on Debian 9</p>
 <p>There are a few ways to install it (Docker, War and apt). For these things I’m a bit weird, and I prefer to install it via apt. Well the first thing I have to say is log in with root user and add the key of the package repository:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">wget -q -O - https://pkg.jenkins.io/debian/jenkins.io.key | apt-key add -
-</code></pre></div><p>Now we have to add the package repository in the source list, there are two ways, so choose whichever you want. I’m going to use the first one.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">sh -c <span style="color:#e6db74">&#39;echo deb http://pkg.jenkins.io/debian-stable binary/ &gt; /etc/apt/sources.list.d/jenkins.list&#39;</span>
-</code></pre></div><p>For the second one, we need to create and add the next line in “/etc/apt/sources.list.d/jenkins.list” :</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">deb https://pkg.jenkins.io/debian binary/
-</code></pre></div><p>Now it’s time to update the apt, so you need to execute the next command and install the package.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">apt-get update <span style="color:#f92672">&amp;&amp;</span> apt-get install jenkins
-</code></pre></div><p>There you have it. Enjoy your Jenkins. But don’t leave here yet. There’s more.  I guess everyone has a Tomcat in the server or something in the 8080 port, so you must to go to the Jenkins conf file which is in “/etc/default/jenkins” and go to line 63, in that line you can configure the port, so change it. I usually use weird ports like 6669, or something like that. After that, you need to restart the service, so run the next command:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">/etc/init.d/jenkins restart
-</code></pre></div><p>When you’ve got it, open a browser and go to the Jenkins. You’ll have something like that:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>wget -q -O - https://pkg.jenkins.io/debian/jenkins.io.key | apt-key add -
+</span></span></code></pre></div><p>Now we have to add the package repository in the source list, there are two ways, so choose whichever you want. I’m going to use the first one.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sh -c <span style="color:#e6db74">&#39;echo deb http://pkg.jenkins.io/debian-stable binary/ &gt; /etc/apt/sources.list.d/jenkins.list&#39;</span>
+</span></span></code></pre></div><p>For the second one, we need to create and add the next line in “/etc/apt/sources.list.d/jenkins.list” :</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>deb https://pkg.jenkins.io/debian binary/
+</span></span></code></pre></div><p>Now it’s time to update the apt, so you need to execute the next command and install the package.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>apt-get update <span style="color:#f92672">&amp;&amp;</span> apt-get install jenkins
+</span></span></code></pre></div><p>There you have it. Enjoy your Jenkins. But don’t leave here yet. There’s more.  I guess everyone has a Tomcat in the server or something in the 8080 port, so you must to go to the Jenkins conf file which is in “/etc/default/jenkins” and go to line 63, in that line you can configure the port, so change it. I usually use weird ports like 6669, or something like that. After that, you need to restart the service, so run the next command:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>/etc/init.d/jenkins restart
+</span></span></code></pre></div><p>When you’ve got it, open a browser and go to the Jenkins. You’ll have something like that:</p>
 <p><img src="/images/jenkins/jenkins.png" alt="jenkis #incenter"></p>
 <p>Afterthat, go to that file and paste in that input, we’re going to customize the Jenkins. Oops… almost forgot. The password is here: “/var/lib/jenkins/secrets/initialAdminPassword”. After that, we must choose between two options:</p>
 <p><img src="/images/jenkins/custom.png" alt="jenkins #incenter"></p>
@@ -323,7 +323,7 @@ Installing Jenkins on Debian 9</p>
   <div class='post'>
     <div id="disqus_thread"></div>
 <script type="application/javascript">
-    var disqus_config = function () {
+    window.disqus_config = function () {
     
     
     
@@ -511,7 +511,7 @@ Installing Jenkins on Debian 9</p>
   <p class="copyright">
     © 2021 Jorge&#39;s notebook
       <br>
-    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.68.3' target='_blank' rel='noopener'>Hugo</a>
+    Theme: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>A <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP port</a> | Powered by <a href='https://gohugo.io/' title='0.108.0' target='_blank' rel='noopener'>Hugo</a>
   </p>
 </footer>
 <a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>
@@ -520,7 +520,7 @@ Installing Jenkins on Debian 9</p>
     
     <script>hljs.highlightAll();</script><script src="//code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.js"></script>
-    <script src="//unpkg.com/lunr/lunr.js"></script><script src="/js/bundlecdn.min.4f132c3a72cc80927fa0afc9069b2b476276c647887b5256af20e2252eef2e92.js" integrity="sha256-TxMsOnLMgJJ/oK/JBpsrR2J2xkeIe1JWryDiJS7vLpI="></script>
+    <script src="//unpkg.com/lunr/lunr.js"></script><script src="/js/bundlecdn.min.41d10a17d610f064095e2fe022e9a4fd49a6640f8f57d652447fe588a9610693.js" integrity="sha256-QdEKF9YQ8GQJXi/gIumk/UmmZA&#43;PV9ZSRH/liKlhBpM="></script>
     <script src="/js/add-on.js"></script>
 <script type="application/javascript">
 var doNotTrack = false;

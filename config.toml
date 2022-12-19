@@ -47,7 +47,7 @@ iOSColor            = "#000000"
 [params.header]
 navbarTitle         = "Jorge's Notebook"
 dynamicTitles       = true
-searchMenu          = true
+searchMenu          = false
 shareMenu           = true
 languageMenu        = true
 
