@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author" content="Jorge Andreu Calatayud">
+<meta name="description" content="Here, you will learn about how to create a small JRE for your microservices. " />
+<meta name="keywords" content=", java, openjdk, jdk, DockerImages, Docker, jvm, jre, maven, Spring Boot" />
+<meta name="robots" content="noodp" />
+<meta name="theme-color" content="" />
+<link rel="canonical" href="https://jorgesnotebook.com/blog/how-to-create-a-small-jvm-docker-image/" />
+
+
+    <title>
+        
+            jlink with Spring Boot services :: Jorge&#39;s notebook 
+        
+    </title>
+
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css" rel="stylesheet"
+    type="text/css">
+
+
+
+<link rel="stylesheet" href="/main.3d89495748aff88bbfbb2a665d8e1260b3aa63445cd77cc810fb6477aba343dd.css">
+
+
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="msapplication-TileColor" content="">
+
+
+<meta itemprop="name" content="jlink with Spring Boot services">
+<meta itemprop="description" content="Here, you will learn about how to create a small JRE for your microservices. "><meta itemprop="datePublished" content="2020-09-28T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2020-09-28T00:00:00+00:00" />
+<meta itemprop="wordCount" content="316">
+<meta itemprop="keywords" content="java,openjdk,jdk,DockerImages,Docker,jvm,jre,maven,Spring Boot," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="jlink with Spring Boot services"/>
+<meta name="twitter:description" content="Here, you will learn about how to create a small JRE for your microservices. "/>
+<meta name="twitter:site" content="@@jorgeancal"/>
+
+
+
+
+
+    <meta property="article:section" content="Java" />
+
+    <meta property="article:section" content="Docker" />
+
+
+
+    <meta property="article:published_time" content="2020-09-28 00:00:00 &#43;0000 UTC" />
+
+
+
+
+
+
+
+
+
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-108421112-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+    </head>
+
+    
+        <body>
+    
+    
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">></span>
+            <span class="logo__text">hello</span>
+            <span class="logo__cursor" style=
+                  "
+                   
+                   ">
+            </span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+            
+                <nav class="menu">
+    <ul class="menu__inner">
+            
+            <div class="submenu">
+                <li class="dropdown">
+                    <a href="/">
+                        Home
+                    </a>
+                </li>
+            </div>
+            
+        
+            
+            <div class="submenu">
+                <li class="dropdown">
+                    <a href="/about/">
+                        About
+                    </a>
+                </li>
+            </div>
+            
+        
+            
+            <div class="submenu">
+                <li class="dropdown">
+                    <a href="/blog/">
+                        Blog
+                    </a>
+                </li>
+            </div>
+            
+        
+            
+            <div class="submenu">
+                <li class="dropdown">
+                    <a href="/categories/">
+                        Categories
+                    </a>
+                </li>
+            </div>
+            
+        
+
+    
+    
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+    <main class="post">
+
+        <div class="post-info">
+            
+            </p>
+        </div>
+
+        <article>
+            
+                <h2 class="post-title"><a href="https://jorgesnotebook.com/blog/how-to-create-a-small-jvm-docker-image/">jlink with Spring Boot services</a></h2>
+            
+
+
+            
+            
+            
+
+            <div class="post-content">
+                <p>This always has been my priority because&hellip; I don&rsquo;t want to pay extra in ECR so&hellip; I have to create small docker images.</p>
+<p>we need to list the classpath of all the libraries that we are going to use the follow command in maven ot save all of them in a file</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>mvn dependency:build-classpath -Dmdep.includeScope<span style="color:#f92672">=</span>runtime -Dmdep.outputFile<span style="color:#f92672">=</span>classpath
+</span></span></code></pre></div><p>once we have all the libraries in a file&hellip; we need are going to put everything in a environment variable that way we can use it later on. To be able to do that&hellip; we need to run the following command</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>export SERVICE_CLASSPATH<span style="color:#f92672">=</span><span style="color:#66d9ef">$(</span>cat classpath<span style="color:#66d9ef">)</span>
+</span></span></code></pre></div><p>Once we have the variable in place let&rsquo;s go to list all the java modules. For that we are going to run the following command:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>jdeps -cp $SERVICE_CLASSPATH --multi-release $JDK --print-module-deps --ignore-missing-deps -R target/classes
+</span></span></code></pre></div><p>Being <code>$JDK</code> the number of java version. Once we have all the modules it&rsquo;s time to create out slim jdk&hellip; for that we are going to need to run the following command (Being <code>$JDEPMODULES</code> the list of modules from the previous command)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-Shell" data-lang="Shell"><span style="display:flex;"><span>$ jlink --module-path /opt/java/jmods --compress<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span> --strip-debug <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  --no-header-files --no-man-pages <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  --add-modules $JDEPMODULES --output /opt/jlink 
+</span></span></code></pre></div><p>Now, we have our runtime in <code>/opt/jlink</code> folder that we can use to run our application and this folder is going to be around 30 Mb instead of 240 Mb which is the normal size of the JDK.</p>
+<p>Nowadays we need to create automated tasks to make everything easier. These steps are really easy to set in a Dockerfile. If you do this you could create an image that is smaller than 100 Mb, maybe a bit more if you have a lot of dependencies. It may look difficult but it&rsquo;s not. I&rsquo;ll try to create another post showing how to do this in an automated way with the dockerfile. I hope you like this post so far and I&rsquo;ll see you in the next one.</p>
+
+            </div>
+        </article>
+
+        <hr />
+
+        <div class="post-info">
+            
+    <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg>
+
+        <span class="tag"><a href="https://jorgesnotebook.com/tags/java/">java</a></span>
+        <span class="tag"><a href="https://jorgesnotebook.com/tags/openjdk/">openjdk</a></span>
+        <span class="tag"><a href="https://jorgesnotebook.com/tags/jdk/">jdk</a></span>
+        <span class="tag"><a href="https://jorgesnotebook.com/tags/dockerimages/">DockerImages</a></span>
+        <span class="tag"><a href="https://jorgesnotebook.com/tags/docker/">Docker</a></span>
+        <span class="tag"><a href="https://jorgesnotebook.com/tags/jvm/">jvm</a></span>
+        <span class="tag"><a href="https://jorgesnotebook.com/tags/jre/">jre</a></span>
+        <span class="tag"><a href="https://jorgesnotebook.com/tags/maven/">maven</a></span>
+        <span class="tag"><a href="https://jorgesnotebook.com/tags/spring-boot/">Spring Boot</a></span>
+        
+    </p>
+
+            
+    <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-folder meta-icon"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+
+        <span class="tag"><a href="https://jorgesnotebook.com/categories/java/">Java</a></span>
+        <span class="tag"><a href="https://jorgesnotebook.com/categories/docker/">Docker</a></span>
+        
+    </p>
+
+  		</div>
+    </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    
+    
+    
+        <div class="footer__inner">
+          
+        </div>
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+<script type="text/javascript" src="/bundle.min.6287a2177681a8a9b1c767e7f6a078bf494acb05a113fe2c5c5833c6f9cf368099768ffab3b5a424a8636a3aa24de5cb7d30e53fa421ccad9f5431e5c09a3ee3.js" integrity="sha512-YoeiF3aBqKmxx2fn9qB4v0lKywWhE/4sXFgzxvnPNoCZdo/6s7WkJKhjajqiTeXLfTDlP6QhzK2fVDHlwJo&#43;4w=="></script>
+
+
+
+    </body>
+</html>

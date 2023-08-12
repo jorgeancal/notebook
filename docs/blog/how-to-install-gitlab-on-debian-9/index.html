@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author" content="Jorge Andreu Calatayud">
+<meta name="description" content="Let’s go with another installation. I’m not really sure about installing GitLab on my server, but I have been thinking a lot about it. I had installed Git which I like, but I tried one years ago and I like it but I haven’t installed it on my server." />
+<meta name="keywords" content=", GitLab, GitLab in Debian 9, GitLab in Debian, GitLad Installation, How to install GitLab, installations" />
+<meta name="robots" content="noodp" />
+<meta name="theme-color" content="" />
+<link rel="canonical" href="https://jorgesnotebook.com/blog/how-to-install-gitlab-on-debian-9/" />
+
+
+    <title>
+        
+            How to Install Gitlab on Debian 9 :: Jorge&#39;s notebook 
+        
+    </title>
+
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css" rel="stylesheet"
+    type="text/css">
+
+
+
+<link rel="stylesheet" href="/main.3d89495748aff88bbfbb2a665d8e1260b3aa63445cd77cc810fb6477aba343dd.css">
+
+
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="msapplication-TileColor" content="">
+
+
+<meta itemprop="name" content="How to Install Gitlab on Debian 9">
+<meta itemprop="description" content="Let’s go with another installation. I’m not really sure about installing GitLab on my server, but I have been thinking a lot about it. I had installed Git which I like, but I tried one years ago and I like it but I haven’t installed it on my server."><meta itemprop="datePublished" content="2020-01-23T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2020-01-23T00:00:00+00:00" />
+<meta itemprop="wordCount" content="468"><meta itemprop="image" content="">
+<meta itemprop="keywords" content="GitLab,GitLab in Debian 9,GitLab in Debian,GitLad Installation,How to install GitLab,installations," />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content=""/>
+
+<meta name="twitter:title" content="How to Install Gitlab on Debian 9"/>
+<meta name="twitter:description" content="Let’s go with another installation. I’m not really sure about installing GitLab on my server, but I have been thinking a lot about it. I had installed Git which I like, but I tried one years ago and I like it but I haven’t installed it on my server."/>
+<meta name="twitter:site" content="@@jorgeancal"/>
+
+
+
+
+
+    <meta property="article:section" content="Gitlab" />
+
+    <meta property="article:section" content="Debian" />
+
+    <meta property="article:section" content="Linux" />
+
+    <meta property="article:section" content="How to" />
+
+
+
+    <meta property="article:published_time" content="2020-01-23 00:00:00 &#43;0000 UTC" />
+
+
+
+
+
+
+
+
+
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-108421112-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+    </head>
+
+    
+        <body>
+    
+    
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">></span>
+            <span class="logo__text">hello</span>
+            <span class="logo__cursor" style=
+                  "
+                   
+                   ">
+            </span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+            
+                <nav class="menu">
+    <ul class="menu__inner">
+            
+            <div class="submenu">
+                <li class="dropdown">
+                    <a href="/">
+                        Home
+                    </a>
+                </li>
+            </div>
+            
+        
+            
+            <div class="submenu">
+                <li class="dropdown">
+                    <a href="/about/">
+                        About
+                    </a>
+                </li>
+            </div>
+            
+        
+            
+            <div class="submenu">
+                <li class="dropdown">
+                    <a href="/blog/">
+                        Blog
+                    </a>
+                </li>
+            </div>
+            
+        
+            
+            <div class="submenu">
+                <li class="dropdown">
+                    <a href="/categories/">
+                        Categories
+                    </a>
+                </li>
+            </div>
+            
+        
+
+    
+    
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+    <main class="post">
+
+        <div class="post-info">
+            
+            </p>
+        </div>
+
+        <article>
+            
+                <h2 class="post-title"><a href="https://jorgesnotebook.com/blog/how-to-install-gitlab-on-debian-9/">How to Install Gitlab on Debian 9</a></h2>
+            
+
+
+            
+            
+            
+
+            <div class="post-content">
+                <p>Let’s go with another installation. I’m not really sure about installing GitLab on my server, but I have been thinking a lot about it. I had installed Git which I like, but I tried one years ago and I like it but I haven’t installed it on my server.</p>
+<p>GitLab is a really good tool. You can have it installed on your server and you can create different teams and just developers. I really like the teams thing because you can create the teams and you can create a project for the teams and you can create roles for each person of the team. I think is excellent.
+Installation</p>
+<p>Firstly, we need you to install the dependencies.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># apt install -y curl openssh-server ca-certificates</span>
+</span></span></code></pre></div><p>There are a lot of people who install the postfix because they want email notifications. So if you want to use another solution to send emails please skip this step and configure an external SMTP server after GitLab has been installed.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># apt install -y postfix</span>
+</span></span></code></pre></div><p>After installing all of it, you must add the respositories of GitLab. For that, you need to run the next command:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># curl -sS https://packages.gitlab.com/install/repositories/gitlab/gitlab-ce/script.deb.sh | bash</span>
+</span></span></code></pre></div><p>Now you need to install it so… there are two different installations the Community Edition or Enterprise Edition. With the Enterprise Edition you have a trial of 30 days and then you have to pay for each user, but you can use mysql with it and there are more functionabilities. The free one is the community, which is the one I have. If you check the installation process on GitLab they are going to tell you to set an External URL as constant, if you want I have one similar to ‘http://myFox.jorgeancal.com’. But if you have in your local, you don’t need it but I drop the command here too.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># EXTERNAL_URL=&#34;http://gitlab.example.com&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># apt install gitlab-ce</span>
+</span></span></code></pre></div><p>Let’s go now with a simple comfiguration which is setting the admin password and login. I’ll do another post speaking more about how to configure and everything. I’m going to do like a quick introducction about commands and setting the root password. Well, the first thing you have to know is the command of how to generate the configuration again.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># gitlab-ctl reconfigure</span>
+</span></span></code></pre></div><p>Another interesting command is the one which allows you to run and stop the GitLab.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># gitlab-ctl start</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># gitlab-ctl stop</span>
+</span></span></code></pre></div><p>Now we’re going to set the password. Open in your browser the URL which you have, or if you didn’t set a URL, just write your IP in the browser.</p>
+<p><img src="/img/gitlab1.png" alt="gitlab change root password #incenter"></p>
+<p>After that, you’ll have the log in screen. The admin user is “root” and the password is the password which you set up before.
+<img src="/img/logIn.png" alt="gitlab login #incenter"></p>
+<p>When you log in you’ll see something like this, and you can start with your projects! Enjoy!
+<img src="/img/welcome.png" alt="gitlab welcome page #incenter"></p>
+
+            </div>
+        </article>
+
+        <hr />
+
+        <div class="post-info">
+            
+    <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg>
+
+        <span class="tag"><a href="https://jorgesnotebook.com/tags/gitlab/">GitLab</a></span>
+        <span class="tag"><a href="https://jorgesnotebook.com/tags/gitlab-in-debian-9/">GitLab in Debian 9</a></span>
+        <span class="tag"><a href="https://jorgesnotebook.com/tags/gitlab-in-debian/">GitLab in Debian</a></span>
+        <span class="tag"><a href="https://jorgesnotebook.com/tags/gitlad-installation/">GitLad Installation</a></span>
+        <span class="tag"><a href="https://jorgesnotebook.com/tags/how-to-install-gitlab/">How to install GitLab</a></span>
+        <span class="tag"><a href="https://jorgesnotebook.com/tags/installations/">installations</a></span>
+        
+    </p>
+
+            
+    <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-folder meta-icon"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+
+        <span class="tag"><a href="https://jorgesnotebook.com/categories/gitlab/">Gitlab</a></span>
+        <span class="tag"><a href="https://jorgesnotebook.com/categories/debian/">Debian</a></span>
+        <span class="tag"><a href="https://jorgesnotebook.com/categories/linux/">Linux</a></span>
+        <span class="tag"><a href="https://jorgesnotebook.com/categories/how-to/">How to</a></span>
+        
+    </p>
+
+  		</div>
+    </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    
+    
+    
+        <div class="footer__inner">
+          
+        </div>
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+<script type="text/javascript" src="/bundle.min.6287a2177681a8a9b1c767e7f6a078bf494acb05a113fe2c5c5833c6f9cf368099768ffab3b5a424a8636a3aa24de5cb7d30e53fa421ccad9f5431e5c09a3ee3.js" integrity="sha512-YoeiF3aBqKmxx2fn9qB4v0lKywWhE/4sXFgzxvnPNoCZdo/6s7WkJKhjajqiTeXLfTDlP6QhzK2fVDHlwJo&#43;4w=="></script>
+
+
+
+    </body>
+</html>

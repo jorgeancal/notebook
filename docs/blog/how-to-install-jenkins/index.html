@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author" content="">
+<meta name="description" content="In this post I’m going to try to explain what Jenkins is, why we use it, how to install it in Debain and how to use it. Everyone is going to say… oh no! Another boring post about it. I’ll tell them just maybe or maybe not. Find out for yourself." />
+<meta name="keywords" content=", How to install Jenkins, installations,  Jenkins Debian 9, Jenkis Debian, What’s jenkins" />
+<meta name="robots" content="noodp" />
+<meta name="theme-color" content="" />
+<link rel="canonical" href="https://jorgesnotebook.com/blog/how-to-install-jenkins/" />
+
+
+    <title>
+        
+            How to Install Jenkins :: Jorge&#39;s notebook 
+        
+    </title>
+
+
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css" rel="stylesheet"
+    type="text/css">
+
+
+
+<link rel="stylesheet" href="/main.3d89495748aff88bbfbb2a665d8e1260b3aa63445cd77cc810fb6477aba343dd.css">
+
+
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="msapplication-TileColor" content="">
+
+
+<meta itemprop="name" content="How to Install Jenkins">
+<meta itemprop="description" content="In this post I’m going to try to explain what Jenkins is, why we use it, how to install it in Debain and how to use it. Everyone is going to say… oh no! Another boring post about it. I’ll tell them just maybe or maybe not. Find out for yourself."><meta itemprop="datePublished" content="2020-01-23T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2020-01-23T00:00:00+00:00" />
+<meta itemprop="wordCount" content="729"><meta itemprop="image" content="">
+<meta itemprop="keywords" content="How to install Jenkins,installations, Jenkins Debian 9,Jenkis Debian,What’s jenkins," />
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content=""/>
+
+<meta name="twitter:title" content="How to Install Jenkins"/>
+<meta name="twitter:description" content="In this post I’m going to try to explain what Jenkins is, why we use it, how to install it in Debain and how to use it. Everyone is going to say… oh no! Another boring post about it. I’ll tell them just maybe or maybe not. Find out for yourself."/>
+<meta name="twitter:site" content="@@jorgeancal"/>
+
+
+
+
+
+    <meta property="article:section" content="Debian" />
+
+    <meta property="article:section" content="Linux" />
+
+    <meta property="article:section" content="How to" />
+
+
+
+    <meta property="article:published_time" content="2020-01-23 00:00:00 &#43;0000 UTC" />
+
+
+
+
+
+
+
+
+
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-108421112-2', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+    </head>
+
+    
+        <body>
+    
+    
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">></span>
+            <span class="logo__text">hello</span>
+            <span class="logo__cursor" style=
+                  "
+                   
+                   ">
+            </span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+            
+                <nav class="menu">
+    <ul class="menu__inner">
+            
+            <div class="submenu">
+                <li class="dropdown">
+                    <a href="/">
+                        Home
+                    </a>
+                </li>
+            </div>
+            
+        
+            
+            <div class="submenu">
+                <li class="dropdown">
+                    <a href="/about/">
+                        About
+                    </a>
+                </li>
+            </div>
+            
+        
+            
+            <div class="submenu">
+                <li class="dropdown">
+                    <a href="/blog/">
+                        Blog
+                    </a>
+                </li>
+            </div>
+            
+        
+            
+            <div class="submenu">
+                <li class="dropdown">
+                    <a href="/categories/">
+                        Categories
+                    </a>
+                </li>
+            </div>
+            
+        
+
+    
+    
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+            
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+    <main class="post">
+
+        <div class="post-info">
+            
+            </p>
+        </div>
+
+        <article>
+            
+                <h2 class="post-title"><a href="https://jorgesnotebook.com/blog/how-to-install-jenkins/">How to Install Jenkins</a></h2>
+            
+
+
+            
+            
+            
+
+            <div class="post-content">
+                <p>In this post I’m going to try to explain what Jenkins is, why we use it, how to install it in Debain and how to use it. Everyone is going to say… oh no! Another boring post about it. I’ll tell them just maybe or maybe not. Find out for yourself.</p>
+<p>Firstly, I have to say this post is all my notes about my research about Jenkins, therefore, it could be a bit different than other websites, or just wrong! So if you see something wrong, just tell me about it.
+What’s Jenkins?</p>
+<p>For me, Jenkins is a web application which offers an easy way to do a continuous integration or continuous delivery in different technologies.</p>
+<p>I think most people who search about these terms knows about Jenkins, but I’m going to explain it too in a few words. Continuous Integration, CI, is the process of automating the building and testing of the code every time the team upload the code to the control repository. Continuous Delivery, CD, is the process which builds, tests, configures and deploys from a test to a production environment.</p>
+<p>I think explaining these terms you can see why we use it. I’m really interested in working with it, because I think you can have more control in the product which we are developing. Because I’m using it now in my work, but I think we’re not using it correctly, but that is another matter.
+Installing Jenkins on Debian 9</p>
+<p>There are a few ways to install it (Docker, War and apt). For these things I’m a bit weird, and I prefer to install it via apt. Well the first thing I have to say is log in with root user and add the key of the package repository:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>wget -q -O - https://pkg.jenkins.io/debian/jenkins.io.key | apt-key add -
+</span></span></code></pre></div><p>Now we have to add the package repository in the source list, there are two ways, so choose whichever you want. I’m going to use the first one.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sh -c <span style="color:#e6db74">&#39;echo deb http://pkg.jenkins.io/debian-stable binary/ &gt; /etc/apt/sources.list.d/jenkins.list&#39;</span>
+</span></span></code></pre></div><p>For the second one, we need to create and add the next line in “/etc/apt/sources.list.d/jenkins.list” :</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>deb https://pkg.jenkins.io/debian binary/
+</span></span></code></pre></div><p>Now it’s time to update the apt, so you need to execute the next command and install the package.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>apt-get update <span style="color:#f92672">&amp;&amp;</span> apt-get install jenkins
+</span></span></code></pre></div><p>There you have it. Enjoy your Jenkins. But don’t leave here yet. There’s more.  I guess everyone has a Tomcat in the server or something in the 8080 port, so you must to go to the Jenkins conf file which is in “/etc/default/jenkins” and go to line 63, in that line you can configure the port, so change it. I usually use weird ports like 6669, or something like that. After that, you need to restart the service, so run the next command:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>/etc/init.d/jenkins restart
+</span></span></code></pre></div><p>When you’ve got it, open a browser and go to the Jenkins. You’ll have something like that:</p>
+<p><img src="/images/jenkins/jenkins.png" alt="jenkis #incenter"></p>
+<p>Afterthat, go to that file and paste in that input, we’re going to customize the Jenkins. Oops… almost forgot. The password is here: “/var/lib/jenkins/secrets/initialAdminPassword”. After that, we must choose between two options:</p>
+<p><img src="/images/jenkins/custom.png" alt="jenkins #incenter"></p>
+<p>I usually select the suggested option, but this time I’m going to try the other one. After clicking on it, you’re going to have the next window:</p>
+<p><img src="/images/jenkins/theStarted.png" alt="jenkins #incenter"></p>
+<p>You can select all of them if you want or just read them all and select the ones you want. I installed the suggested ones, and I added some other ones, such as JUnit, Warnings, ssh plugins and all of the plugins from Git. One more thing, you can check all the dependencies for each plugin if you click on the number with the row. You can see this on the previous screenshot in the first plugin. When you’ve finished selecting all the plugins which you want to install, click on install and wait. You are going to have an installation screen, as you can see in the next screenshot:</p>
+<p><img src="/images/jenkins/theInstallation.png" alt="jenkins #incenter"></p>
+<p>After that, you can add a user or just continue as admin. I recommend adding an Admin user.</p>
+<p><img src="/images/jenkins/jenkins1.png" alt="jenkins #incenter"></p>
+<p>After that, you have to decide the Jenkins URL that you want. You’re going to wonder why I need this. As this is a test server, I’m going to leave it like that, but in my own jenkins the URL is something like that <code>https://myBarMan.jorgeancal.com:6669</code>. After choosing the URL, you’re done with the installation, so enjoy your Jenkins!</p>
+<p><img src="/images/jenkins/jenkins2.png" alt="jenkins #thumbinline2"> <img src="/images/jenkins/jenkins3-1.png" alt="jenkis #thumbinline2"></p>
+
+            </div>
+        </article>
+
+        <hr />
+
+        <div class="post-info">
+            
+    <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg>
+
+        <span class="tag"><a href="https://jorgesnotebook.com/tags/how-to-install-jenkins/">How to install Jenkins</a></span>
+        <span class="tag"><a href="https://jorgesnotebook.com/tags/installations/">installations</a></span>
+        <span class="tag"><a href="https://jorgesnotebook.com/tags/jenkins-debian-9/"> Jenkins Debian 9</a></span>
+        <span class="tag"><a href="https://jorgesnotebook.com/tags/jenkis-debian/">Jenkis Debian</a></span>
+        <span class="tag"><a href="https://jorgesnotebook.com/tags/whats-jenkins/">What’s jenkins</a></span>
+        
+    </p>
+
+            
+    <p>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-folder meta-icon"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+
+        <span class="tag"><a href="https://jorgesnotebook.com/categories/debian/">Debian</a></span>
+        <span class="tag"><a href="https://jorgesnotebook.com/categories/linux/">Linux</a></span>
+        <span class="tag"><a href="https://jorgesnotebook.com/categories/how-to/">How to</a></span>
+        
+    </p>
+
+  		</div>
+    </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    
+    
+    
+        <div class="footer__inner">
+          
+        </div>
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+<script type="text/javascript" src="/bundle.min.6287a2177681a8a9b1c767e7f6a078bf494acb05a113fe2c5c5833c6f9cf368099768ffab3b5a424a8636a3aa24de5cb7d30e53fa421ccad9f5431e5c09a3ee3.js" integrity="sha512-YoeiF3aBqKmxx2fn9qB4v0lKywWhE/4sXFgzxvnPNoCZdo/6s7WkJKhjajqiTeXLfTDlP6QhzK2fVDHlwJo&#43;4w=="></script>
+
+
+
+    </body>
+</html>
