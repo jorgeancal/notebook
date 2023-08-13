@@ -2,10 +2,10 @@
 title= "Como configurar SOPS en Helmfile"
 date= "2021-02-28"
 comments = true
-categories = ["Helm", "kubernetes", "How to", "helmfile"]
+categories = ["Helm", "kubernetes", "How to"]
 description = "Te explicare como implementar sops en Helmfile de una manera rapida y sencilla."
 author = "Jorge Andreu Calatayud"
-tags= ["helm", "helmcharts", "sops","kubernetes", "helmfile", "cluster", "Kluster", "helm-secrets", "secrets"]
+tags= ["helm", "helmcharts", "sops","kubernetes", "helmfile", "cluster", "helm-secrets", "secrets"]
 +++
 
 Como veíamos por encima en nuestro anterior post sobre helmfile podemos tener un fichero en nuestro repo que este encriptado mediante sops y tener ahi las variables para usar en nuestra chart mediante Helmfile.

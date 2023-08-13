@@ -4,7 +4,7 @@ date= "2021-01-30"
 comments = true
 categories = ["Helm", "kubernetes", "How to", "cluster"]
 description = "We'll config helmfile. This is not the perfect solution, but this is my way, and it works for me."
-tags= ["cluster","Kluster", "helm", "helmcharts", "kubernetes", "helmfile" ]
+tags= ["cluster", "helm", "helmcharts", "kubernetes", "helmfile" ]
 author = "Jorge Andreu Calatayud"
 +++
 
