@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>sops on Jorge&#39;s Notebook</title>
+    <title>sops on Jorge&#39;s notebook</title>
     <link>https://jorgesnotebook.com/es/tags/sops/</link>
-    <description>Recent content in sops on Jorge&#39;s Notebook</description>
+    <description>Recent content in sops on Jorge&#39;s notebook</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
     <lastBuildDate>Sun, 28 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://jorgesnotebook.com/es/tags/sops/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Como configurar SOPS en Helmfile</title>
-      <link>https://jorgesnotebook.com/es/blog/how-to-implement-sops-helmfile/</link>
+      <link>https://jorgesnotebook.com/es/posts/how-to-implement-sops-helmfile/</link>
       <pubDate>Sun, 28 Feb 2021 00:00:00 +0000</pubDate>
       
-      <guid>https://jorgesnotebook.com/es/blog/how-to-implement-sops-helmfile/</guid>
+      <guid>https://jorgesnotebook.com/es/posts/how-to-implement-sops-helmfile/</guid>
       <description>Como veíamos por encima en nuestro anterior post sobre helmfile podemos tener un fichero en nuestro repo que este encriptado mediante sops y tener ahi las variables para usar en nuestra chart mediante Helmfile.
-¿Qué es Sops? Si nos vamos a si proyecto veremos que Mozilla define SOPS como un editor de archivos cifrados que admite los formatos YAML, JSON, ENV, INI y BINARY. Además de soportar el cifrado de estos mediante los cifrados AWS KMS, GCP KMS, Azure Key Vault y PGP.</description>
+¿Qué es Sops? # Si nos vamos a si proyecto veremos que Mozilla define SOPS como un editor de archivos cifrados que admite los formatos YAML, JSON, ENV, INI y BINARY. Además de soportar el cifrado de estos mediante los cifrados AWS KMS, GCP KMS, Azure Key Vault y PGP.</description>
     </item>
     
   </channel>

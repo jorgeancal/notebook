@@ -9,10 +9,10 @@
     <lastBuildDate>Thu, 23 Jan 2020 23:08:17 +0000</lastBuildDate><atom:link href="https://jorgesnotebook.com/tags/jdk-11-lts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>What’s going on with Java?</title>
-      <link>https://jorgesnotebook.com/blog/what-is-going-on-with-java/</link>
+      <link>https://jorgesnotebook.com/posts/what-is-going-on-with-java/</link>
       <pubDate>Thu, 23 Jan 2020 23:08:17 +0000</pubDate>
       
-      <guid>https://jorgesnotebook.com/blog/what-is-going-on-with-java/</guid>
+      <guid>https://jorgesnotebook.com/posts/what-is-going-on-with-java/</guid>
       <description>The other day there were a few news articles about the new version of Java. I was thinking another one? Really? Like a lot of people in the beginning of their careers, no-one checks the differences between Java versions because they are focused on the projects which they are working on, or maybe it’s just me. But, I had a break between jobs so I decided to update all my knowledge and one thing from my list was this one, so I hope you find this information interesting.</description>
     </item>
     

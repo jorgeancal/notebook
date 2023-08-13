@@ -2,17 +2,17 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://jorgesnotebook.com/blog/</loc>
+    <loc>https://jorgesnotebook.com/posts/</loc>
     <lastmod>2021-02-28T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="https://jorgesnotebook.com/es/blog/"
+                href="https://jorgesnotebook.com/es/posts/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://jorgesnotebook.com/blog/"
+                href="https://jorgesnotebook.com/posts/"
                 />
   </url><url>
     <loc>https://jorgesnotebook.com/categories/</loc>
@@ -132,17 +132,17 @@
                 href="https://jorgesnotebook.com/categories/how-to/"
                 />
   </url><url>
-    <loc>https://jorgesnotebook.com/blog/how-to-implement-sops-helmfile/</loc>
+    <loc>https://jorgesnotebook.com/posts/how-to-implement-sops-helmfile/</loc>
     <lastmod>2021-02-28T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="https://jorgesnotebook.com/es/blog/how-to-implement-sops-helmfile/"
+                href="https://jorgesnotebook.com/es/posts/how-to-implement-sops-helmfile/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://jorgesnotebook.com/blog/how-to-implement-sops-helmfile/"
+                href="https://jorgesnotebook.com/posts/how-to-implement-sops-helmfile/"
                 />
   </url><url>
     <loc>https://jorgesnotebook.com/</loc>
@@ -239,17 +239,17 @@
     <loc>https://jorgesnotebook.com/categories/cluster/</loc>
     <lastmod>2021-01-30T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://jorgesnotebook.com/blog/how-to-set-up-your-kluster-with-helmfle/</loc>
+    <loc>https://jorgesnotebook.com/posts/how-to-set-up-your-kluster-with-helmfle/</loc>
     <lastmod>2021-01-30T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
-                href="https://jorgesnotebook.com/es/blog/how-to-set-up-your-kluster-with-helmfle/"
+                href="https://jorgesnotebook.com/es/posts/how-to-set-up-your-kluster-with-helmfle/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://jorgesnotebook.com/blog/how-to-set-up-your-kluster-with-helmfle/"
+                href="https://jorgesnotebook.com/posts/how-to-set-up-your-kluster-with-helmfle/"
                 />
   </url><url>
     <loc>https://jorgesnotebook.com/tags/docker/</loc>
@@ -270,7 +270,7 @@
     <loc>https://jorgesnotebook.com/tags/jdk/</loc>
     <lastmod>2020-09-28T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://jorgesnotebook.com/blog/how-to-create-a-small-jvm-docker-image/</loc>
+    <loc>https://jorgesnotebook.com/posts/how-to-create-a-small-jvm-docker-image/</loc>
     <lastmod>2020-09-28T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://jorgesnotebook.com/tags/jre/</loc>
@@ -306,7 +306,7 @@
     <loc>https://jorgesnotebook.com/tags/starting-with-spring-boot/</loc>
     <lastmod>2020-01-23T23:10:39+00:00</lastmod>
   </url><url>
-    <loc>https://jorgesnotebook.com/blog/starting-with-spring-boot/</loc>
+    <loc>https://jorgesnotebook.com/posts/starting-with-spring-boot/</loc>
     <lastmod>2020-01-23T23:10:39+00:00</lastmod>
   </url><url>
     <loc>https://jorgesnotebook.com/tags/adoptopenjdk/</loc>
@@ -333,7 +333,7 @@
     <loc>https://jorgesnotebook.com/categories/opinion/</loc>
     <lastmod>2020-01-23T23:08:17+00:00</lastmod>
   </url><url>
-    <loc>https://jorgesnotebook.com/blog/what-is-going-on-with-java/</loc>
+    <loc>https://jorgesnotebook.com/posts/what-is-going-on-with-java/</loc>
     <lastmod>2020-01-23T23:08:17+00:00</lastmod>
   </url><url>
     <loc>https://jorgesnotebook.com/tags/jenkins-debian-9/</loc>
@@ -360,13 +360,13 @@
     <loc>https://jorgesnotebook.com/tags/how-to-install-gitlab/</loc>
     <lastmod>2020-01-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://jorgesnotebook.com/blog/how-to-install-gitlab-on-debian-9/</loc>
+    <loc>https://jorgesnotebook.com/posts/how-to-install-gitlab-on-debian-9/</loc>
     <lastmod>2020-01-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://jorgesnotebook.com/tags/how-to-install-jenkins/</loc>
     <lastmod>2020-01-23T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://jorgesnotebook.com/blog/how-to-install-jenkins/</loc>
+    <loc>https://jorgesnotebook.com/posts/how-to-install-jenkins/</loc>
     <lastmod>2020-01-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://jorgesnotebook.com/tags/installations/</loc>
@@ -382,6 +382,7 @@
     <lastmod>2020-01-23T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://jorgesnotebook.com/about/</loc>
+    <lastmod>2021-04-29T20:37:15+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"

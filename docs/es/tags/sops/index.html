@@ -1,420 +1,520 @@
-<!doctype html>
-<html lang="es">
-  <head>
-  <meta charset="utf-8">
-<title>sops - Jorge&#39;s Notebook</title>
-<meta name="description" content="Welcome to my notebook">
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:title" content="sops" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://jorgesnotebook.com/es/tags/sops/" />
+<title>sops | Jorge&#39;s notebook</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" >
+  <link rel="alternate" hreflang="en" href="https://jorgesnotebook.com/tags/sops/" title="sops">
+<link rel="stylesheet" href="/book.min.f8de3645fe00591b41524aee174e19edd98a22255a2930a0cdc82a94835ba387.css" integrity="sha256-&#43;N42Rf4AWRtBUkruF04Z7dmKIiVaKTCgzcgqlINbo4c=" crossorigin="anonymous">
+  <script defer src="/flexsearch.min.js"></script>
+  <script defer src="/es.search.min.57faffb81479b3cdcbe89e4a99bcd8470c1472a7e0b31e83febe56a393314ac9.js" integrity="sha256-V/r/uBR5s83L6J5KmbzYRwwUcqfgsx6D/r5Wo5MxSsk=" crossorigin="anonymous"></script>
+
+  <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk=" crossorigin="anonymous"></script>
 
-<meta name="twitter:card" content="summary_large_image">
-
-<meta property="og:site_name" content="Jorge&#39;s Notebook">
-<meta property="og:title" content="sops">
-<meta property="og:description" content="Welcome to my notebook">
-<meta property="og:type" content="article">
-<meta property="og:url" content="https://jorgesnotebook.com/es/tags/sops/">
-  <meta property="og:image" content="https://jorgesnotebook.com/img/notebook.png">
-
-
-
-  <link rel="manifest" href="/favicon/site.webmanifest?v=1">
-  <link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png?v=1">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png?v=1">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png?v=1">
-  
-    <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg?v=1" color="#000000">
-    <link rel="shortcut icon" href="/favicon/favicon.ico?v=1">
-    <meta name="msapplication-config" content="/favicon/browserconfig.xml?v=1">
-  
-  <meta name="msapplication-TileColor" content="#000000">
-  <meta name="theme-color" content="#000000">
-
-
-  <meta name="generator" content="Hugo 0.111.3">
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/styles/paraiso-dark.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:400,800,900|Source+Sans+Pro:400,700">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.6/css/academicons.min.css">
-        <script src="https://kit.fontawesome.com/be54eb011a.js" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css"><link rel="stylesheet" href="/css/main.min.1ef73455ed94bf3a90936ea9321231bc257897b2807dcef51ae18bd6697f0ed9.css" integrity="sha256-Hvc0Ve2UvzqQk26pMhIxvCV4l7KAfc71GuGL1ml/Dtk="><link rel="stylesheet" href="/css/add-on.css">
-</head>
-
-  <body>
-    
-
-<header id="site-header">
-  <nav id="site-nav">
-    <h1 class="nav-title">
-      <a href="/es/" class="nav">
-        
-          Etiquetas
-        
-      </a>
-    </h1>
-    <menu id="site-nav-menu" class="flyout-menu menu">
-      
-        
-          
-          <a href="/es/" class="nav link"><i class='fas fa-home'></i> Inicio</a>
-        
-      
-        
-          
-          <a href="/es/about/" class="nav link"><i class='far fa-id-card'></i> ¿Qué es esto?</a>
-        
-      
-        
-          
-          <a href="/es/blog/" class="nav link"><i class='far fa-newspaper'></i> Blog</a>
-        
-      
-        
-          
-          <a href="/es/categories/" class="nav link"><i class='fas fa-sitemap'></i> Categorias</a>
-        
-      
-      <a href="#share-menu" class="nav link share-toggle"><i class="fas fa-share-alt">&nbsp;</i>Share</a>
-      
-    </menu>
-    
-    <a href="#share-menu" class="nav share-toggle"><i class="fas fa-share-alt fa-2x">&nbsp;</i></a>
-    <a href="#lang-menu" class="nav lang-toggle" lang="es">es</a>
-    <a href="#site-nav" class="nav nav-toggle"><i class="fas fa-bars fa-2x"></i></a>
-  </nav>
-  
-  <menu id="lang-menu" class="flyout-menu menu">
-  <a href="#" lang="es" class="nav link active">Castellano (es)</a>
-  
-      <a href="https://jorgesnotebook.com/tags/sops/" lang="en" class="nav link">English (en)</a>
-    
-  
-</menu>
-
-  
-    <menu id="share-menu" class="flyout-menu menu">
-      <h1>Share Post</h1>
-      
-
-
-
-
-  
-    
-    <a href="//twitter.com/share?text=sops&amp;url=https%3a%2f%2fjorgesnotebook.com%2fes%2ftags%2fsops%2f" target="_blank" rel="noopener" class="nav share-btn twitter">
-        <p>Twitter</p>
-      </a>
-  
-
-  
-      <a href="//www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fjorgesnotebook.com%2fes%2ftags%2fsops%2f" target="_blank" rel="noopener" class="nav share-btn facebook">
-        <p>Facebook</p>
-        </a>
-  
-
-  
-        <a href="//www.linkedin.com/shareArticle?url=https%3a%2f%2fjorgesnotebook.com%2fes%2ftags%2fsops%2f&amp;title=sops" target="_blank" rel="noopener" class="nav share-btn linkedin">
-            <p>LinkedIn</p>
-          </a>
-  
-
-  
-        <a href="mailto:?subject=Mira%20esta%20publicaci%c3%b3n%20por %7b%20%20%20%20%20%20%20%20map%5b%5d%7d&amp;body=https%3a%2f%2fjorgesnotebook.com%2fes%2ftags%2fsops%2f" target="_blank" class="nav share-btn email" data-proofer-ignore>
-          <p>Email</p>
-        </a>
-  
-
-
-    </menu>
-  
-</header>
-
-    <div id="wrapper">
-      <section id="site-intro" class="hidden-single-column">
-  <a href="/es/"><img src="/img/notebook.png" class="circle" width="100" alt="Jorge&#39;s Notebook" /></a>
-  <header>
-    <h1>Jorge's Notebook</h1>
-  </header>
-  <main>
-    <p>Wellcome! This is a multi-lengual notebook. You'll read some geeky things here. I hope you enjoy it.</p>
-  </main>
-  
-    <footer>
-      <ul class="socnet-icons">
-        
-    <li><a href="/es/tags/sops/index.xml" type="application/rss+xml" target="_blank" title="RSS" class="fas fa-rss"></a></li>
-
-
-        <li><a href="//github.com/jorgeancal" target="_blank" rel="noopener" title="GitHub" class="fab fa-github"></a></li>
-<li><a href="//gitlab.com/jorgeancal" target="_blank" rel="noopener" title="GitLab" class="fab fa-gitlab"></a></li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<li><a href="//twitter.com/@jorgeancal" target="_blank" rel="noopener" title="Twitter" class="fab fa-twitter"></a></li>
-
-
-
-
-
-
-
-
-
-
-
-<li><a href="mailto:info@jorgeancal.com" target="_blank" title="Email" class="far fa-envelope"></a></li>
-
-      </ul>
-    </footer>
-  
-</section>
-
-      <main id="site-main">
-        
-  
-  
-    <article class="post">
-  <header>
-  <div class="title">
-    
-      <h2><a href="/es/blog/how-to-implement-sops-helmfile/">Como configurar SOPS en Helmfile</a></h2>
-    
-    
-      <p>Te explicare como implementar sops en Helmfile de una manera rapida y sencilla.</p>
-    
-  </div>
-  <div class="meta">
-    <time datetime="2021-02-28 00:00:00 &#43;0000 UTC">28 de Enero, 2021</time>
-    <p>Jorge Andreu Calatayud</p>
-    <p>Lectura De 3 Minutos</p>
-  </div>
-</header>
-
-  <div class="content">
-    
-    
-    <p>Como veíamos por encima en nuestro anterior post sobre helmfile podemos tener un fichero en nuestro repo que este encriptado mediante sops y tener ahi las variables para usar en nuestra chart mediante Helmfile.</p>
-  </div>
-  <footer>
-    <a href="/es/blog/how-to-implement-sops-helmfile/" class="button big">Lee Mas</a>
-    <div class="stats">
-  
-    <ul class="categories">
-      
-        
-          <li><a class="article-terms-link" href="/es/categories/helm/">Helm</a></li>
-        
-          <li><a class="article-terms-link" href="/es/categories/kubernetes/">kubernetes</a></li>
-        
-          <li><a class="article-terms-link" href="/es/categories/how-to/">How to</a></li>
-        
-          <li><a class="article-terms-link" href="/es/categories/helmfile/">helmfile</a></li>
-        
-      
-    </ul>
-  
-  
-    <ul class="tags">
-      
-        
-          <li><a class="article-terms-link" href="/es/tags/helm/">helm</a></li>
-        
-          <li><a class="article-terms-link" href="/es/tags/helmcharts/">helmcharts</a></li>
-        
-          <li><a class="article-terms-link" href="/es/tags/sops/">sops</a></li>
-        
-          <li><a class="article-terms-link" href="/es/tags/kubernetes/">kubernetes</a></li>
-        
-          <li><a class="article-terms-link" href="/es/tags/helmfile/">helmfile</a></li>
-        
-          <li><a class="article-terms-link" href="/es/tags/cluster/">cluster</a></li>
-        
-          <li><a class="article-terms-link" href="/es/tags/kluster/">Kluster</a></li>
-        
-          <li><a class="article-terms-link" href="/es/tags/helm-secrets/">helm-secrets</a></li>
-        
-          <li><a class="article-terms-link" href="/es/tags/secrets/">secrets</a></li>
-        
-      
-    </ul>
-  
-</div>
-
-  </footer>
-</article>
-
-  
-  <div class="pagination">
-    
-    
-  </div>
-
-      </main>
-      <section id="site-sidebar">
-  
-    <section id="recent-posts">
-      <header>
-        <h1>Posts Recientes</h1>
-      </header>
-      
-      <article class="mini-post">
-          
-        <header>
-          <h2><a href="/es/blog/how-to-implement-sops-helmfile/">Como configurar SOPS en Helmfile</a></h2>
-          <time class="published" datetime="2021-02-28 00:00:00 &#43;0000 UTC">28 de Enero, 2021</time>
-        </header>
-      </article>
-      
-      <article class="mini-post">
-          
-        <header>
-          <h2><a href="/es/blog/how-to-set-up-your-kluster-with-helmfle/">Configurar tu kluster con Helmfile</a></h2>
-          <time class="published" datetime="2021-01-30 00:00:00 &#43;0000 UTC">30 de Enero, 2021</time>
-        </header>
-      </article>
-      
-      
-    </section>
-  
-
-  
-    
-
-      <section id="categories">
-        <header>
-          <h1><a href="/es/categories">Categorías</a></h1>
-        </header>
-        <ul>
-          
-          
-          <li>
-              <a href="/es/categories/helm/">helm<span class="count">2</span></a>
-          
-          <li>
-              <a href="/es/categories/helmfile/">helmfile<span class="count">2</span></a>
-          
-          <li>
-              <a href="/es/categories/how-to/">how-to<span class="count">2</span></a>
-          
-          <li>
-              <a href="/es/categories/kubernetes/">kubernetes<span class="count">2</span></a>
-          
-          </li>
-        </ul>
-      </section>
-    
-  
-
-  
-    <section id="mini-bio">
-      <header>
-        <h1>Sobre</h1>
-      </header>
-      <p>In this Notebook I’ll post about my knowledges, and somethings that I’ll discover while I’m working. I won’t post all days because it’s a impossible. I’ll try to post one per week or at least one per month. If you like my posts stay tune becuase I’ll start a youtube channel guess how is gonig to be the name?…jorge's Notebook!.</p>
-      <footer>
-        <a href="/es/about" class="button">Aprende Más</a>
-      </footer>
-    </section>
-  
-</section>
-
-      <footer id="site-footer">
-  
-      <ul class="socnet-icons">
-        
-    <li><a href="/es/tags/sops/index.xml" type="application/rss+xml" target="_blank" title="RSS" class="fas fa-rss"></a></li>
-
-
-        <li><a href="//github.com/jorgeancal" target="_blank" rel="noopener" title="GitHub" class="fab fa-github"></a></li>
-<li><a href="//gitlab.com/jorgeancal" target="_blank" rel="noopener" title="GitLab" class="fab fa-gitlab"></a></li>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<li><a href="//twitter.com/@jorgeancal" target="_blank" rel="noopener" title="Twitter" class="fab fa-twitter"></a></li>
-
-
-
-
-
-
-
-
-
-
-
-<li><a href="mailto:info@jorgeancal.com" target="_blank" title="Email" class="far fa-envelope"></a></li>
-
-      </ul>
-  
-  <p class="copyright">
-    © 2021 Jorge&#39;s Notebook
-      <br>
-    Tema: <a href='https://github.com/pacollins/hugo-future-imperfect-slim' target='_blank' rel='noopener'>Hugo Future Imperfect Slim</a><br>Adaptado de <a href='https://html5up.net/future-imperfect' target='_blank' rel='noopener'>HTML5 UP</a> | Impulsado por <a href='https://gohugo.io/' title='0.111.3' target='_blank' rel='noopener'>Hugo</a>
-  </p>
-</footer>
-<a id="back-to-top" href="#" class="fas fa-arrow-up fa-2x"></a>
-
-      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/highlight.min.js"></script>
-    
-    <script>hljs.highlightAll();</script><script src="//code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.js"></script>
-    <script src="//unpkg.com/lunr/lunr.js"></script><script src="/js/bundlecdn.min.41d10a17d610f064095e2fe022e9a4fd49a6640f8f57d652447fe588a9610693.js" integrity="sha256-QdEKF9YQ8GQJXi/gIumk/UmmZA&#43;PV9ZSRH/liKlhBpM="></script>
-    <script src="/js/add-on.js"></script>
 <script type="application/javascript">
 var doNotTrack = false;
 if (!doNotTrack) {
-	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 	ga('create', 'UA-108421112-2', 'auto');
 	
 	ga('send', 'pageview');
 }
-</script>
-<script async src='https://www.google-analytics.com/analytics.js'></script>
+</script><link rel="alternate" type="application/rss+xml" href="https://jorgesnotebook.com/es/tags/sops/index.xml" title="Jorge's notebook" />
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><img src="/favicon.png" alt="Logo" /><span>Jorge&#39;s notebook</span>
+  </a>
+</h2>
 
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Buscar" aria-label="Buscar" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+  
+
+
+
+  
+    
+  
+
+
+  
+
+
+<ul class="book-languages">
+  <li>
+    <input type="checkbox" id="languages" class="toggle" />
+    <label for="languages" class="flex justify-between">
+      <a role="button" class="flex align-center">
+        <img src="/svg/translate.svg" class="book-icon" alt="Languages" />
+        Castellano
+      </a>
+    </label>
+
+    <ul>
+      
+      <li>
+        <a href="https://jorgesnotebook.com/tags/sops/">
+          English
+        </a>
+      </li>
+      
+    </ul>
+  </li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <span>Posts</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/es/posts/how-to-implement-sops-helmfile/" class="">Como configurar SOPS en Helmfile</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/es/posts/how-to-set-up-your-kluster-with-helmfle/" class="">Configurar tu kluster con Helmfile</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/es/about/" class="">About</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    <a href="https://github.com/jorgeancal/"  target="_blank" rel="noopener">
+        Github
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>sops</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  <nav>
+  <ul>
+  
+    
+    <li class="book-section-flat">
+      <strong>Categories</strong>
+      <ul>
+      
+        <li class="flex justify-between">
+          <a href="/es/categories/helm/">Helm</a>
+          <span>2</span>
+        </li>
+      
+        <li class="flex justify-between">
+          <a href="/es/categories/helmfile/">helmfile</a>
+          <span>2</span>
+        </li>
+      
+        <li class="flex justify-between">
+          <a href="/es/categories/how-to/">How to</a>
+          <span>2</span>
+        </li>
+      
+        <li class="flex justify-between">
+          <a href="/es/categories/kubernetes/">kubernetes</a>
+          <span>2</span>
+        </li>
+      
+      </ul>
+    </li>
+    
+  
+    
+    <li class="book-section-flat">
+      <strong>Tags</strong>
+      <ul>
+      
+        <li class="flex justify-between">
+          <a href="/es/tags/cluster/">cluster</a>
+          <span>2</span>
+        </li>
+      
+        <li class="flex justify-between">
+          <a href="/es/tags/helm/">helm</a>
+          <span>2</span>
+        </li>
+      
+        <li class="flex justify-between">
+          <a href="/es/tags/helm-secrets/">helm-secrets</a>
+          <span>1</span>
+        </li>
+      
+        <li class="flex justify-between">
+          <a href="/es/tags/helmcharts/">helmcharts</a>
+          <span>2</span>
+        </li>
+      
+        <li class="flex justify-between">
+          <a href="/es/tags/helmfile/">helmfile</a>
+          <span>2</span>
+        </li>
+      
+        <li class="flex justify-between">
+          <a href="/es/tags/kluster/">Kluster</a>
+          <span>2</span>
+        </li>
+      
+        <li class="flex justify-between">
+          <a href="/es/tags/kubernetes/">kubernetes</a>
+          <span>2</span>
+        </li>
+      
+        <li class="flex justify-between">
+          <a href="/es/tags/secrets/">secrets</a>
+          <span>1</span>
+        </li>
+      
+        <li class="flex justify-between">
+          <a href="/es/tags/sops/">sops</a>
+          <span>1</span>
+        </li>
+      
+      </ul>
+    </li>
+    
+  
+  </ul>
+</nav>
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  
+  <article class="markdown book-post">
+    <h2>
+      <a href="/es/posts/how-to-implement-sops-helmfile/">Como configurar SOPS en Helmfile</a>
+    </h2>
+    
+  <h5>February 28, 2021</h5>
+
+
+
+  
+  <div>
+    
+      <a href="/es/categories/helm/">Helm</a>, 
+      <a href="/es/categories/kubernetes/">kubernetes</a>, 
+      <a href="/es/categories/how-to/">How to</a>, 
+      <a href="/es/categories/helmfile/">helmfile</a>
+  </div>
+  
+
+  
+  <div>
+    
+      <a href="/es/tags/helm/">helm</a>, 
+      <a href="/es/tags/helmcharts/">helmcharts</a>, 
+      <a href="/es/tags/sops/">sops</a>, 
+      <a href="/es/tags/kubernetes/">kubernetes</a>, 
+      <a href="/es/tags/helmfile/">helmfile</a>, 
+      <a href="/es/tags/cluster/">cluster</a>, 
+      <a href="/es/tags/kluster/">Kluster</a>, 
+      <a href="/es/tags/helm-secrets/">helm-secrets</a>, 
+      <a href="/es/tags/secrets/">secrets</a>
+  </div>
+  
+
+
+
+
+    <p>Como veíamos por encima en nuestro anterior post sobre helmfile podemos tener un fichero en nuestro repo que este encriptado mediante sops y tener ahi las variables para usar en nuestra chart mediante Helmfile.
+¿Qué es Sops? # Si nos vamos a si proyecto veremos que Mozilla define SOPS como un editor de archivos cifrados que admite los formatos YAML, JSON, ENV, INI y BINARY. Además de soportar el cifrado de estos mediante los cifrados AWS KMS, GCP KMS, Azure Key Vault y PGP.
+        <a href="/es/posts/how-to-implement-sops-helmfile/">...</a>
+      
+    </p>
+  </article>
+  
+
+  
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
     </div>
-  </body>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  <nav>
+  <ul>
+  
+    
+    <li class="book-section-flat">
+      <strong>Categories</strong>
+      <ul>
+      
+        <li class="flex justify-between">
+          <a href="/es/categories/helm/">Helm</a>
+          <span>2</span>
+        </li>
+      
+        <li class="flex justify-between">
+          <a href="/es/categories/helmfile/">helmfile</a>
+          <span>2</span>
+        </li>
+      
+        <li class="flex justify-between">
+          <a href="/es/categories/how-to/">How to</a>
+          <span>2</span>
+        </li>
+      
+        <li class="flex justify-between">
+          <a href="/es/categories/kubernetes/">kubernetes</a>
+          <span>2</span>
+        </li>
+      
+      </ul>
+    </li>
+    
+  
+    
+    <li class="book-section-flat">
+      <strong>Tags</strong>
+      <ul>
+      
+        <li class="flex justify-between">
+          <a href="/es/tags/cluster/">cluster</a>
+          <span>2</span>
+        </li>
+      
+        <li class="flex justify-between">
+          <a href="/es/tags/helm/">helm</a>
+          <span>2</span>
+        </li>
+      
+        <li class="flex justify-between">
+          <a href="/es/tags/helm-secrets/">helm-secrets</a>
+          <span>1</span>
+        </li>
+      
+        <li class="flex justify-between">
+          <a href="/es/tags/helmcharts/">helmcharts</a>
+          <span>2</span>
+        </li>
+      
+        <li class="flex justify-between">
+          <a href="/es/tags/helmfile/">helmfile</a>
+          <span>2</span>
+        </li>
+      
+        <li class="flex justify-between">
+          <a href="/es/tags/kluster/">Kluster</a>
+          <span>2</span>
+        </li>
+      
+        <li class="flex justify-between">
+          <a href="/es/tags/kubernetes/">kubernetes</a>
+          <span>2</span>
+        </li>
+      
+        <li class="flex justify-between">
+          <a href="/es/tags/secrets/">secrets</a>
+          <span>1</span>
+        </li>
+      
+        <li class="flex justify-between">
+          <a href="/es/tags/sops/">sops</a>
+          <span>1</span>
+        </li>
+      
+      </ul>
+    </li>
+    
+  
+  </ul>
+</nav>
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+

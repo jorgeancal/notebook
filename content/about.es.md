@@ -1,6 +1,7 @@
 ---
 title: "About"
 description: "Just something about the Website."
+type: doc
 ---
 Buenas,
 
