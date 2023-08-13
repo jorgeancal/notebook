@@ -2,39 +2,126 @@ baseurl = "https://jorgesnotebook.com"
 DefaultContentLanguage  = "en"
 languageCode = "en-GB"
 title = "Jorge's notebook"
-homeSubtitle = "A simple and beautiful blog"
-theme = "hello-4s3ti"
-preserveTaxonomyNames = true
+theme = 'hugo-book'
 disqusShortname = "jorgesnotebook"
 googleAnalytics = "UA-108421112-2"
 publishDir="docs"
 
-paginate = 4
-pluralizeListTitles     = true
-disableLanguages        = [ "FR" , "PL", "PT", "DE", "ZH-CN", "ZH-TW", "JA", "NL"]
-
-
-[markup.goldmark.renderer]
-unsafe                = true
-
+paginate = 3
+# Book configuration
+disablePathToLower = false
+enableGitInfo = true
 [outputs]
-home                  = ["html", "json", "rss"]
+home                  = ["html", "rss"]
+
+# Needed for mermaid/katex shortcodes
+[markup]
+[markup.goldmark.renderer]
+unsafe = true
+
+[markup.tableOfContents]
+startLevel = 1
+
+# Multi-lingual mode config
+# There are different options to translate files
+# See https://gohugo.io/content-management/multilingual/#translation-by-filename
+# And https://gohugo.io/content-management/multilingual/#translation-by-content-directory
+[languages]
+[languages.en]
+languageName = 'English'
+weight = 1
+
+[languages.es]
+languageName = 'Castellano'
+weight = 2
+
+
+[menu]
+# [[menu.before]]
+[[menu.after]]
+name = "Github"
+url = "https://github.com/jorgeancal/"
+weight = 10
+
 
 [params]
+
+
 enableCDN             = true
 cssFiles              = ["default"]
 jsFiles               = ["default"]
 highlightjs           = true
 highlightjsTheme      = "paraiso-dark"
 highlightjsLang       = []
-viewMorePostsLink     = "/blog/"
-readingTime           = true
-imageStretch          = ""
-removeBlur            = false
-socialShare           = ["twitter", "facebook", "linkedin", "email"]
-hideEmptyStats        = false
-toc                   = false
-tocWords              = 400
+# (Optional, default light) Sets color theme: light, dark or auto.
+# Theme 'auto' switches between dark and light modes based on browser/os preferences
+BookTheme = 'auto'
+
+# (Optional, default true) Controls table of contents visibility on right side of pages.
+# Start and end levels can be controlled with markup.tableOfContents setting.
+# You can also specify this parameter per page in front matter.
+BookToC = true
+
+# (Optional, default favicon.png) Set the path to a favicon file.
+# If the favicon is /static/favicon.png then the path would be favicon.png
+BookFavicon = 'favicon-notebook.png'
+
+# (Optional, default none) Set the path to a logo for the book.
+# If the logo is /static/logo.png then the path would be logo.png
+BookLogo = 'favicon.png'
+
+# (Optional, default none) Set leaf bundle to render as side menu
+# When not specified file structure and weights will be used
+
+# (Optional, default docs) Specify root page to render child pages as menu.
+# Page is resoled by .GetPage function: https://gohugo.io/functions/getpage/
+# For backward compatibility you can set '*' to render all sections to menu. Acts same as '/'
+BookSection = '*'
+
+# Set source repository location.
+# Used for 'Last Modified' and 'Edit this page' links.
+BookRepo = 'https://github.com/jorgeancal/notebook'
+
+# (Optional, default 'commit') Specifies commit portion of the link to the page's last modified
+# commit hash for 'doc' page type.
+# Requires 'BookRepo' param.
+# Value used to construct a URL consisting of BookRepo/BookCommitPath/<commit-hash>
+# Github uses 'commit', Bitbucket uses 'commits'
+# BookCommitPath = 'commit'
+
+# Enable "Edit this page" links for 'doc' page type.
+# Disabled by default. Uncomment to enable. Requires 'BookRepo' param.
+# Edit path must point to root directory of repo.
+
+# Configure the date format used on the pages
+# - In git information
+# - In blog posts
+BookDateFormat = 'January 2, 2006'
+
+# (Optional, default true) Enables search function with flexsearch,
+# Index is built on fly, therefore it might slowdown your website.
+# Configuration for indexing can be adjusted in i18n folder per language.
+BookSearch = true
+
+# (Optional, default true) Enables comments template on pages
+# By default partals/docs/comments.html includes Disqus template
+# See https://gohugo.io/content-management/comments/#configure-disqus
+# Can be overwritten by same param in page frontmatter
+BookComments = true
+
+# /!\ This is an experimental feature, might be removed or changed at any time
+# (Optional, experimental, default false) Enables portable links and link checks in markdown pages.
+# Portable links meant to work with text editors and let you write markdown without {{< relref >}} shortcode
+# Theme will print warning if page referenced in markdown does not exists.
+BookPortableLinks = true
+
+# /!\ This is an experimental feature, might be removed or changed at any time
+# (Optional, experimental, default false) Enables service worker that caches visited pages and resources for offline use.
+BookServiceWorker = true
+
+# /!\ This is an experimental feature, might be removed or changed at any time
+# (Optional, experimental, default false) Enables a drop-down menu for translations only if a translation is present.
+BookTranslatedOnly = false
 
 [params.meta]
 description         = "Welcome to my notebook"
@@ -45,12 +132,14 @@ faviconVersion      = "1"
 msColor             = "#000000"
 iOSColor            = "#000000"
 
+
 [params.header]
 navbarTitle         = "Jorge's Notebook"
 dynamicTitles       = true
 searchMenu          = false
 shareMenu           = true
 languageMenu        = true
+
 
 [params.intro]
 header                = "Jorge's Notebook"
@@ -59,168 +148,3 @@ rssIntro              = true
 socialIntro           = true
 hideWhenSingleColumn  = true
 alwaysOnHomepage      = false
-
-[params.intro.pic]
-src                 = "img/notebook.png"
-shape               = "circle"
-width               = ""
-alt                 = "Jorge's Notebook"
-
-[params.sidebar]
-about               = "In this Notebook I’ll post about my knowledges, and somethings that I’ll discover while I’m working. I won’t post all days because it’s a impossible. I’ll try to post one per week or at least one per month. If you like my posts stay tune becuase I’ll start a youtube channel guess how is gonig to be the name?…jorge's Notebook!."
-postAmount          = 3
-categories          = true
-categoriesByCount   = true
-
-[params.footer]
-rssFooter           = true
-socialFooter        = true
-
-[params.staticman]
-enabled             = true
-api                 = ""  # No Trailing Slash
-gitProvider         = ""
-username            = ""
-repo                = ""
-branch              = ""
-
-[params.staticman.recaptcha]
-siteKey           = ""
-encryptedKey      = ""
-
-[menu]
-
-[[menu.main]]
-name              = "Home"
-identifier        = "home"
-url               = "/"
-pre               = "<i class='fa fa-home'></i>"
-weight            = 1
-
-[[menu.main]]
-name              = "About"
-identifier        = "about"
-url               = "/about/"
-pre               = "<i class='far fa-id-card'></i>"
-weight            = 2
-
-[[menu.main]]
-name              = "Blog"
-identifier        = "blog"
-url               = "/blog/"
-pre               = "<i class='far fa-newspaper'></i>"
-weight            = 3
-
-[[menu.main]]
-name              = "Categories"
-identifier        = "categories"
-url               = "/categories/"
-pre               = "<i class='fas fa-sitemap'></i>"
-weight            = 5
-
-#[[menu.main]]
-#name              = "Contact"
-#identifier        = "contact"
-#url               = "/contact/"
-#pre               = "<i class='far fa-envelope'></i>"
-#weight            = 6
-
-[Languages]
-
-[Languages.en]
-LanguageCode        = "en"
-LanguageName        = "English"
-weight              = 1
-
-[Languages.es]
-LanguageCode        = "es"
-LanguageName        = "Castellano"
-title               = "Jorge's Notebook"
-description         = "La traduccion del blog en castellano. Pero solo estoy traduciendo los nuevos posts."
-weight              = 2
-
-[[Languages.es.menu.main]]
-name              = "Inicio"
-identifier        = "home"
-url               = "/"
-pre               = "<i class='fas fa-home'></i>"
-weight            = 1
-
-[[Languages.es.menu.main]]
-name              = "¿Qué es esto?"
-identifier        = "about"
-url               = "/about/"
-pre               = "<i class='far fa-id-card'></i>"
-weight            = 2
-
-[[Languages.es.menu.main]]
-name              = "Blog"
-identifier        = "blog"
-url               = "/blog/"
-pre               = "<i class='far fa-newspaper'></i>"
-weight            = 3
-
-[[Languages.es.menu.main]]
-name              = "Categorias"
-identifier        = "categories"
-url               = "/categories/"
-pre               = "<i class='fas fa-sitemap'></i>"
-weight            = 5
-
-#[[Languages.es.menu.main]]
-#name              = "Contact"
-#identifier        = "contact"
-#url               = "/contact/"
-#pre               = "<i class='far fa-envelope'></i>"
-#weight            = 6
-
-
-[social]
-# Coding Communities
-github                = "jorgeancal"
-gitlab                = "jorgeancal"
-stackoverflow         = "" # User Number
-bitbucket             = ""
-jsfiddle              = ""
-codepen               = ""
-# Visual Art Communities
-deviantart            = ""
-flickr                = ""
-behance               = ""
-dribbble              = ""
-# Publishing Communities
-wordpress             = ""
-medium                = ""
-# Professional/Business Oriented Communities
-linkedin              = ""
-linkedin_company      = ""
-foursquare            = ""
-xing                  = ""
-slideshare            = ""
-# Social Networks
-facebook              = ""
-googleplus            = ""
-reddit                = ""
-quora                 = ""
-youtube               = ""
-vimeo                 = ""
-whatsapp              = "" # WhatsApp Number
-# WeChat and QQ need testing.
-wechat              = ""
-qq                  = "" # User ID Number
-instagram             = ""
-tumblr                = ""
-twitter               = "@jorgeancal"
-strava                = ""
-skype                 = ""
-snapchat              = ""
-pinterest             = ""
-telegram              = ""
-vine                  = ""
-googlescholar         = ""
-orcid                 = ""
-researchgate          = ""
-keybase               = ""
-mastodon              = ""
-# Email
-email                 = "info@jorgeancal.com"

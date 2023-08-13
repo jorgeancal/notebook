@@ -9,10 +9,10 @@
     <lastBuildDate>Mon, 28 Sep 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://jorgesnotebook.com/tags/spring-boot/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>jlink with Spring Boot services</title>
-      <link>https://jorgesnotebook.com/blog/how-to-create-a-small-jvm-docker-image/</link>
+      <link>https://jorgesnotebook.com/posts/how-to-create-a-small-jvm-docker-image/</link>
       <pubDate>Mon, 28 Sep 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://jorgesnotebook.com/blog/how-to-create-a-small-jvm-docker-image/</guid>
+      <guid>https://jorgesnotebook.com/posts/how-to-create-a-small-jvm-docker-image/</guid>
       <description>This always has been my priority because&amp;hellip; I don&amp;rsquo;t want to pay extra in ECR so&amp;hellip; I have to create small docker images.
 we need to list the classpath of all the libraries that we are going to use the follow command in maven ot save all of them in a file
 mvn dependency:build-classpath -Dmdep.includeScope=runtime -Dmdep.outputFile=classpath once we have all the libraries in a file&amp;hellip; we need are going to put everything in a environment variable that way we can use it later on.</description>
@@ -20,12 +20,12 @@ mvn dependency:build-classpath -Dmdep.includeScope=runtime -Dmdep.outputFile=cla
     
     <item>
       <title>Starting with Spring Boot</title>
-      <link>https://jorgesnotebook.com/blog/starting-with-spring-boot/</link>
+      <link>https://jorgesnotebook.com/posts/starting-with-spring-boot/</link>
       <pubDate>Thu, 23 Jan 2020 23:10:39 +0000</pubDate>
       
-      <guid>https://jorgesnotebook.com/blog/starting-with-spring-boot/</guid>
+      <guid>https://jorgesnotebook.com/posts/starting-with-spring-boot/</guid>
       <description>In this post we’re going to have different sections, in the first one, as in all beginner courses, we’re going to define Spring, learn how to create a project with Spring Boot and learn what the meaning of the basic class which Spring gives you when you start a project is.
-What’s Spring? If you stop someone on the street and ask them about it, they are going to tell you that Spring is a season of the year, but that’s not the meaning that we want.</description>
+What’s Spring? # If you stop someone on the street and ask them about it, they are going to tell you that Spring is a season of the year, but that’s not the meaning that we want.</description>
     </item>
     
   </channel>
