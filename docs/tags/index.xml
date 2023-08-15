@@ -53,15 +53,6 @@
     </item>
     
     <item>
-      <title>Kluster</title>
-      <link>https://jorgesnotebook.com/tags/kluster/</link>
-      <pubDate>Sun, 28 Feb 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://jorgesnotebook.com/tags/kluster/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>kubernetes</title>
       <link>https://jorgesnotebook.com/tags/kubernetes/</link>
       <pubDate>Sun, 28 Feb 2021 00:00:00 +0000</pubDate>
@@ -89,6 +80,15 @@
     </item>
     
     <item>
+      <title>cilium</title>
+      <link>https://jorgesnotebook.com/tags/cilium/</link>
+      <pubDate>Mon, 28 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jorgesnotebook.com/tags/cilium/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Docker</title>
       <link>https://jorgesnotebook.com/tags/docker/</link>
       <pubDate>Mon, 28 Sep 2020 00:00:00 +0000</pubDate>
@@ -103,6 +103,24 @@
       <pubDate>Mon, 28 Sep 2020 00:00:00 +0000</pubDate>
       
       <guid>https://jorgesnotebook.com/tags/dockerimages/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ha</title>
+      <link>https://jorgesnotebook.com/tags/ha/</link>
+      <pubDate>Mon, 28 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jorgesnotebook.com/tags/ha/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>How to</title>
+      <link>https://jorgesnotebook.com/tags/how-to/</link>
+      <pubDate>Mon, 28 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jorgesnotebook.com/tags/how-to/</guid>
       <description></description>
     </item>
     
@@ -143,11 +161,29 @@
     </item>
     
     <item>
+      <title>k3s</title>
+      <link>https://jorgesnotebook.com/tags/k3s/</link>
+      <pubDate>Mon, 28 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jorgesnotebook.com/tags/k3s/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>maven</title>
       <link>https://jorgesnotebook.com/tags/maven/</link>
       <pubDate>Mon, 28 Sep 2020 00:00:00 +0000</pubDate>
       
       <guid>https://jorgesnotebook.com/tags/maven/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>metallb</title>
+      <link>https://jorgesnotebook.com/tags/metallb/</link>
+      <pubDate>Mon, 28 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jorgesnotebook.com/tags/metallb/</guid>
       <description></description>
     </item>
     

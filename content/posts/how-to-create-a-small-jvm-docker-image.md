@@ -5,7 +5,6 @@ categories = ["Java", "Docker"]
 tags = ["java", "openjdk", "jdk", "DockerImages", "Docker", "jvm", "jre", "maven", "Spring Boot"]
 date = "2020-09-28"
 description = "Here, you will learn about how to create a small JRE for your microservices. "
-linktitle = ""
 title= "jlink with Spring Boot services"
 type="post"
 +++

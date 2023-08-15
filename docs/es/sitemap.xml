@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://jorgesnotebook.com/es/categories/</loc>
-    <lastmod>2023-08-13T13:01:33+01:00</lastmod>
+    <lastmod>2023-08-13T20:43:58+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -16,7 +16,7 @@
                 />
   </url><url>
     <loc>https://jorgesnotebook.com/es/tags/cluster/</loc>
-    <lastmod>2023-08-13T13:01:33+01:00</lastmod>
+    <lastmod>2023-08-13T20:43:58+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -29,7 +29,7 @@
                 />
   </url><url>
     <loc>https://jorgesnotebook.com/es/posts/how-to-implement-sops-helmfile/</loc>
-    <lastmod>2023-08-13T13:01:33+01:00</lastmod>
+    <lastmod>2023-08-13T20:43:58+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -42,7 +42,7 @@
                 />
   </url><url>
     <loc>https://jorgesnotebook.com/es/tags/helm/</loc>
-    <lastmod>2023-08-13T13:01:33+01:00</lastmod>
+    <lastmod>2023-08-13T20:43:58+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -55,7 +55,7 @@
                 />
   </url><url>
     <loc>https://jorgesnotebook.com/es/categories/helm/</loc>
-    <lastmod>2023-08-13T13:01:33+01:00</lastmod>
+    <lastmod>2023-08-13T20:43:58+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -68,7 +68,7 @@
                 />
   </url><url>
     <loc>https://jorgesnotebook.com/es/tags/helm-secrets/</loc>
-    <lastmod>2023-08-13T13:01:33+01:00</lastmod>
+    <lastmod>2023-08-13T20:43:58+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -81,7 +81,7 @@
                 />
   </url><url>
     <loc>https://jorgesnotebook.com/es/tags/helmcharts/</loc>
-    <lastmod>2023-08-13T13:01:33+01:00</lastmod>
+    <lastmod>2023-08-13T20:43:58+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -94,7 +94,7 @@
                 />
   </url><url>
     <loc>https://jorgesnotebook.com/es/tags/helmfile/</loc>
-    <lastmod>2023-08-13T13:01:33+01:00</lastmod>
+    <lastmod>2023-08-13T20:43:58+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -106,21 +106,8 @@
                 href="https://jorgesnotebook.com/es/tags/helmfile/"
                 />
   </url><url>
-    <loc>https://jorgesnotebook.com/es/categories/helmfile/</loc>
-    <lastmod>2023-08-13T13:01:33+01:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://jorgesnotebook.com/categories/helmfile/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://jorgesnotebook.com/es/categories/helmfile/"
-                />
-  </url><url>
     <loc>https://jorgesnotebook.com/es/categories/how-to/</loc>
-    <lastmod>2023-08-13T13:01:33+01:00</lastmod>
+    <lastmod>2023-08-13T20:43:58+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -133,7 +120,7 @@
                 />
   </url><url>
     <loc>https://jorgesnotebook.com/es/</loc>
-    <lastmod>2023-08-13T13:01:33+01:00</lastmod>
+    <lastmod>2023-08-13T20:43:58+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -145,21 +132,8 @@
                 href="https://jorgesnotebook.com/es/"
                 />
   </url><url>
-    <loc>https://jorgesnotebook.com/es/tags/kluster/</loc>
-    <lastmod>2023-08-13T13:01:33+01:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://jorgesnotebook.com/tags/kluster/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://jorgesnotebook.com/es/tags/kluster/"
-                />
-  </url><url>
     <loc>https://jorgesnotebook.com/es/tags/kubernetes/</loc>
-    <lastmod>2023-08-13T13:01:33+01:00</lastmod>
+    <lastmod>2023-08-13T20:43:58+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -172,7 +146,7 @@
                 />
   </url><url>
     <loc>https://jorgesnotebook.com/es/categories/kubernetes/</loc>
-    <lastmod>2023-08-13T13:01:33+01:00</lastmod>
+    <lastmod>2023-08-13T20:43:58+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -185,7 +159,7 @@
                 />
   </url><url>
     <loc>https://jorgesnotebook.com/es/posts/</loc>
-    <lastmod>2023-08-13T13:01:33+01:00</lastmod>
+    <lastmod>2023-08-13T20:43:58+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -198,7 +172,7 @@
                 />
   </url><url>
     <loc>https://jorgesnotebook.com/es/tags/secrets/</loc>
-    <lastmod>2023-08-13T13:01:33+01:00</lastmod>
+    <lastmod>2023-08-13T20:43:58+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -211,7 +185,7 @@
                 />
   </url><url>
     <loc>https://jorgesnotebook.com/es/tags/sops/</loc>
-    <lastmod>2023-08-13T13:01:33+01:00</lastmod>
+    <lastmod>2023-08-13T20:43:58+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -224,7 +198,7 @@
                 />
   </url><url>
     <loc>https://jorgesnotebook.com/es/tags/</loc>
-    <lastmod>2023-08-13T13:01:33+01:00</lastmod>
+    <lastmod>2023-08-13T20:43:58+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -237,7 +211,7 @@
                 />
   </url><url>
     <loc>https://jorgesnotebook.com/es/posts/how-to-set-up-your-kluster-with-helmfle/</loc>
-    <lastmod>2023-08-13T13:01:33+01:00</lastmod>
+    <lastmod>2023-08-13T20:43:58+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
@@ -247,6 +221,61 @@
                 rel="alternate"
                 hreflang="es"
                 href="https://jorgesnotebook.com/es/posts/how-to-set-up-your-kluster-with-helmfle/"
+                />
+  </url><url>
+    <loc>https://jorgesnotebook.com/es/categories/helmfile/</loc>
+    <lastmod>2023-08-13T20:43:58+01:00</lastmod>
+  </url><url>
+    <loc>https://jorgesnotebook.com/es/categories/cluster/</loc>
+    <lastmod>2023-08-13T20:43:58+01:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://jorgesnotebook.com/categories/cluster/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://jorgesnotebook.com/es/categories/cluster/"
+                />
+  </url><url>
+    <loc>https://jorgesnotebook.com/es/posts/how-to-create-a-k8s-homelab/</loc>
+    <lastmod>2023-08-13T20:43:58+01:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://jorgesnotebook.com/posts/how-to-create-a-k8s-homelab/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://jorgesnotebook.com/es/posts/how-to-create-a-k8s-homelab/"
+                />
+  </url><url>
+    <loc>https://jorgesnotebook.com/es/tags/how-to/</loc>
+    <lastmod>2023-08-13T20:43:58+01:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://jorgesnotebook.com/tags/how-to/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://jorgesnotebook.com/es/tags/how-to/"
+                />
+  </url><url>
+    <loc>https://jorgesnotebook.com/es/tags/k3s/</loc>
+    <lastmod>2023-08-13T20:43:58+01:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://jorgesnotebook.com/tags/k3s/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://jorgesnotebook.com/es/tags/k3s/"
                 />
   </url><url>
     <loc>https://jorgesnotebook.com/es/about/</loc>

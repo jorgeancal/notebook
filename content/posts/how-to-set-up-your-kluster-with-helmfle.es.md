@@ -5,7 +5,7 @@ comments = true
 categories = ["Helm", "kubernetes", "How to", "helmfile"]
 description = "Echamos un vistazo atrás de cómo se ha portado helmfile después de 6 meses usando helmfile en el trabajo y mostramos a cómo configurarlo."
 author = "Jorge Andreu Calatayud"
-tags= ["helm", "helmcharts", "kubernetes", "helmfile", "cluster", "Kluster"]
+tags= ["helm", "helmcharts", "kubernetes", "helmfile", "cluster"]
 +++
 
 Helmfile es una herramienta que te permite sacar más partido a Helm. Ya que si usas helmfile puedes implementar cualquier cantidad de helmcharts. Básicamente con helmfile declaras las helmcharts y les das los valores que tú quieres a cada una de las helm chart, helmfile creara el correspondiente deploy mediante helm para mandar a tu cluster todo lo que has definido en helmfile, claro esta puedes decirle a helmfile impleméntame solo este grupo de helmchart y de este grupo quiero implementarlas en esta secuencia. 

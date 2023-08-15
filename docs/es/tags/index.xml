@@ -53,15 +53,6 @@
     </item>
     
     <item>
-      <title>Kluster</title>
-      <link>https://jorgesnotebook.com/es/tags/kluster/</link>
-      <pubDate>Sun, 28 Feb 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://jorgesnotebook.com/es/tags/kluster/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>kubernetes</title>
       <link>https://jorgesnotebook.com/es/tags/kubernetes/</link>
       <pubDate>Sun, 28 Feb 2021 00:00:00 +0000</pubDate>
@@ -85,6 +76,24 @@
       <pubDate>Sun, 28 Feb 2021 00:00:00 +0000</pubDate>
       
       <guid>https://jorgesnotebook.com/es/tags/sops/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>How to</title>
+      <link>https://jorgesnotebook.com/es/tags/how-to/</link>
+      <pubDate>Mon, 28 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jorgesnotebook.com/es/tags/how-to/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>k3s</title>
+      <link>https://jorgesnotebook.com/es/tags/k3s/</link>
+      <pubDate>Mon, 28 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jorgesnotebook.com/es/tags/k3s/</guid>
       <description></description>
     </item>
     
