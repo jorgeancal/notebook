@@ -16,7 +16,7 @@
                 />
   </url><url>
     <loc>https://jorgesnotebook.com/categories/</loc>
-    <lastmod>2023-08-13T13:01:33+01:00</lastmod>
+    <lastmod>2023-08-13T20:43:58+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
@@ -29,7 +29,7 @@
                 />
   </url><url>
     <loc>https://jorgesnotebook.com/tags/cluster/</loc>
-    <lastmod>2023-08-13T13:01:33+01:00</lastmod>
+    <lastmod>2023-08-13T20:43:58+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
@@ -42,7 +42,7 @@
                 />
   </url><url>
     <loc>https://jorgesnotebook.com/tags/helm/</loc>
-    <lastmod>2023-08-13T13:01:33+01:00</lastmod>
+    <lastmod>2023-08-13T20:43:58+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
@@ -55,7 +55,7 @@
                 />
   </url><url>
     <loc>https://jorgesnotebook.com/categories/helm/</loc>
-    <lastmod>2023-08-13T13:01:33+01:00</lastmod>
+    <lastmod>2023-08-13T20:43:58+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
@@ -68,7 +68,7 @@
                 />
   </url><url>
     <loc>https://jorgesnotebook.com/tags/helm-secrets/</loc>
-    <lastmod>2023-08-13T13:01:33+01:00</lastmod>
+    <lastmod>2023-08-13T20:43:58+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
@@ -81,7 +81,7 @@
                 />
   </url><url>
     <loc>https://jorgesnotebook.com/tags/helmcharts/</loc>
-    <lastmod>2023-08-13T13:01:33+01:00</lastmod>
+    <lastmod>2023-08-13T20:43:58+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
@@ -94,7 +94,7 @@
                 />
   </url><url>
     <loc>https://jorgesnotebook.com/tags/helmfile/</loc>
-    <lastmod>2023-08-13T13:01:33+01:00</lastmod>
+    <lastmod>2023-08-13T20:43:58+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
@@ -106,21 +106,8 @@
                 href="https://jorgesnotebook.com/tags/helmfile/"
                 />
   </url><url>
-    <loc>https://jorgesnotebook.com/categories/helmfile/</loc>
-    <lastmod>2023-08-13T13:01:33+01:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://jorgesnotebook.com/es/categories/helmfile/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://jorgesnotebook.com/categories/helmfile/"
-                />
-  </url><url>
     <loc>https://jorgesnotebook.com/categories/how-to/</loc>
-    <lastmod>2023-08-13T13:01:33+01:00</lastmod>
+    <lastmod>2023-08-13T20:43:58+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
@@ -133,7 +120,7 @@
                 />
   </url><url>
     <loc>https://jorgesnotebook.com/posts/how-to-implement-sops-helmfile/</loc>
-    <lastmod>2023-08-13T13:01:33+01:00</lastmod>
+    <lastmod>2023-08-13T20:43:58+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
@@ -145,21 +132,8 @@
                 href="https://jorgesnotebook.com/posts/how-to-implement-sops-helmfile/"
                 />
   </url><url>
-    <loc>https://jorgesnotebook.com/tags/kluster/</loc>
-    <lastmod>2023-08-13T13:01:33+01:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="es"
-                href="https://jorgesnotebook.com/es/tags/kluster/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://jorgesnotebook.com/tags/kluster/"
-                />
-  </url><url>
     <loc>https://jorgesnotebook.com/tags/kubernetes/</loc>
-    <lastmod>2023-08-13T13:01:33+01:00</lastmod>
+    <lastmod>2023-08-13T20:43:58+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
@@ -172,7 +146,7 @@
                 />
   </url><url>
     <loc>https://jorgesnotebook.com/categories/kubernetes/</loc>
-    <lastmod>2023-08-13T13:01:33+01:00</lastmod>
+    <lastmod>2023-08-13T20:43:58+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
@@ -185,7 +159,7 @@
                 />
   </url><url>
     <loc>https://jorgesnotebook.com/tags/secrets/</loc>
-    <lastmod>2023-08-13T13:01:33+01:00</lastmod>
+    <lastmod>2023-08-13T20:43:58+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
@@ -198,7 +172,7 @@
                 />
   </url><url>
     <loc>https://jorgesnotebook.com/tags/sops/</loc>
-    <lastmod>2023-08-13T13:01:33+01:00</lastmod>
+    <lastmod>2023-08-13T20:43:58+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
@@ -211,7 +185,7 @@
                 />
   </url><url>
     <loc>https://jorgesnotebook.com/tags/</loc>
-    <lastmod>2023-08-13T13:01:33+01:00</lastmod>
+    <lastmod>2023-08-13T20:43:58+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
@@ -224,10 +198,20 @@
                 />
   </url><url>
     <loc>https://jorgesnotebook.com/categories/cluster/</loc>
-    <lastmod>2023-08-13T13:01:33+01:00</lastmod>
+    <lastmod>2023-08-13T20:43:58+01:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://jorgesnotebook.com/es/categories/cluster/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://jorgesnotebook.com/categories/cluster/"
+                />
   </url><url>
     <loc>https://jorgesnotebook.com/posts/how-to-set-up-your-kluster-with-helmfle/</loc>
-    <lastmod>2023-08-13T13:01:33+01:00</lastmod>
+    <lastmod>2023-08-13T20:43:58+01:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="es"
@@ -239,41 +223,89 @@
                 href="https://jorgesnotebook.com/posts/how-to-set-up-your-kluster-with-helmfle/"
                 />
   </url><url>
+    <loc>https://jorgesnotebook.com/tags/cilium/</loc>
+    <lastmod>2023-08-13T20:43:58+01:00</lastmod>
+  </url><url>
+    <loc>https://jorgesnotebook.com/posts/how-to-create-a-k8s-homelab/</loc>
+    <lastmod>2023-08-13T20:43:58+01:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://jorgesnotebook.com/es/posts/how-to-create-a-k8s-homelab/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://jorgesnotebook.com/posts/how-to-create-a-k8s-homelab/"
+                />
+  </url><url>
     <loc>https://jorgesnotebook.com/tags/docker/</loc>
-    <lastmod>2023-08-13T13:01:33+01:00</lastmod>
+    <lastmod>2023-08-13T20:43:58+01:00</lastmod>
   </url><url>
     <loc>https://jorgesnotebook.com/categories/docker/</loc>
-    <lastmod>2023-08-13T13:01:33+01:00</lastmod>
+    <lastmod>2023-08-13T20:43:58+01:00</lastmod>
   </url><url>
     <loc>https://jorgesnotebook.com/tags/dockerimages/</loc>
-    <lastmod>2023-08-13T13:01:33+01:00</lastmod>
+    <lastmod>2023-08-13T20:43:58+01:00</lastmod>
+  </url><url>
+    <loc>https://jorgesnotebook.com/tags/ha/</loc>
+    <lastmod>2023-08-13T20:43:58+01:00</lastmod>
+  </url><url>
+    <loc>https://jorgesnotebook.com/tags/how-to/</loc>
+    <lastmod>2023-08-13T20:43:58+01:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://jorgesnotebook.com/es/tags/how-to/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://jorgesnotebook.com/tags/how-to/"
+                />
   </url><url>
     <loc>https://jorgesnotebook.com/tags/java/</loc>
-    <lastmod>2023-08-13T13:01:33+01:00</lastmod>
+    <lastmod>2023-08-13T20:43:58+01:00</lastmod>
   </url><url>
     <loc>https://jorgesnotebook.com/categories/java/</loc>
-    <lastmod>2023-08-13T13:01:33+01:00</lastmod>
+    <lastmod>2023-08-13T20:43:58+01:00</lastmod>
   </url><url>
     <loc>https://jorgesnotebook.com/tags/jdk/</loc>
-    <lastmod>2023-08-13T13:01:33+01:00</lastmod>
+    <lastmod>2023-08-13T20:43:58+01:00</lastmod>
   </url><url>
     <loc>https://jorgesnotebook.com/posts/how-to-create-a-small-jvm-docker-image/</loc>
-    <lastmod>2023-08-13T13:01:33+01:00</lastmod>
+    <lastmod>2023-08-13T20:43:58+01:00</lastmod>
   </url><url>
     <loc>https://jorgesnotebook.com/tags/jre/</loc>
-    <lastmod>2023-08-13T13:01:33+01:00</lastmod>
+    <lastmod>2023-08-13T20:43:58+01:00</lastmod>
   </url><url>
     <loc>https://jorgesnotebook.com/tags/jvm/</loc>
-    <lastmod>2023-08-13T13:01:33+01:00</lastmod>
+    <lastmod>2023-08-13T20:43:58+01:00</lastmod>
+  </url><url>
+    <loc>https://jorgesnotebook.com/tags/k3s/</loc>
+    <lastmod>2023-08-13T20:43:58+01:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="es"
+                href="https://jorgesnotebook.com/es/tags/k3s/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://jorgesnotebook.com/tags/k3s/"
+                />
   </url><url>
     <loc>https://jorgesnotebook.com/tags/maven/</loc>
-    <lastmod>2023-08-13T13:01:33+01:00</lastmod>
+    <lastmod>2023-08-13T20:43:58+01:00</lastmod>
+  </url><url>
+    <loc>https://jorgesnotebook.com/tags/metallb/</loc>
+    <lastmod>2023-08-13T20:43:58+01:00</lastmod>
   </url><url>
     <loc>https://jorgesnotebook.com/tags/openjdk/</loc>
-    <lastmod>2023-08-13T13:01:33+01:00</lastmod>
+    <lastmod>2023-08-13T20:43:58+01:00</lastmod>
   </url><url>
     <loc>https://jorgesnotebook.com/tags/spring-boot/</loc>
-    <lastmod>2023-08-13T13:01:33+01:00</lastmod>
+    <lastmod>2023-08-13T20:43:58+01:00</lastmod>
   </url><url>
     <loc>https://jorgesnotebook.com/tags/init-spring-boot/</loc>
     <lastmod>2023-08-13T13:01:33+01:00</lastmod>

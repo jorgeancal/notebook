@@ -27,6 +27,15 @@
     </item>
     
     <item>
+      <title>Create your own cluster</title>
+      <link>https://jorgesnotebook.com/es/posts/how-to-create-a-k8s-homelab/</link>
+      <pubDate>Mon, 28 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jorgesnotebook.com/es/posts/how-to-create-a-k8s-homelab/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>About</title>
       <link>https://jorgesnotebook.com/es/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
