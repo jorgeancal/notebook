@@ -67,7 +67,7 @@ I went to the following path to get it:
 
 ```bash
 # cat /var/lib/rancher/k3s/server/token
-K10d9e7a53050ffe13e6ff11d9f79dcdf5b6c2533d2a86402432b32ae25a1777161::server:30a4477614dadd20a0857ca2da65f4b8
+93821hp98rf9283jhf82p14hfn2984f2qhfuwhep9r8h3q2498rytq24r::server:9823p54uy19823rj248994fj0429fj
 ```
 Once I had the token, I went to the next Raspberry. And I had to repeat the swap step and 
 the cmdline step. Then I had to get the token, the current IP and the IP of the master node 

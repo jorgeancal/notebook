@@ -6,96 +6,77 @@
     <description>Recent content in Tags on Jorge&#39;s notebook</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es</language>
-    <lastBuildDate>Sun, 28 Feb 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://jorgesnotebook.com/es/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 28 Feb 2021 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://jorgesnotebook.com/es/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>cluster</title>
       <link>https://jorgesnotebook.com/es/tags/cluster/</link>
       <pubDate>Sun, 28 Feb 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://jorgesnotebook.com/es/tags/cluster/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>helm</title>
       <link>https://jorgesnotebook.com/es/tags/helm/</link>
       <pubDate>Sun, 28 Feb 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://jorgesnotebook.com/es/tags/helm/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>helm-secrets</title>
       <link>https://jorgesnotebook.com/es/tags/helm-secrets/</link>
       <pubDate>Sun, 28 Feb 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://jorgesnotebook.com/es/tags/helm-secrets/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>helmcharts</title>
       <link>https://jorgesnotebook.com/es/tags/helmcharts/</link>
       <pubDate>Sun, 28 Feb 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://jorgesnotebook.com/es/tags/helmcharts/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>helmfile</title>
       <link>https://jorgesnotebook.com/es/tags/helmfile/</link>
       <pubDate>Sun, 28 Feb 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://jorgesnotebook.com/es/tags/helmfile/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>kubernetes</title>
       <link>https://jorgesnotebook.com/es/tags/kubernetes/</link>
       <pubDate>Sun, 28 Feb 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://jorgesnotebook.com/es/tags/kubernetes/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>secrets</title>
       <link>https://jorgesnotebook.com/es/tags/secrets/</link>
       <pubDate>Sun, 28 Feb 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://jorgesnotebook.com/es/tags/secrets/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>sops</title>
       <link>https://jorgesnotebook.com/es/tags/sops/</link>
       <pubDate>Sun, 28 Feb 2021 00:00:00 +0000</pubDate>
-      
       <guid>https://jorgesnotebook.com/es/tags/sops/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>How to</title>
       <link>https://jorgesnotebook.com/es/tags/how-to/</link>
       <pubDate>Mon, 28 Sep 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://jorgesnotebook.com/es/tags/how-to/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>k3s</title>
       <link>https://jorgesnotebook.com/es/tags/k3s/</link>
       <pubDate>Mon, 28 Sep 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://jorgesnotebook.com/es/tags/k3s/</guid>
       <description></description>
     </item>
-    
   </channel>
 </rss>

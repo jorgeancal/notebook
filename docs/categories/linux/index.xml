@@ -6,26 +6,23 @@
     <description>Recent content in Linux on Jorge&#39;s notebook</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 23 Jan 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://jorgesnotebook.com/categories/linux/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 23 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://jorgesnotebook.com/categories/linux/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to Install Gitlab on Debian 9</title>
       <link>https://jorgesnotebook.com/posts/how-to-install-gitlab-on-debian-9/</link>
       <pubDate>Thu, 23 Jan 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://jorgesnotebook.com/posts/how-to-install-gitlab-on-debian-9/</guid>
       <description>Let’s go with another installation. I’m not really sure about installing GitLab on my server, but I have been thinking a lot about it. I had installed Git which I like, but I tried one years ago and I like it but I haven’t installed it on my server.
 GitLab is a really good tool. You can have it installed on your server and you can create different teams and just developers.</description>
     </item>
-    
     <item>
       <title>How to Install Jenkins</title>
       <link>https://jorgesnotebook.com/posts/how-to-install-jenkins/</link>
       <pubDate>Thu, 23 Jan 2020 00:00:00 +0000</pubDate>
-      
       <guid>https://jorgesnotebook.com/posts/how-to-install-jenkins/</guid>
       <description>In this post I’m going to try to explain what Jenkins is, why we use it, how to install it in Debain and how to use it. Everyone is going to say… oh no! Another boring post about it. I’ll tell them just maybe or maybe not. Find out for yourself.
 Firstly, I have to say this post is all my notes about my research about Jenkins, therefore, it could be a bit different than other websites, or just wrong!</description>
     </item>
-    
   </channel>
 </rss>
