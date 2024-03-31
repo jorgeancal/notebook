@@ -6,94 +6,94 @@
     <description>Recent content in Tags on Jorge&#39;s notebook</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Tue, 15 Aug 2023 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 15 Aug 2023 19:16:26 +0100</lastBuildDate>
     <atom:link href="https://jorgesnotebook.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>cilium</title>
+      <title>Cilium</title>
       <link>https://jorgesnotebook.com/tags/cilium/</link>
       <pubDate>Tue, 15 Aug 2023 00:00:00 +0000</pubDate>
       <guid>https://jorgesnotebook.com/tags/cilium/</guid>
       <description></description>
     </item>
     <item>
-      <title>ha</title>
+      <title>Ha</title>
       <link>https://jorgesnotebook.com/tags/ha/</link>
       <pubDate>Tue, 15 Aug 2023 00:00:00 +0000</pubDate>
       <guid>https://jorgesnotebook.com/tags/ha/</guid>
       <description></description>
     </item>
     <item>
-      <title>How to</title>
+      <title>How To</title>
       <link>https://jorgesnotebook.com/tags/how-to/</link>
       <pubDate>Tue, 15 Aug 2023 00:00:00 +0000</pubDate>
       <guid>https://jorgesnotebook.com/tags/how-to/</guid>
       <description></description>
     </item>
     <item>
-      <title>k3s</title>
+      <title>K3s</title>
       <link>https://jorgesnotebook.com/tags/k3s/</link>
       <pubDate>Tue, 15 Aug 2023 00:00:00 +0000</pubDate>
       <guid>https://jorgesnotebook.com/tags/k3s/</guid>
       <description></description>
     </item>
     <item>
-      <title>kubernetes</title>
+      <title>Kubernetes</title>
       <link>https://jorgesnotebook.com/tags/kubernetes/</link>
       <pubDate>Tue, 15 Aug 2023 00:00:00 +0000</pubDate>
       <guid>https://jorgesnotebook.com/tags/kubernetes/</guid>
       <description></description>
     </item>
     <item>
-      <title>metallb</title>
+      <title>Metallb</title>
       <link>https://jorgesnotebook.com/tags/metallb/</link>
       <pubDate>Tue, 15 Aug 2023 00:00:00 +0000</pubDate>
       <guid>https://jorgesnotebook.com/tags/metallb/</guid>
       <description></description>
     </item>
     <item>
-      <title>cluster</title>
+      <title>Cluster</title>
       <link>https://jorgesnotebook.com/tags/cluster/</link>
       <pubDate>Sun, 28 Feb 2021 00:00:00 +0000</pubDate>
       <guid>https://jorgesnotebook.com/tags/cluster/</guid>
       <description></description>
     </item>
     <item>
-      <title>helm</title>
+      <title>Helm</title>
       <link>https://jorgesnotebook.com/tags/helm/</link>
       <pubDate>Sun, 28 Feb 2021 00:00:00 +0000</pubDate>
       <guid>https://jorgesnotebook.com/tags/helm/</guid>
       <description></description>
     </item>
     <item>
-      <title>helm-secrets</title>
+      <title>Helm-Secrets</title>
       <link>https://jorgesnotebook.com/tags/helm-secrets/</link>
       <pubDate>Sun, 28 Feb 2021 00:00:00 +0000</pubDate>
       <guid>https://jorgesnotebook.com/tags/helm-secrets/</guid>
       <description></description>
     </item>
     <item>
-      <title>helmcharts</title>
+      <title>Helmcharts</title>
       <link>https://jorgesnotebook.com/tags/helmcharts/</link>
       <pubDate>Sun, 28 Feb 2021 00:00:00 +0000</pubDate>
       <guid>https://jorgesnotebook.com/tags/helmcharts/</guid>
       <description></description>
     </item>
     <item>
-      <title>helmfile</title>
+      <title>Helmfile</title>
       <link>https://jorgesnotebook.com/tags/helmfile/</link>
       <pubDate>Sun, 28 Feb 2021 00:00:00 +0000</pubDate>
       <guid>https://jorgesnotebook.com/tags/helmfile/</guid>
       <description></description>
     </item>
     <item>
-      <title>secrets</title>
+      <title>Secrets</title>
       <link>https://jorgesnotebook.com/tags/secrets/</link>
       <pubDate>Sun, 28 Feb 2021 00:00:00 +0000</pubDate>
       <guid>https://jorgesnotebook.com/tags/secrets/</guid>
       <description></description>
     </item>
     <item>
-      <title>sops</title>
+      <title>Sops</title>
       <link>https://jorgesnotebook.com/tags/sops/</link>
       <pubDate>Sun, 28 Feb 2021 00:00:00 +0000</pubDate>
       <guid>https://jorgesnotebook.com/tags/sops/</guid>
@@ -114,42 +114,42 @@
       <description></description>
     </item>
     <item>
-      <title>java</title>
+      <title>Java</title>
       <link>https://jorgesnotebook.com/tags/java/</link>
       <pubDate>Mon, 28 Sep 2020 00:00:00 +0000</pubDate>
       <guid>https://jorgesnotebook.com/tags/java/</guid>
       <description></description>
     </item>
     <item>
-      <title>jdk</title>
+      <title>JDK</title>
       <link>https://jorgesnotebook.com/tags/jdk/</link>
       <pubDate>Mon, 28 Sep 2020 00:00:00 +0000</pubDate>
       <guid>https://jorgesnotebook.com/tags/jdk/</guid>
       <description></description>
     </item>
     <item>
-      <title>jre</title>
+      <title>Jre</title>
       <link>https://jorgesnotebook.com/tags/jre/</link>
       <pubDate>Mon, 28 Sep 2020 00:00:00 +0000</pubDate>
       <guid>https://jorgesnotebook.com/tags/jre/</guid>
       <description></description>
     </item>
     <item>
-      <title>jvm</title>
+      <title>Jvm</title>
       <link>https://jorgesnotebook.com/tags/jvm/</link>
       <pubDate>Mon, 28 Sep 2020 00:00:00 +0000</pubDate>
       <guid>https://jorgesnotebook.com/tags/jvm/</guid>
       <description></description>
     </item>
     <item>
-      <title>maven</title>
+      <title>Maven</title>
       <link>https://jorgesnotebook.com/tags/maven/</link>
       <pubDate>Mon, 28 Sep 2020 00:00:00 +0000</pubDate>
       <guid>https://jorgesnotebook.com/tags/maven/</guid>
       <description></description>
     </item>
     <item>
-      <title>openjdk</title>
+      <title>OpenJDK</title>
       <link>https://jorgesnotebook.com/tags/openjdk/</link>
       <pubDate>Mon, 28 Sep 2020 00:00:00 +0000</pubDate>
       <guid>https://jorgesnotebook.com/tags/openjdk/</guid>
@@ -163,35 +163,35 @@
       <description></description>
     </item>
     <item>
-      <title>init spring boot</title>
+      <title>Init Spring Boot</title>
       <link>https://jorgesnotebook.com/tags/init-spring-boot/</link>
       <pubDate>Thu, 23 Jan 2020 23:10:39 +0000</pubDate>
       <guid>https://jorgesnotebook.com/tags/init-spring-boot/</guid>
       <description></description>
     </item>
     <item>
-      <title>spring</title>
+      <title>Spring</title>
       <link>https://jorgesnotebook.com/tags/spring/</link>
       <pubDate>Thu, 23 Jan 2020 23:10:39 +0000</pubDate>
       <guid>https://jorgesnotebook.com/tags/spring/</guid>
       <description></description>
     </item>
     <item>
-      <title>spring boot 2.0</title>
+      <title>Spring Boot 2.0</title>
       <link>https://jorgesnotebook.com/tags/spring-boot-2.0/</link>
       <pubDate>Thu, 23 Jan 2020 23:10:39 +0000</pubDate>
       <guid>https://jorgesnotebook.com/tags/spring-boot-2.0/</guid>
       <description></description>
     </item>
     <item>
-      <title>starting with spring</title>
+      <title>Starting With Spring</title>
       <link>https://jorgesnotebook.com/tags/starting-with-spring/</link>
       <pubDate>Thu, 23 Jan 2020 23:10:39 +0000</pubDate>
       <guid>https://jorgesnotebook.com/tags/starting-with-spring/</guid>
       <description></description>
     </item>
     <item>
-      <title>starting with spring boot</title>
+      <title>Starting With Spring Boot</title>
       <link>https://jorgesnotebook.com/tags/starting-with-spring-boot/</link>
       <pubDate>Thu, 23 Jan 2020 23:10:39 +0000</pubDate>
       <guid>https://jorgesnotebook.com/tags/starting-with-spring-boot/</guid>
@@ -240,7 +240,7 @@
       <description></description>
     </item>
     <item>
-      <title>opinion</title>
+      <title>Opinion</title>
       <link>https://jorgesnotebook.com/tags/opinion/</link>
       <pubDate>Thu, 23 Jan 2020 23:08:17 +0000</pubDate>
       <guid>https://jorgesnotebook.com/tags/opinion/</guid>
@@ -248,9 +248,9 @@
     </item>
     <item>
       <title> Jenkins Debian 9</title>
-      <link>https://jorgesnotebook.com/tags/jenkins-debian-9/</link>
+      <link>https://jorgesnotebook.com/tags/-jenkins-debian-9/</link>
       <pubDate>Thu, 23 Jan 2020 00:00:00 +0000</pubDate>
-      <guid>https://jorgesnotebook.com/tags/jenkins-debian-9/</guid>
+      <guid>https://jorgesnotebook.com/tags/-jenkins-debian-9/</guid>
       <description></description>
     </item>
     <item>
@@ -282,21 +282,21 @@
       <description></description>
     </item>
     <item>
-      <title>How to install GitLab</title>
+      <title>How to Install GitLab</title>
       <link>https://jorgesnotebook.com/tags/how-to-install-gitlab/</link>
       <pubDate>Thu, 23 Jan 2020 00:00:00 +0000</pubDate>
       <guid>https://jorgesnotebook.com/tags/how-to-install-gitlab/</guid>
       <description></description>
     </item>
     <item>
-      <title>How to install Jenkins</title>
+      <title>How to Install Jenkins</title>
       <link>https://jorgesnotebook.com/tags/how-to-install-jenkins/</link>
       <pubDate>Thu, 23 Jan 2020 00:00:00 +0000</pubDate>
       <guid>https://jorgesnotebook.com/tags/how-to-install-jenkins/</guid>
       <description></description>
     </item>
     <item>
-      <title>installations</title>
+      <title>Installations</title>
       <link>https://jorgesnotebook.com/tags/installations/</link>
       <pubDate>Thu, 23 Jan 2020 00:00:00 +0000</pubDate>
       <guid>https://jorgesnotebook.com/tags/installations/</guid>
@@ -310,7 +310,7 @@
       <description></description>
     </item>
     <item>
-      <title>What’s jenkins</title>
+      <title>What’s Jenkins</title>
       <link>https://jorgesnotebook.com/tags/whats-jenkins/</link>
       <pubDate>Thu, 23 Jan 2020 00:00:00 +0000</pubDate>
       <guid>https://jorgesnotebook.com/tags/whats-jenkins/</guid>
