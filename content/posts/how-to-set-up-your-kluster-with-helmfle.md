@@ -6,7 +6,6 @@ categories = ["Helm", "kubernetes", "How to", "cluster"]
 description = "We'll config helmfile. This is not the perfect solution, but this is my way, and it works for me."
 tags= ["cluster", "helm", "helmcharts", "kubernetes", "helmfile" ]
 author = "Jorge Andreu Calatayud"
-type="post"
 +++
 
 

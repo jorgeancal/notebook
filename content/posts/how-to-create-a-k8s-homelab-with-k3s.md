@@ -1,12 +1,11 @@
 +++
-comments= true
+title= "Create your own cluster with k3s"
 author = "Jorge Andreu Calatayud"
 categories = ["cluster", "Kubernetes"]
 tags = ["kubernetes", "How to", "k3s", "ha", "cilium", "metallb"]
 date = "2023-08-15"
 description = "How to set up a k3s cluster with cilium and Metallb"
-title= "Create your own cluster with k3s"
-type="post"
+comments= true
 +++
 
 For a long time, I've been trying to achieve a better configuration in my home lab. 

@@ -6,7 +6,6 @@ tags = ["java", "openjdk", "jdk", "DockerImages", "Docker", "jvm", "jre", "maven
 date = "2020-09-28"
 description = "Here, you will learn about how to create a small JRE for your microservices. "
 title= "jlink with Spring Boot services"
-type="post"
 +++
 
 This always has been my priority because... I don't want to pay extra in ECR so... I have to create small docker images.

@@ -5,10 +5,7 @@ description = "Another version of java? See what it's going on with java and wha
 tags = ["AdoptOpenJDK", "java", "JDK", "JDK 11", "JDK 11 LTS", "JDK 6", "JDK 7", "JDK 8","OpenJDK", "opinion"]
 categories = ["Java", "Opinion"]
 comments = true
-[[images]]
-src = "images/oracleversion.png"
-alt = "Oraclee's Timeline"
-stretch = "Vertical"
+images = ['images/oracleversion.png']
 +++
 
 The other day there were a few news articles about the new version of Java. I was thinking another one? Really? Like a lot of people in the beginning of their careers, no-one checks the differences between Java versions because they are focused on the projects which they are working on, or maybe it’s just me. But, I had a break between jobs so I decided to update all my knowledge and one thing from my list was this one, so I hope you find this information interesting. As everyone knows, Java has another JDK version which is the JDK 11.
