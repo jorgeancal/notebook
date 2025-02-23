@@ -13,7 +13,7 @@ pagerSize = 10
 disablePathToLower = false
 enableGitInfo = true
 [outputs]
-home                  = ["html", "rss"]
+home = ["html", "rss"]
 
 # Needed for mermaid/katex shortcodes
 [markup]
