@@ -1,51 +1,557 @@
-<!doctype html><html lang=es dir=ltr><head><meta name=generator content="Hugo 0.123.8"><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content><meta name=theme-color content="#FFFFFF"><meta property="og:title" content="Helmfile"><meta property="og:description" content><meta property="og:type" content="website"><meta property="og:url" content="https://jorgesnotebook.com/es/tags/helmfile/"><title>Helmfile | Jorge's notebook</title>
-<link rel=manifest href=/manifest.json><link rel=icon href=/favicon.png type=image/x-icon><link rel=alternate hreflang=en href=https://jorgesnotebook.com/tags/helmfile/ title=Helmfile><link rel=stylesheet href=/book.min.ece3f56fc3f716f87ccd4e6f3ea44ba1fa6757114261dadfbf861fde7d4e6203.css integrity="sha256-7OP1b8P3Fvh8zU5vPqRLofpnVxFCYdrfv4Yf3n1OYgM="><script defer src=/es.search.min.5f001f24895536372eec087f7a14fce7b3b0fdd5806ffce4dcbb43d1576bfded.js integrity="sha256-XwAfJIlVNjcu7Ah/ehT857Ow/dWAb/zk3LtD0Vdr/e0="></script><script defer src=/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js integrity="sha256-b2+Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC+NdcPIvZhzk="></script><script>var doNotTrack=!1;doNotTrack||(window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)},ga.l=+new Date,ga("create","UA-108421112-2","auto"),ga("send","pageview"))</script><script async src=https://www.google-analytics.com/analytics.js></script><link rel=alternate type=application/rss+xml href=https://jorgesnotebook.com/es/tags/helmfile/index.xml title="Jorge's notebook"></head><body dir=ltr><input type=checkbox class="hidden toggle" id=menu-control>
-<input type=checkbox class="hidden toggle" id=toc-control><main class="container flex"><aside class=book-menu><div class=book-menu-content><nav><h2 class=book-brand><a href=/es><img src=/favicon.png alt=Logo><span>Jorge's notebook</span></a></h2><div class=book-search><input type=text id=book-search-input placeholder=Buscar aria-label=Buscar maxlength=64 data-hotkeys=s/><div class="book-search-spinner hidden"></div><ul id=book-search-results></ul></div><ul><li><span>Posts</span><ul><li><a href=https://jorgesnotebook.com/es/posts/how-to-implement-sops-helmfile/>Como configurar SOPS en Helmfile</a></li><li><a href=https://jorgesnotebook.com/es/posts/how-to-set-up-your-kluster-with-helmfle/>Configurar tu kluster con Helmfile</a></li></ul></li><li><a href=https://jorgesnotebook.com/es/about/>About</a></li></ul><ul><li><a href=https://github.com/jorgeancal/ target=_blank rel=noopener>Github</a></li></ul></nav><script>(function(){var e=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script></div></aside><div class=book-page><header class=book-header><div class="flex align-center justify-between"><label for=menu-control><img src=/svg/menu.svg class=book-icon alt=Menu>
-</label><strong>Helmfile</strong>
-<label for=toc-control><img src=/svg/toc.svg class=book-icon alt="Table of Contents"></label></div><aside class="hidden clearfix"><nav><ul><li class=book-section-flat><strong>Categories</strong><ul><li class="flex justify-between"><a href=/es/categories/helm/>Helm</a>
-<span>2</span></li><li class="flex justify-between"><a href=/es/categories/how-to/>How To</a>
-<span>2</span></li><li class="flex justify-between"><a href=/es/categories/kubernetes/>Kubernetes</a>
-<span>2</span></li><li class="flex justify-between"><a href=/es/categories/helmfile/>Helmfile</a>
-<span>1</span></li></ul></li><li class=book-section-flat><strong>Tags</strong><ul><li class="flex justify-between"><a href=/es/tags/cluster/>Cluster</a>
-<span>2</span></li><li class="flex justify-between"><a href=/es/tags/helm/>Helm</a>
-<span>2</span></li><li class="flex justify-between"><a href=/es/tags/helm-secrets/>Helm-Secrets</a>
-<span>1</span></li><li class="flex justify-between"><a href=/es/tags/helmcharts/>Helmcharts</a>
-<span>2</span></li><li class="flex justify-between"><a href=/es/tags/helmfile/>Helmfile</a>
-<span>2</span></li><li class="flex justify-between"><a href=/es/tags/kubernetes/>Kubernetes</a>
-<span>2</span></li><li class="flex justify-between"><a href=/es/tags/secrets/>Secrets</a>
-<span>1</span></li><li class="flex justify-between"><a href=/es/tags/sops/>Sops</a>
-<span>1</span></li></ul></li></ul></nav></aside></header><article class="markdown book-post"><h2><a href=/es/posts/how-to-implement-sops-helmfile/>Como configurar SOPS en Helmfile</a></h2><h5>February 28, 2021</h5><div><a href=/es/categories/helm/>Helm</a>,
-<a href=/es/categories/kubernetes/>Kubernetes</a>,
-<a href=/es/categories/how-to/>How To</a></div><div><a href=/es/tags/helm/>Helm</a>,
-<a href=/es/tags/helmcharts/>Helmcharts</a>,
-<a href=/es/tags/sops/>Sops</a>,
-<a href=/es/tags/kubernetes/>Kubernetes</a>,
-<a href=/es/tags/helmfile/>Helmfile</a>,
-<a href=/es/tags/cluster/>Cluster</a>,
-<a href=/es/tags/helm-secrets/>Helm-Secrets</a>,
-<a href=/es/tags/secrets/>Secrets</a></div><p>Como veíamos por encima en nuestro anterior post sobre helmfile podemos tener un fichero en nuestro repo que este encriptado mediante sops y tener ahi las variables para usar en nuestra chart mediante Helmfile.
-¿Qué es Sops? # Si nos vamos a si proyecto veremos que Mozilla define SOPS como un editor de archivos cifrados que admite los formatos YAML, JSON, ENV, INI y BINARY. Además de soportar el cifrado de estos mediante los cifrados AWS KMS, GCP KMS, Azure Key Vault y PGP.
-<a href=/es/posts/how-to-implement-sops-helmfile/>...</a></p></article><article class="markdown book-post"><h2><a href=/es/posts/how-to-set-up-your-kluster-with-helmfle/>Configurar tu kluster con Helmfile</a></h2><h5>January 30, 2021</h5><div><a href=/es/categories/helm/>Helm</a>,
-<a href=/es/categories/kubernetes/>Kubernetes</a>,
-<a href=/es/categories/how-to/>How To</a>,
-<a href=/es/categories/helmfile/>Helmfile</a></div><div><a href=/es/tags/helm/>Helm</a>,
-<a href=/es/tags/helmcharts/>Helmcharts</a>,
-<a href=/es/tags/kubernetes/>Kubernetes</a>,
-<a href=/es/tags/helmfile/>Helmfile</a>,
-<a href=/es/tags/cluster/>Cluster</a></div><p>Helmfile es una herramienta que te permite sacar más partido a Helm. Ya que si usas helmfile puedes implementar cualquier cantidad de helmcharts. Básicamente con helmfile declaras las helmcharts y les das los valores que tú quieres a cada una de las helm chart, helmfile creara el correspondiente deploy mediante helm para mandar a tu cluster todo lo que has definido en helmfile, claro esta puedes decirle a helmfile impleméntame solo este grupo de helmchart y de este grupo quiero implementarlas en esta secuencia.
-<a href=/es/posts/how-to-set-up-your-kluster-with-helmfle/>...</a></p></article><footer class=book-footer><div class="flex flex-wrap justify-between"><div class=book-languages tabindex=0 aria-haspopup=true><ul><li class="flex align-center"><img src=/svg/translate.svg class=book-icon alt=Languages>
-Castellano</li></ul><ul class=book-languages-list><li><a href=https://jorgesnotebook.com/tags/helmfile/ class="flex align-center"><img src=/svg/translate.svg class=book-icon alt=Languages>
-English</a></li><li class=active><a href=https://jorgesnotebook.com/es/ class="flex align-center"><img src=/svg/translate.svg class=book-icon alt=Languages>
-Castellano</a></li></ul></div></div></footer><label for=menu-control class="hidden book-menu-overlay"></label></div><aside class=book-toc><div class=book-toc-content><nav><ul><li class=book-section-flat><strong>Categories</strong><ul><li class="flex justify-between"><a href=/es/categories/helm/>Helm</a>
-<span>2</span></li><li class="flex justify-between"><a href=/es/categories/how-to/>How To</a>
-<span>2</span></li><li class="flex justify-between"><a href=/es/categories/kubernetes/>Kubernetes</a>
-<span>2</span></li><li class="flex justify-between"><a href=/es/categories/helmfile/>Helmfile</a>
-<span>1</span></li></ul></li><li class=book-section-flat><strong>Tags</strong><ul><li class="flex justify-between"><a href=/es/tags/cluster/>Cluster</a>
-<span>2</span></li><li class="flex justify-between"><a href=/es/tags/helm/>Helm</a>
-<span>2</span></li><li class="flex justify-between"><a href=/es/tags/helm-secrets/>Helm-Secrets</a>
-<span>1</span></li><li class="flex justify-between"><a href=/es/tags/helmcharts/>Helmcharts</a>
-<span>2</span></li><li class="flex justify-between"><a href=/es/tags/helmfile/>Helmfile</a>
-<span>2</span></li><li class="flex justify-between"><a href=/es/tags/kubernetes/>Kubernetes</a>
-<span>2</span></li><li class="flex justify-between"><a href=/es/tags/secrets/>Secrets</a>
-<span>1</span></li><li class="flex justify-between"><a href=/es/tags/sops/>Sops</a>
-<span>1</span></li></ul></li></ul></nav></div></aside></main></body></html>
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
+<meta name="color-scheme" content="light dark"><meta property="og:url" content="https://jorgesnotebook.com/es/tags/helmfile/">
+  <meta property="og:site_name" content="Jorge&#39;s notebook">
+  <meta property="og:title" content="Helmfile">
+  <meta property="og:locale" content="es">
+  <meta property="og:type" content="website">
+<title>Helmfile | Jorge&#39;s notebook</title>
+<link rel="icon" href="/favicon-notebook.png" >
+<link rel="manifest" href="/manifest.json">
+<link rel="canonical" href="https://jorgesnotebook.com/es/tags/helmfile/">
+  <link rel="alternate" hreflang="en" href="https://jorgesnotebook.com/tags/helmfile/" title="Helmfile">
+<link rel="stylesheet" href="/book.min.434035e7885c7f5d12818bd9f111cf1a0925c6fb78382667381c3d5eda3fb4f1.css" integrity="sha256-Q0A154hcf10SgYvZ8RHPGgklxvt4OCZnOBw9Xto/tPE=" crossorigin="anonymous">
+  <script defer src="/fuse.min.js"></script>
+  <script defer src="/es.search.min.dc4bf8e4f51007d0578a7d46c530caabac2a837dd086e23b3704439c77e1ab34.js" integrity="sha256-3Ev45PUQB9BXin1GxTDKq6wqg33QhuI7NwRDnHfhqzQ=" crossorigin="anonymous"></script>
+
+  <script defer src="/sw.min.6f6f90fcb8eb1c49ec389838e6b801d0de19430b8e516902f8d75c3c8bd98739.js" integrity="sha256-b2&#43;Q/LjrHEnsOJg45rgB0N4ZQwuOUWkC&#43;NdcPIvZhzk=" crossorigin="anonymous"></script>
+
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-5X0MZZJXFN"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-5X0MZZJXFN');
+        }
+      </script><link rel="alternate" type="application/rss+xml" href="https://jorgesnotebook.com/es/tags/helmfile/index.xml" title="Jorge's notebook" />
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+  
+</head>
+<body dir="ltr">
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <main class="container flex">
+    <aside class="book-menu">
+      <div class="book-menu-content">
+        
+  <nav>
+<h2 class="book-brand">
+  <a class="flex align-center" href="/"><img src="/favicon.png" alt="Logo" class="book-icon" /><span>Jorge&#39;s notebook</span>
+  </a>
+</h2>
+
+
+<div class="book-search hidden">
+  <input type="text" id="book-search-input" placeholder="Buscar" aria-label="Buscar" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+<script>document.querySelector(".book-search").classList.remove("hidden")</script>
+
+
+
+  
+
+
+
+  
+    
+  
+
+
+  
+
+
+<ul class="book-languages">
+  <li>
+    <input type="checkbox" id="languages" class="toggle" />
+    <label for="languages" class="flex justify-between">
+      <a role="button" class="flex align-center">
+        <img src="/svg/translate.svg" class="book-icon" alt="Languages" />
+        Castellano
+      </a>
+    </label>
+
+    <ul>
+      
+      <li>
+        <a href="/tags/helmfile/">
+          English
+        </a>
+      </li>
+      
+    </ul>
+  </li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <span>Posts</span>
+  
+
+          
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/es/posts/how-to-implement-sops-helmfile/" class="">Como configurar SOPS en Helmfile</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/es/posts/how-to-set-up-your-kluster-with-helmfle/" class="">Configurar tu kluster con Helmfile</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="/es/about/" class="">About</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    <a href="https://github.com/jorgeancal/"  target="_blank" rel="noopener">
+        Github
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script>
+
+
+ 
+      </div>
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <h3>Helmfile</h3>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  <nav>
+  <ul>
+  
+    
+    <li class="book-section-flat">
+      <strong>Categories</strong>
+      <ul>
+      
+        <li class="flex justify-between">
+          <a href="/es/categories/helm/">Helm</a>
+          <span>2</span>
+        </li>
+      
+        <li class="flex justify-between">
+          <a href="/es/categories/how-to/">How To</a>
+          <span>2</span>
+        </li>
+      
+        <li class="flex justify-between">
+          <a href="/es/categories/kubernetes/">Kubernetes</a>
+          <span>2</span>
+        </li>
+      
+        <li class="flex justify-between">
+          <a href="/es/categories/helmfile/">Helmfile</a>
+          <span>1</span>
+        </li>
+      
+      </ul>
+    </li>
+    
+  
+    
+    <li class="book-section-flat">
+      <strong>Tags</strong>
+      <ul>
+      
+        <li class="flex justify-between">
+          <a href="/es/tags/cluster/">Cluster</a>
+          <span>2</span>
+        </li>
+      
+        <li class="flex justify-between">
+          <a href="/es/tags/helm/">Helm</a>
+          <span>2</span>
+        </li>
+      
+        <li class="flex justify-between">
+          <a href="/es/tags/helm-secrets/">Helm-Secrets</a>
+          <span>1</span>
+        </li>
+      
+        <li class="flex justify-between">
+          <a href="/es/tags/helmcharts/">Helmcharts</a>
+          <span>2</span>
+        </li>
+      
+        <li class="flex justify-between">
+          <a href="/es/tags/helmfile/">Helmfile</a>
+          <span>2</span>
+        </li>
+      
+        <li class="flex justify-between">
+          <a href="/es/tags/kubernetes/">Kubernetes</a>
+          <span>2</span>
+        </li>
+      
+        <li class="flex justify-between">
+          <a href="/es/tags/secrets/">Secrets</a>
+          <span>1</span>
+        </li>
+      
+        <li class="flex justify-between">
+          <a href="/es/tags/sops/">Sops</a>
+          <span>1</span>
+        </li>
+      
+      </ul>
+    </li>
+    
+  
+  </ul>
+</nav>
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  
+  <article class="markdown book-post">
+    <h2>
+      <a href="/es/posts/how-to-implement-sops-helmfile/">Como configurar SOPS en Helmfile</a>
+    </h2>
+    
+  <div class="flex align-center text-small book-post-date">
+    <img src="/svg/calendar.svg" class="book-icon " alt="" />
+    <span>febrero 28, 2021</span>
+  </div>
+
+
+
+  
+  <div class="text-small">
+    
+      <a href="/es/categories/helm/">Helm</a>, 
+      <a href="/es/categories/kubernetes/">Kubernetes</a>, 
+      <a href="/es/categories/how-to/">How To</a>
+  </div>
+  
+
+  
+  <div class="text-small">
+    
+      <a href="/es/tags/helm/">Helm</a>, 
+      <a href="/es/tags/helmcharts/">Helmcharts</a>, 
+      <a href="/es/tags/sops/">Sops</a>, 
+      <a href="/es/tags/kubernetes/">Kubernetes</a>, 
+      <a href="/es/tags/helmfile/">Helmfile</a>, 
+      <a href="/es/tags/cluster/">Cluster</a>, 
+      <a href="/es/tags/helm-secrets/">Helm-Secrets</a>, 
+      <a href="/es/tags/secrets/">Secrets</a>
+  </div>
+  
+
+
+    <p><p>Como veíamos por encima en nuestro anterior post sobre helmfile podemos tener un fichero en nuestro repo que este encriptado mediante sops y tener ahi las variables para usar en nuestra chart mediante Helmfile.</p>
+<h2 id="qué-es-sops">
+  ¿Qué es Sops?
+  <a class="anchor" href="#qu%c3%a9-es-sops">#</a>
+</h2>
+<p>Si nos vamos a si 
+  <a href="https://github.com/mozilla/sops">proyecto</a> veremos que Mozilla define SOPS como un editor de archivos cifrados que admite los formatos YAML, JSON, ENV, INI y BINARY. Además de soportar el cifrado de estos mediante los cifrados AWS KMS, GCP KMS, Azure Key Vault y PGP.</p>
+        <a href="/es/posts/how-to-implement-sops-helmfile/">...</a>
+      
+    </p>
+  </article>
+  
+  <article class="markdown book-post">
+    <h2>
+      <a href="/es/posts/how-to-set-up-your-kluster-with-helmfle/">Configurar tu kluster con Helmfile</a>
+    </h2>
+    
+  <div class="flex align-center text-small book-post-date">
+    <img src="/svg/calendar.svg" class="book-icon " alt="" />
+    <span>enero 30, 2021</span>
+  </div>
+
+
+
+  
+  <div class="text-small">
+    
+      <a href="/es/categories/helm/">Helm</a>, 
+      <a href="/es/categories/kubernetes/">Kubernetes</a>, 
+      <a href="/es/categories/how-to/">How To</a>, 
+      <a href="/es/categories/helmfile/">Helmfile</a>
+  </div>
+  
+
+  
+  <div class="text-small">
+    
+      <a href="/es/tags/helm/">Helm</a>, 
+      <a href="/es/tags/helmcharts/">Helmcharts</a>, 
+      <a href="/es/tags/kubernetes/">Kubernetes</a>, 
+      <a href="/es/tags/helmfile/">Helmfile</a>, 
+      <a href="/es/tags/cluster/">Cluster</a>
+  </div>
+  
+
+
+    <p><p>Helmfile es una herramienta que te permite sacar más partido a Helm. Ya que si usas helmfile puedes implementar cualquier cantidad de helmcharts. Básicamente con helmfile declaras las helmcharts y les das los valores que tú quieres a cada una de las helm chart, helmfile creara el correspondiente deploy mediante helm para mandar a tu cluster todo lo que has definido en helmfile, claro esta puedes decirle a helmfile impleméntame solo este grupo de helmchart y de este grupo quiero implementarlas en esta secuencia.</p>
+        <a href="/es/posts/how-to-set-up-your-kluster-with-helmfle/">...</a>
+      
+    </p>
+  </article>
+  
+
+  
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+
+
+</div>
+
+
+
+  <script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script>
+
+
+ 
+        
+      </footer>
+
+      
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      <div class="book-toc-content">
+        
+  <nav>
+  <ul>
+  
+    
+    <li class="book-section-flat">
+      <strong>Categories</strong>
+      <ul>
+      
+        <li class="flex justify-between">
+          <a href="/es/categories/helm/">Helm</a>
+          <span>2</span>
+        </li>
+      
+        <li class="flex justify-between">
+          <a href="/es/categories/how-to/">How To</a>
+          <span>2</span>
+        </li>
+      
+        <li class="flex justify-between">
+          <a href="/es/categories/kubernetes/">Kubernetes</a>
+          <span>2</span>
+        </li>
+      
+        <li class="flex justify-between">
+          <a href="/es/categories/helmfile/">Helmfile</a>
+          <span>1</span>
+        </li>
+      
+      </ul>
+    </li>
+    
+  
+    
+    <li class="book-section-flat">
+      <strong>Tags</strong>
+      <ul>
+      
+        <li class="flex justify-between">
+          <a href="/es/tags/cluster/">Cluster</a>
+          <span>2</span>
+        </li>
+      
+        <li class="flex justify-between">
+          <a href="/es/tags/helm/">Helm</a>
+          <span>2</span>
+        </li>
+      
+        <li class="flex justify-between">
+          <a href="/es/tags/helm-secrets/">Helm-Secrets</a>
+          <span>1</span>
+        </li>
+      
+        <li class="flex justify-between">
+          <a href="/es/tags/helmcharts/">Helmcharts</a>
+          <span>2</span>
+        </li>
+      
+        <li class="flex justify-between">
+          <a href="/es/tags/helmfile/">Helmfile</a>
+          <span>2</span>
+        </li>
+      
+        <li class="flex justify-between">
+          <a href="/es/tags/kubernetes/">Kubernetes</a>
+          <span>2</span>
+        </li>
+      
+        <li class="flex justify-between">
+          <a href="/es/tags/secrets/">Secrets</a>
+          <span>1</span>
+        </li>
+      
+        <li class="flex justify-between">
+          <a href="/es/tags/sops/">Sops</a>
+          <span>1</span>
+        </li>
+      
+      </ul>
+    </li>
+    
+  
+  </ul>
+</nav>
+
+ 
+      </div>
+    </aside>
+    
+  </main>
+
+  
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
